@@ -70,6 +70,10 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     background: "#ffffff",
     padding: "10vh 0vh",
+    justifyContent: "center",
+    justifyItems: "center",
+    alignItems: "center",
+    textAlign: "center",
   },
   secondaryPanel: {
     position: "relative",
@@ -124,6 +128,9 @@ const Home = () => {
 
       <div className={classes.secondaryPanel}>
         <InternData />
+      </div>
+      <div className={classes.primaryPanel}>
+        <Purpose />
       </div>
       <div className={classes.primaryPanel}>
         <Message />

@@ -655,10 +655,7 @@ export default function InternData() {
           remember is they taught me how to be a{" "}
           <span style={{ fontWeight: 800 }}> GOOD PERSON </span> no matter what
           or where you are.{" "}
-          <span style={{ fontWeight: 800 }}>
-            {" "}
-            MARAMING SALAMAT, MAHAL KONG RBS.{" "}
-          </span>
+          <span style={{ fontWeight: 800 }}> MARAMING SALAMAT, RBS. </span>
           <br /> <br />
         </p>
       ),
