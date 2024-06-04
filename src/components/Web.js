@@ -12,15 +12,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     overflow: "hidden",
-    height: "100vh",
-    width: "100vw",
-    overflowY: "scroll",
-    scrollSnapType: "y mandatory",
-    scrollbarWidth: "none", // For Firefox
-    msOverflowStyle: "none", // For Internet Explorer and Edge
-    "&::-webkit-scrollbar": {
-      display: "none", // For Chrome, Safari, and Opera
-    },
   },
   LandingPane: {
     display: "flex",
@@ -32,12 +23,26 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       height: "50vh",
     },
-    scrollSnapAlign: "start",
+    scrollSnapType: "y mandatory",
+    scrollbarWidth: "none",
+    msOverflowStyle: "none",
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
+    "&:hover": {
+      scrollbarColor: "#f5f5f5 transparent",
+    },
+    "&::-webkit-scrollbar-track": {
+      background: "#f5f5f5",
+    },
+    "&::-webkit-scrollbar-thumb": {
+      backgroundColor: "transparent",
+    },
   },
   primaryPanel: {
     position: "relative",
     background: "#f5f5f5",
-    padding: "10vh 0",
+    padding: "10vh 0vh",
     justifyContent: "center",
     justifyItems: "center",
     alignItems: "center",
@@ -48,11 +53,10 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     height: "40vh",
     background: "#011c25",
-    padding: "10vh 0",
+    padding: "10vh 0vh",
     scrollSnapAlign: "start",
   },
 }));
-
 const Home = () => {
   const classes = useStyles();
 
