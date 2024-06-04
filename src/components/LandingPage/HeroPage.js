@@ -1,80 +1,83 @@
-import { Box, Grid, Typography, makeStyles } from "@material-ui/core";
 import React from "react";
-import logo from "../../images/emblem.svg";
-const useStyles = makeStyles((theme) => ({
-  root: {
-    textAlign: "center",
-    width: "100vw",
-    height: "100vh",
-    background: "#f1f1f1",
-    padding: theme.spacing(4),
-  },
-  logo: {
-    width: "20vw",
-    height: "20vw",
-  },
-  heading: {
-    fontFamily: "Radley",
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: "3vw",
-    marginBottom: theme.spacing(2),
-  },
-  highlight: {
-    color: "#FF6600",
-  },
-  underline: {
-    textDecoration: "underline",
-  },
-  subheading: {
-    fontSize: "1rem",
-    marginBottom: theme.spacing(2),
-  },
+import { makeStyles } from "@material-ui/core/styles";
 
-  description: {
-    marginTop: theme.spacing(2),
-    fontSize: "2.5vw",
-    fontStyle: "italic",
-    fontFamily: "Radley",
-    lineHeight: 1.5,
-    fontWeight: 500,
+const useStyles = makeStyles((theme) => ({
+  landingPage: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    height: "100vh",
+    width: "100vw",
+    textAlign: "center",
+    background: "#f5f5f5",
+    color: "#333",
+    fontFamily: '"Playfair Display", serif',
+    padding: "20px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "0px",
+    },
   },
-  Growing: {
-    fontWeight: "bold",
-    fontSize: "5vw",
+  header: {
+    marginBottom: "20px",
+    padding: "20px",
+    borderBottom: "2px solid #000",
+    width: "80%",
+  },
+  headerH1: {
+    fontSize: "3em",
+    marginTop: "20vh",
+    letterSpacing: "2px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "5vw",
+      marginTop: "0vh",
+    },
+  },
+  headerH2: {
+    fontSize: "1.5em",
+    marginTop: 0,
+    color: "#555",
+    letterSpacing: "1px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.2em",
+    },
+  },
+  mainContent: {
+    fontSize: "1.2em",
+    maxWidth: "800px",
+    margin: "20px auto",
+    fontFamily: '"Roboto", sans-serif',
+    lineHeight: 1.6,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1em",
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1.5em",
+    },
   },
 }));
 
-const CareerOdyssey = () => {
+const HeroPage = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root}>
-      <img src={logo} alt="logo" className={classes.logo} />
-      <Typography variant="h4" className={classes.heading}>
-        NAVIGATE YOUR{" "}
-        <span className={classes.highlight}>CAREER ODYSSEY: </span>
-      </Typography>
-      <Typography variant="h4" className={classes.heading}>
-        FROM INTERNSHIP{" "}
-        <span className={`${classes.highlight} ${classes.circled}`}>
-          TO FUTURE SUCCESS
-        </span>
-      </Typography>
-      <Typography
-        variant="body1"
-        className={classes.description}
-        style={{ display: "flex", justifyContent: "center" }}
-      >
-        <Grid item xs={8} style={{ textAlign: "center" }}>
-          Learning, <span className={classes.Growing}>Growing</span>,{" "}
-          <span style={{ color: "#ff7704" }}>Making an impact:</span> Explore
-          the journeys of those who dared to bridge the gap between theory and
-          reality.
-        </Grid>
-      </Typography>
-    </Box>
+    <div className={classes.landingPage}>
+      <header className={classes.header}>
+        <h1 className={classes.headerH1}>
+          NAVIGATE YOUR <span style={{ color: "#ff7704" }}>CAREER ODYSSEY</span>
+        </h1>
+        <h2 className={classes.headerH2}>
+          FROM INTERNSHIP TO{" "}
+          <span style={{ color: "#ff7704" }}>FUTURE SUCCESS</span>
+        </h2>
+      </header>
+      <main className={classes.mainContent}>
+        <p>
+          Learning, Growing, Making an impact: Explore the journeys of those who
+          dared to bridge the gap between theory and reality.
+        </p>
+      </main>
+    </div>
   );
 };
 
-export default CareerOdyssey;
+export default HeroPage;
