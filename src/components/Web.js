@@ -1,13 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-import {
-  Box,
-  Typography,
-  makeStyles,
-} from "@material-ui/core";
-=======
 import { Box, Typography, makeStyles } from "@material-ui/core";
->>>>>>> dad002ad4e27c781b1e5c78007e3b7960b269106
 import InternData from "./Teams/Testimonials/InternData";
 import Slider from "./InternTeam/Accordion";
 import Faqs from "./Faqs/Faqs";
@@ -134,20 +126,10 @@ const Home = () => {
         <InternData />
       </div>
       <div className={classes.primaryPanel}>
-<<<<<<< HEAD
-        <Message />
-      </div>
-      <div className={classes.primaryPanel}>
-        <Gallery/>
-=======
-        <Purpose />
-      </div>
-      <div className={classes.primaryPanel}>
         <Message />
       </div>
       <div className={classes.primaryPanel}>
         <Gallery />
->>>>>>> dad002ad4e27c781b1e5c78007e3b7960b269106
       </div>
       <div className={classes.primaryPanel}>
         <Faqs />
