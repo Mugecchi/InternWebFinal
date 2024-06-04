@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     overflow: "hidden",
+    height: "100vh",
+    width: "100vw",
+    overflowY: "scroll",
   },
   LandingPane: {
     display: "flex",
@@ -20,43 +23,30 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     width: "100vw",
     overflow: "hidden",
+    transition: "opacity 0.5s ease",
     [theme.breakpoints.down("sm")]: {
       height: "50vh",
-    },
-    scrollSnapType: "y mandatory",
-    scrollbarWidth: "none",
-    msOverflowStyle: "none",
-    "&::-webkit-scrollbar": {
-      display: "none",
-    },
-    "&:hover": {
-      scrollbarColor: "#f5f5f5 transparent",
-    },
-    "&::-webkit-scrollbar-track": {
-      background: "#f5f5f5",
-    },
-    "&::-webkit-scrollbar-thumb": {
-      backgroundColor: "transparent",
     },
   },
   primaryPanel: {
     position: "relative",
     background: "#f5f5f5",
-    padding: "10vh 0vh",
+    padding: "10vh 0",
     justifyContent: "center",
     justifyItems: "center",
     alignItems: "center",
     textAlign: "center",
-    scrollSnapAlign: "start",
+    transition: "opacity 0.5s ease",
   },
   secondaryPanel: {
     position: "relative",
     height: "40vh",
     background: "#011c25",
-    padding: "10vh 0vh",
-    scrollSnapAlign: "start",
+    padding: "10vh 0",
+    transition: "opacity 0.5s ease",
   },
 }));
+
 const Home = () => {
   const classes = useStyles();
 
