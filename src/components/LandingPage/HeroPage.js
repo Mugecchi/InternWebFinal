@@ -44,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
   mainContent: {
     fontSize: "1.2em",
     maxWidth: "800px",
-    margin: "20px auto",
     fontFamily: '"Roboto", sans-serif',
     lineHeight: 1.6,
     [theme.breakpoints.down("sm")]: {
@@ -72,8 +71,18 @@ const HeroPage = () => {
       </header>
       <main className={classes.mainContent}>
         <p>
-          Learning, Growing, Making an impact: Explore the journeys of those who
-          dared to bridge the gap between theory and reality.
+          <span
+            style={{
+              WebkitTextStroke: "1px #000000",
+              color: "transparent",
+            }}
+          >
+            Learning,{" "}
+          </span>
+          <span style={{ fontWeight: 800, fontSize: "4vh" }}>Growing,</span>{" "}
+          <span style={{ color: "#ff7704" }}>Making an impact: </span>Explore
+          the journeys of those who dared to bridge the gap between theory and
+          reality.
         </p>
       </main>
     </div>

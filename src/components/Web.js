@@ -12,6 +12,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     overflow: "hidden",
+    height: "100vh",
+    width: "100vw",
+    overflowY: "scroll",
+    scrollSnapType: "y mandatory",
+    scrollbarWidth: "none", // For Firefox
+    msOverflowStyle: "none", // For Internet Explorer and Edge
+    "&::-webkit-scrollbar": {
+      display: "none", // For Chrome, Safari, and Opera
+    },
   },
   LandingPane: {
     display: "flex",
@@ -23,21 +32,24 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       height: "50vh",
     },
+    scrollSnapAlign: "start",
   },
   primaryPanel: {
     position: "relative",
     background: "#f5f5f5",
-    padding: "10vh 0vh",
+    padding: "10vh 0",
     justifyContent: "center",
     justifyItems: "center",
     alignItems: "center",
     textAlign: "center",
+    scrollSnapAlign: "start",
   },
   secondaryPanel: {
     position: "relative",
     height: "40vh",
     background: "#011c25",
-    padding: "10vh 0vh",
+    padding: "10vh 0",
+    scrollSnapAlign: "start",
   },
 }));
 
