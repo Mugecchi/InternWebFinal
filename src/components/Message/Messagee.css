@@ -1,0 +1,70 @@
+.notes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.note {
+  width: calc(100% - 80px);
+  max-width: 400px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 2px solid #000; /* Added border */
+  margin-top: 30px; /* Added top margin to ensure pin visibility */
+}
+
+.pin {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 5px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px; /* Adjusted top to ensure full visibility */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.note-content {
+  padding: 20px;
+  margin: 10px;
+  text-align: justify;
+  font-size: 16px;
+  height: calc(100% - 40px); /* Subtract padding and margin */
+  overflow-y: scroll; /* Use overflow-y for vertical scrolling */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.note-content::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.note img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .note {
+    height: auto; /* Remove fixed height */
+    max-height: 400px; /* Add max-height for mobile */
+    width: 200px;
+    align-items: center;
+    overflow: auto; /* Enable scrolling */
+  }
+
+  .note-content {
+    font-size: 12px;
+    height: auto; /* Adjust height for mobile */
+  }
+}

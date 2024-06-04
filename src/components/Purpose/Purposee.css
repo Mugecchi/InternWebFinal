@@ -1,0 +1,17 @@
+.message-container {
+  position: relative;
+  padding: 40px;
+  border: 5px solid #000;
+  border-radius: 20px;
+  margin-bottom: 100px;
+  background-color: #ff7704;
+  margin-left: 17px;
+}
+
+.message-card {
+  margin-bottom: 2rem;
+  position: relative;
+  border-radius: 20px;
+  z-index: 1;
+  border-style: inherit;
+}
