@@ -1,32 +1,38 @@
 .notes-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   padding: 50px;
+  align-items: left;
+  justify-content: left;
   overflow: hidden;
 }
 
 .note {
-  width: calc(100% - 80px);
-  max-width: 400px;
-  height: 400px;
+  width: calc(100% - 30px);
+  max-width: 20vw;
+  height: 20vw;
   margin: 20px;
   border-radius: 20px;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border: 2px solid #000; /* Added border */
-  margin-top: 30px; /* Added top margin to ensure pin visibility */
+  border: 2px solid #f1f1f1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.note:hover {
+  transform: scale(1.05);
 }
 
 .pin {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background-color: #fff;
-  border: 5px solid #000;
+  border: 5px solid #ff7704;
   border-radius: 50%;
   position: absolute;
-  top: -20px; /* Adjusted top to ensure full visibility */
+  top: -10px; /* Adjusted top to ensure full visibility */
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -35,6 +41,7 @@
 .note-content {
   padding: 20px;
   margin: 10px;
+  font-family: Poppins;
   text-align: justify;
   font-size: 16px;
   height: calc(100% - 40px); /* Subtract padding and margin */
@@ -57,7 +64,7 @@
 @media only screen and (max-width: 600px) {
   .note {
     height: auto; /* Remove fixed height */
-    max-height: 400px; /* Add max-height for mobile */
+    max-height: 300px; /* Add max-height for mobile */
     width: 200px;
     align-items: center;
     overflow: auto; /* Enable scrolling */
