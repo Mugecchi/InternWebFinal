@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 export const useStyles = makeStyles((theme) => ({
   titleContainer: {
-    background: "#ffd3c5",
+    background: "#ffdcd1",
     justifyContent: "left",
     alignItems: "center",
     display: "flex",
