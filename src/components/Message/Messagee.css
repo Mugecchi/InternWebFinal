@@ -3,8 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 50px;
-  align-items: left;
-  justify-content: left;
+  align-items: flex-start; /* Corrected to flex-start for vertical alignment */
   overflow: hidden;
 }
 
@@ -41,7 +40,7 @@
 .note-content {
   padding: 20px;
   margin: 10px;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   text-align: justify;
   font-size: 16px;
   height: calc(100% - 40px); /* Subtract padding and margin */
@@ -61,17 +60,57 @@
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
   .note {
+    max-width: 25vw;
+    height: 25vw;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .note {
+    max-width: 30vw;
+    height: 30vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .note {
+    max-width: 40vw;
+    height: 40vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .notes-grid {
+    padding: 20px;
+  }
+
+  .note {
+    width: 90%;
     height: auto; /* Remove fixed height */
     max-height: 300px; /* Add max-height for mobile */
-    width: 200px;
     align-items: center;
     overflow: auto; /* Enable scrolling */
+    flex-basis: 100%; /* Take full width on mobile */
   }
 
   .note-content {
-    font-size: 12px;
+    font-size: 14px; /* Adjust font size for smaller screens */
     height: auto; /* Adjust height for mobile */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .note {
+    width: 100%;
+    height: auto;
+    margin: 10px 0; /* Adjust margin for smaller screens */
+    flex-basis: 100%; /* Take full width on mobile */
+    font-size: 5px;
+  }
+
+  .note-content {
+    font-size: 12px; /* Further adjust font size for very small screens */
   }
 }
