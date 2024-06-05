@@ -17,16 +17,10 @@ const useStyles = makeStyles((theme) => ({
     overflowY: "scroll",
   },
   LandingPane: {
-    display: "flex",
-    textAlign: "center",
     position: "relative",
     height: "100vh",
     width: "100vw",
     overflow: "hidden",
-    transition: "opacity 0.5s ease",
-    [theme.breakpoints.down("sm")]: {
-      height: "50vh",
-    },
   },
   primaryPanel: {
     position: "relative",

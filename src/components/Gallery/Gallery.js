@@ -16,7 +16,6 @@ import hero from "../../images/album1/bg.jpg";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
-    backgroundColor: "#f8f9fa",
     color: "#333",
   },
   heroSection: {

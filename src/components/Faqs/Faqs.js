@@ -5,6 +5,7 @@ import {
   Typography,
   TextField,
   Button,
+  Collapse,
 } from "@material-ui/core";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { makeStyles } from "@material-ui/core/styles"; // Import makeStyles
@@ -27,33 +28,38 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Faq = ({ question, answer, isOpen, onClick }) => {
+const Faq = ({ question, answer, isOpen, onMouseEnter, onMouseLeave }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.faqContainer}>
+    <div
+      className={classes.faqContainer}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       <Button
         className={classes.button}
         variant="contained"
         color="primary"
-        onClick={onClick}
         fullWidth
       >
         {question}
       </Button>
-      {isOpen && (
-        <ul className={classes.answerList}>
-          {answer.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      )}
+      <Typography>
+        <Collapse in={isOpen}>
+          <ul className={classes.answerList}>
+            {answer.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </Collapse>
+      </Typography>
     </div>
   );
 };
 
 const Faqs = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [hoverIndex, setHoverIndex] = useState(null);
   const [formState, setFormState] = useState({
     fullName: "",
     subject: "",
@@ -102,8 +108,12 @@ const Faqs = () => {
     },
   ];
 
-  const handleToggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const handleMouseEnter = (index) => {
+    setHoverIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverIndex(null);
   };
 
   const handleInputChange = (e) => {
@@ -120,9 +130,9 @@ const Faqs = () => {
     rotationAngle: 45,
     iconUrl: markerIcon,
     iconSize: [50, 52],
-    iconAnchor: [22, 51], 
-    popupAnchor: [10, -51], 
-    className: 'rotating-marker',
+    iconAnchor: [22, 51],
+    popupAnchor: [10, -51],
+    className: "rotating-marker",
   });
 
   return (
@@ -133,26 +143,36 @@ const Faqs = () => {
             <Typography variant="h3" align="center" gutterBottom>
               Frequently Asked Questions
             </Typography>
-            <p style={{ textAlign: "justify" }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you eager to
-              kickstart your career? Look no further! An internship opportunity
-              with Radztech will empower you with practical skills, real-world
-              experience, and valuable connections.
-            </p>
-            <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here
-              are the frequently asked questions about the Internship program
-              offered by Radztech Business Solutions!
-            </p>
-            {faqs.map((faq, index) => (
-              <Faq
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={openIndex === index}
-                onClick={() => handleToggle(index)}
-              />
-            ))}
+            <Typography align="center">
+              <p style={{ textAlign: "justify" }}>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you eager to
+                kickstart your career? Look no further! An internship
+                opportunity with Radztech will empower you with practical
+                skills, real-world experience, and valuable connections.
+              </p>
+              <Typography align="left" style={{ marginBottom: "-1vh" }}>
+                <p
+                  style={{
+                    fontStyle: "italic",
+                    opacity: 0.8,
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Here are the frequently asked questions about the Internship
+                  program offered by Radztech Business Solutions!
+                </p>
+              </Typography>
+              {faqs.map((faq, index) => (
+                <Faq
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={hoverIndex === index}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                />
+              ))}
+            </Typography>
           </div>
         </Grid>
         <Grid item xs={12} md={6} style={{ paddingLeft: "1vw" }}>
@@ -171,15 +191,7 @@ const Faqs = () => {
                 variant="outlined"
                 required
               />
-              <TextField
-                fullWidth
-                label="Subject"
-                name="subject"
-                value={formState.subject}
-                onChange={handleInputChange}
-                margin="normal"
-                variant="outlined"
-              />
+
               <TextField
                 fullWidth
                 label="Email"
@@ -212,9 +224,11 @@ const Faqs = () => {
                 margin="normal"
                 variant="outlined"
               />
-              <Button type="submit" variant="contained" color="primary">
-                Send
-              </Button>
+              <Typography align="left">
+                <Button type="submit" variant="contained" color="primary">
+                  Send
+                </Button>
+              </Typography>
             </form>
           </div>
         </Grid>
@@ -232,17 +246,17 @@ const Faqs = () => {
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <Marker position={[16.932315, 121.767919]} icon={customIcon}>
                   <Popup>
-                    Don Jose Canciller Ave., District 1, <br /> Cauayan City 3305, Isabela
+                    Don Jose Canciller Ave., District 1, <br /> Cauayan City
+                    3305, Isabela
                   </Popup>
                 </Marker>
               </MapContainer>
             </div>
           </div>
         </Grid>
-      </Grid>               
+      </Grid>
     </Container>
   );
 };
 
 export default Faqs;
-
