@@ -116,7 +116,7 @@ const ModalExp = ({ children = {}, Team = [] }) => {
           style={{ maxHeight: "10vh" }}
           responsive={responsive}
           infinite
-          autoPlaySpeed={2000}
+          autoPlaySpeed={300}
           autoPlay
           centerMode={isMobile ? false : true}
         >

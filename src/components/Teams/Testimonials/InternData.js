@@ -1,20 +1,21 @@
 import React from "react";
 import Testimonial from "./Testimonial";
-import Randy from "./Images/RAN.jpg";
+import Randy from "./Images/RAN.JPG";
 import Migs from "./Images/migs.jpg";
-import Adonis from "./Images/ADO.jpg";
-import Ben from "./Images/BEN.jpg";
-import Angie from "./Images/ANGIE.jpg";
-import Ryan from "./Images/RY.jpg";
-import Joan from "./Images/JOAN.jpg";
-import Joemar from "./Images/JOMS.jpg";
-import Andeng from "./Images/ANDENG.jpg";
-import Novelyn from "./Images/NOVE.jpg";
-import Frenan from "./Images/FRENAN.jpg";
-import Frenalyn from "./Images/FRENALYN.jpg";
-import Pat from "./Images/PAT.jpg";
-import Isah from "./Images/ISAH.jpg";
+import Adonis from "./Images/ADO.JPG";
+import Ben from "./Images/BEN.JPG";
+import Angie from "./Images/ANGIE.JPG";
+import Ryan from "./Images/RY.JPG";
+import Joan from "./Images/joan.jpg";
+import Joemar from "./Images/JOMS.JPG";
+import Andeng from "./Images/ANDENG.JPG";
+import Novelyn from "./Images/NOVE.JPG";
+import Frenan from "./Images/frenan.jpg";
+import Frenalyn from "./Images/frenalyn.jpg";
+import Pat from "./Images/PAT.JPG";
+import Isah from "./Images/ISAH.JPG";
 import ModalExp from "./Modal";
+
 export default function InternData() {
   const data = [
     {

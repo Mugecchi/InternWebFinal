@@ -7,10 +7,10 @@ import {
   CardMedia,
   Typography,
   Button,
+  Box,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import { importAllImages } from "./utils/importImages"; // Import the utility function
 import hero from "../../images/album1/bg.jpg";
 
 const useStyles = makeStyles((theme) => ({
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 0,
   },
   card: {
-    maxWidth: 300,
+    width: "20vw",
     margin: theme.spacing(2),
   },
   media: {
@@ -79,20 +79,40 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // Dynamically import images from the ../../images directory
-const album1Images = importAllImages(
-  require.context("../../images/album1", false, /\.(png|jpe?g|svg)$/)
-);
 
 const albums = [
   {
-    title: "Name of album",
-    images: album1Images,
+    title: "Reporting",
+    thumbnail: hero,
     link: "/BarDaGoalan",
   },
   {
-    title: "Name of Album2",
-    images: album1Images,
-    link: "/album3",
+    title: "Orrientation",
+    link: "/Orrientation",
+  },
+  {
+    title: "DeploMoyments",
+    link: "/DeploMoment",
+  },
+  {
+    title: "Clients",
+    link: "/Client",
+  },
+  {
+    title: "Food",
+    link: "/Food",
+  },
+  {
+    title: "BibleStudy",
+    link: "/BibleStudy",
+  },
+  {
+    title: <Box style={{ alignItems: "center" }}>Birthday</Box>,
+    link: "/Birthday",
+  },
+  {
+    title: "FunMoment",
+    link: "/FunMoment",
   },
 ];
 
@@ -120,7 +140,7 @@ const Gallery = () => {
               <CardActionArea component={Link} to={album.link}>
                 <CardMedia
                   className={classes.media}
-                  image={Object.values(album.images)[0]}
+                  image={album.thumbnail}
                   title={album.title}
                 />
                 <div className={classes.cardTitle}>
