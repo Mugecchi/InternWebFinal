@@ -36,10 +36,7 @@ const useStyles = makeStyles((theme) => ({
     height: "40vh",
     boxShadow: 24,
     borderRadius: "50px",
-    [theme.breakpoints.down("md")]: {
-      width: "35vh",
-      height: "35vh",
-    },
+
     [theme.breakpoints.down("sm")]: {
       width: "35vh",
       height: "35vh",
@@ -93,16 +90,48 @@ const ModalExp = ({ children = {}, Team = [] }) => {
   const handleOpen = (index) => () => setOpenModalIndex(index);
   const handleClose = () => setOpenModalIndex(null);
   const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+    ultraWide: {
+      breakpoint: { max: 5000, min: 3000 },
       items: 1,
     },
+    largeDesktop: {
+      breakpoint: { max: 3000, min: 1920 },
+      items: 1,
+    },
+    desktop: {
+      breakpoint: { max: 1920, min: 1440 },
+      items: 1,
+    },
+    laptopLarge: {
+      breakpoint: { max: 1440, min: 1200 },
+      items: 1,
+    },
+    laptop: {
+      breakpoint: { max: 1200, min: 1024 },
+      items: 1,
+    },
+    tabletLarge: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
+    },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 3,
+      breakpoint: { max: 768, min: 600 },
+      items: 2,
+    },
+    tabletSmall: {
+      breakpoint: { max: 600, min: 464 },
+      items: 2,
+    },
+    mobileLarge: {
+      breakpoint: { max: 464, min: 375 },
+      items: 1,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 375, min: 320 },
+      items: 1,
+    },
+    mobileSmall: {
+      breakpoint: { max: 320, min: 0 },
       items: 1,
     },
   };
@@ -116,9 +145,9 @@ const ModalExp = ({ children = {}, Team = [] }) => {
           style={{ maxHeight: "10vh" }}
           responsive={responsive}
           infinite
-          autoPlaySpeed={300}
+          autoPlaySpeed={2000}
           autoPlay
-          centerMode={isMobile ? false : true}
+          centerMode={!isMobile}
         >
           {Team.map((item, index) => (
             <div

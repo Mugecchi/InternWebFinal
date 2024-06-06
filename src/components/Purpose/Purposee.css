@@ -3,14 +3,14 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 0px;
-  border-radius: 50px;
+  border-radius: 50vw;
   justify-items: center;
   padding: 20px;
 }
 
 .message-card {
   width: 80%;
-  border-radius: 50px;
+  border-radius: 50vw;
   margin: 10px 0;
   background-color: #ffffff;
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
@@ -25,32 +25,34 @@
 .message-title {
   text-align: center;
   margin: 10px 0;
+  border-radius: 50vw;
 }
 
 .message-content {
   text-align: justify;
   margin: 10px;
+  border-radius: 50vw;
 }
 
 .vision,
 .mission,
 .purpose {
   /*border: 2px solid #ff7704; Optional: add a border color*/
-  border-radius: 30px; /* Adjust the value for more or less curvature */
+  border-radius: 50vw; /* Adjust the value for more or less curvature */
   padding: 15px; /* Optional: add some padding for inner spacing */
+  border-radius: 50vw;
 }
 
 .vision {
-  border-radius: 30px;
+  border-radius: 50vh;
   grid-column: 1;
   justify-self: start;
   margin-left: 8.8vw;
-
   width: 77%;
 }
 
 .mission {
-  border-radius: 30px;
+  border-radius: 50vw;
   grid-column: 2;
   justify-self: end;
   margin-right: 8.8vw;
@@ -58,7 +60,7 @@
 }
 
 .purpose {
-  border-radius: 30x;
+  border-radius: 50vw;
   grid-column: 1 / span 2;
   justify-self: center;
   margin-top: 7px;
@@ -67,6 +69,7 @@
 @media only screen and (max-width: 1200px) {
   .message-container {
     grid-template-columns: 1fr;
+    border-radius: 50vw;
   }
 
   .vision,
@@ -74,6 +77,7 @@
   .purpose {
     margin: 0 auto;
     width: 90%;
+    border-radius: 50vw;
   }
 
   .vision,
@@ -81,12 +85,14 @@
     grid-column: auto;
     justify-self: center;
     margin: 10px;
+    border-radius: 50vw;
   }
 
   .purpose {
     grid-column: auto;
     justify-self: center;
     margin: 0;
+    border-radius: 50vw;
   }
 }
 
@@ -95,26 +101,31 @@
     grid-template-columns: 1fr;
     margin-right: 50px;
     margin-left: 20px;
+    border-radius: 50vw;
   }
 
   .message-card {
     width: 90%;
     margin: 20px auto;
+    border-radius: 50vw;
   }
 
   .vision,
   .mission,
   .purpose {
     width: 100%;
+    border-radius: 50vw;
   }
 
   .vision,
   .mission {
     margin: 10px auto;
+    border-radius: 50vw;
   }
 
   .purpose {
     margin: 10px auto;
+    border-radius: 50vw;
   }
 }
 
@@ -123,26 +134,23 @@
     padding: 20px;
     margin-right: 20px;
     margin-left: 5px;
-    border-radius: 50px;
+    border-radius: 50vw;
   }
 
   .message-card {
     width: 95%;
-    border-radius: 50px;
+    border-radius: 50vw;
   }
 
   .message-content {
     font-size: 14px;
-    border-radius: 50px;
+    border-radius: 50vw;
   }
 
   .vision,
   .mission,
   .purpose {
     padding: 10px;
-    border-radius: 50px;
-
-    border-radius: 20px;
-    font-size: 10;
+    border-radius: 50vw;
   }
 }
