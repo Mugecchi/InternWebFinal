@@ -1,8 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 import bg from "./bg.png";
+
 export const useStyles = makeStyles((theme) => ({
   titleContainer: {
-    background: `url(${bg}) no-repeat center center`, // Adjust the path to your image
+    background: `url(${bg}) no-repeat center center`,
     backgroundSize: "cover",
     justifyContent: "center",
     alignItems: "center",
@@ -12,7 +13,7 @@ export const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "100%",
     zIndex: -2,
-    animation: "$slideIn 1.5s ease-in",
+    animation: "$fadeIn 1.5s ease-in",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
       alignItems: "center",
@@ -37,7 +38,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
 
-  "@keyframes slideIn": {
+  "@keyframes fadeIn": {
     "0%": {
       opacity: 0,
     },
@@ -45,20 +46,31 @@ export const useStyles = makeStyles((theme) => ({
       opacity: 1,
     },
   },
-
+  "@keyframes bounce": {
+    "0%, 100%": {
+      transform: "translateY(0)", // Start and end position
+    },
+    "50%": {
+      transform: "translateY(-100px)", // Bounce up
+    },
+  },
   logo: {
     width: "20vw",
     height: "20vw",
   },
   heading: {
-    fontFamily: "Radley",
-    color: "white",
     textAlign: "center",
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: "4vw",
+    fontFamily: `"Unkempt", cursive`,
+    color: "#000000",
+    fontSize: "4.8vw",
+    top: "20vh",
+    left: "5vw",
+    fontWeight: "bolder",
+    position: "absolute",
+    fontOpticalSizing: "auto",
     zIndex: 10,
     marginBottom: theme.spacing(2),
+    animation: "$bounce 2s ease-in-out infinite", // Applying flyIn animation
     [theme.breakpoints.down("sm")]: {
       fontSize: "4.5vh",
     },
@@ -79,10 +91,14 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     fontSize: "3vw",
     fontStyle: "italic",
-    color: "white",
     fontWeight: 900,
-    fontFamily: "Radley",
+    position: "absolute",
+    top: "40vh",
+    left: "5vw",
+    padding: "10px",
+    fontFamily: `"Unkempt", cursive`,
     lineHeight: 1.5,
+    animation: "$bounce 2s ease-in-out infinite",
     [theme.breakpoints.down("sm")]: {
       fontSize: "3vh",
     },
@@ -92,3 +108,5 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "5vh",
   },
 }));
+
+export default useStyles;

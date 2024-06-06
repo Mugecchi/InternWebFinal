@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, makeStyles } from "@material-ui/core";
+import { Box, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import logo from "./wave.svg";
 import { useStyles } from "./useStyles";
@@ -16,27 +16,26 @@ const HeroPage = () => {
       <Typography variant="h4" className={classes.heading}>
         NAVIGATE YOUR{" "}
         <span className={classes.highlight}>CAREER ODYSSEY: </span>
+        <br />
         FROM INTERNSHIP{" "}
         <span className={`${classes.highlight} ${classes.circled}`}>
           TO FUTURE SUCCESS
         </span>
       </Typography>
-      <Typography
-        variant="body1"
-        className={classes.description}
-        style={{
-          display: "flex",
-          textJustify: "inter-word",
-          justifyContent: "center",
-        }}
-      >
-        <Grid item xs={8} style={{ textAlign: "center" }}>
+      <Grid>
+        <Typography className={classes.description}>
           Learning, <span className={classes.Growing}>Growing</span>,{" "}
           <span style={{ color: "#ff7704" }}>Making an impact:</span> Explore
           the journeys of those who dared to bridge the gap between theory and
           reality.
-        </Grid>
-      </Typography>
+          <Grid>
+            <i
+              class="fa-solid fa-arrow-down fa-2x"
+              className={classes["@keyframes bounce"]}
+            ></i>
+          </Grid>
+        </Typography>
+      </Grid>
     </Box>
   );
 };
