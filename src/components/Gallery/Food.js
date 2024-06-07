@@ -60,9 +60,7 @@ const Food = () => {
     <div className={classes.container}>
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
-          Food <br /> <br />- In a single camera’s click ripples countless
-          photos as the interns were unstoppable to show their smiles and take
-          poses.
+          Food
         </Typography>
         <div className={classes.root}>
           <ImageList rowHeight={300} gap={12} className={classes.imageList}>
