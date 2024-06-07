@@ -5,6 +5,7 @@ import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 import IconButton from "@material-ui/core/IconButton";
+import { Link } from "react-router-dom";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import {
   Paper,
@@ -28,6 +29,9 @@ const FunMoment = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const handleBackClick = () => {
+    window.history.back();
+  };
   const photos = [
     {
       img: "https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/447620223_1835909473502445_7111774670779690064_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFDBVxtsEtgNNFInuFARzv0Xg8CwJPXF_NeDwLAk9cX89JVaJLy7KTewv_gS-RlcCUgbih34K0pYiTsy8oYeQsf&_nc_ohc=2mOOu3PTCCEQ7kNvgH1dBnz&_nc_ht=scontent.fmnl4-4.fna&oh=00_AYB5ct8SEkm5d7Ofm22s_R3v7CdE_O0s97jrcOXdER9zbQ&oe=6665E598",
@@ -50,6 +54,13 @@ const FunMoment = () => {
 
   return (
     <div className={classes.container}>
+      <Button
+        variant="contained"
+        onClick={handleBackClick}
+        className={classes.floatingButton}
+      >
+        Back
+      </Button>
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
           FunMoment

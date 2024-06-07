@@ -28,6 +28,11 @@ const BibleStudy = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleBackClick = () => {
+    window.history.back();
+  };
+
   const photos = [
     {
       img: "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/447616622_1835905440169515_7091066312287955012_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGFZpGOa5NLTL8UzyqEnkTAv-uMT3joSHG_64xPeOhIcTruyd_833UYrNKqZR_9rpDoBBdKyXH_6qC4DYreTpRw&_nc_ohc=ejyTU7AgE6gQ7kNvgHvkT43&_nc_ht=scontent.fmnl4-7.fna&oh=00_AYAPV99CMNHtMtleIJDFzBikqbYcfjpkNKP82R_EWcaMag&oe=66660DD4",
@@ -38,6 +43,13 @@ const BibleStudy = () => {
 
   return (
     <div className={classes.container}>
+      <Button
+        variant="contained"
+        onClick={handleBackClick}
+        className={classes.floatingButton}
+      >
+        Back
+      </Button>
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
           BibleStudy

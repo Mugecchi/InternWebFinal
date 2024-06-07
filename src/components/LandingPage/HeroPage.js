@@ -26,16 +26,6 @@ const HeroPage = () => {
         <span className={`${classes.highlight} ${classes.circled}`}>
           TO FUTURE SUCCESS
         </span>
-        <Avatar
-          src={Ryan}
-          style={{
-            width: "40vh",
-            height: "40vh",
-            position: "absolute",
-            right: "10vw",
-            top: "5vh",
-          }}
-        ></Avatar>
       </Typography>
       <Grid>
         <Typography className={classes.description}>

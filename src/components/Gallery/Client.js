@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
+import { Link } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import {
@@ -28,6 +29,9 @@ const Client = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const handleBackClick = () => {
+    window.history.back();
+  };
   const photos = [
     {
       img: "https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/447555963_1835904470169612_2860019519222343637_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEMk5wFbLtDmWQwcU3p0tSkUar0ADKSzSZRqvQAMpLNJp4LvCg8D1ByPCcSs8QJBBLGS_gFukCov3GmYTG9Y47U&_nc_ohc=n1HPxOvblYUQ7kNvgFAK5FF&_nc_ht=scontent.fmnl4-3.fna&oh=00_AYA3VEoZliE1S9hbC2fcOADS9TeaXrKyKWM-C5hFIeu-cQ&oe=6665FBF7",
@@ -38,6 +42,14 @@ const Client = () => {
 
   return (
     <div className={classes.container}>
+      <Button
+        variant="contained"
+        onClick={handleBackClick}
+        className={classes.floatingButton}
+      >
+        Back
+      </Button>
+
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
           Client

@@ -120,6 +120,16 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: "3rem",
     },
   },
+  Avatar: {
+    width: "40vh",
+    height: "40vh",
+    position: "absolute",
+    zIndex: 10,
+    marginTop: theme.spacing(2),
+    fontSize: "2rem",
+    fontStyle: "italic",
+    color: "white",
+  },
 }));
 
 export default useStyles;

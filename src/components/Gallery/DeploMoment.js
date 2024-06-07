@@ -5,6 +5,7 @@ import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 import IconButton from "@material-ui/core/IconButton";
+import { Link } from "react-router-dom";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import {
   Paper,
@@ -28,6 +29,9 @@ const DeploMoment = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const handleBackClick = () => {
+    window.history.back();
+  };
   const photos = [
     {
       img: "https://scontent.fmnl4-6.fna.fbcdn.net/v/t39.30808-6/447616330_1835903426836383_990556026098755227_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFjmubmwclqQGHMXYUIs4kYUyyTFXvVdwtTLJMVe9V3C8stZFNiMwtmeUtY3RG-i5NaXhL4mFsY3eiZGf7DvdfE&_nc_ohc=L87oigqxfOcQ7kNvgEmMhQE&_nc_ht=scontent.fmnl4-6.fna&oh=00_AYAynOl8xaUSkG1Un_XS4hEix8QhBBwo7MfB3Rc7023KWg&oe=6665F465",
@@ -50,6 +54,13 @@ const DeploMoment = () => {
 
   return (
     <div className={classes.container}>
+      <Button
+        variant="contained"
+        onClick={handleBackClick}
+        className={classes.floatingButton}
+      >
+        Back
+      </Button>
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
           DeploMoment

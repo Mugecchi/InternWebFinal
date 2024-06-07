@@ -5,6 +5,7 @@ import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 import IconButton from "@material-ui/core/IconButton";
+import { Link } from "react-router-dom";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import {
   Paper,
@@ -28,6 +29,9 @@ const Orrientation = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const handleBackClick = () => {
+    window.history.back();
+  };
   const photos = [
     {
       img: "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/447634084_1835902723503120_1336065542110380525_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFDtdLGWMza8qMk0GgT6iaMHKryrP_PS-IcqvKs_89L4rolfRvOWW6Jgm2oO4-7iGSoPmR11BDBjx09rbMPpj3f&_nc_ohc=P6enxm_f_XAQ7kNvgExxH4k&_nc_ht=scontent.fmnl4-7.fna&oh=00_AYCuHSszEHxedVp334hG1ksY0Dm9CcDxGiG0G9QbI958EQ&oe=6665E307",
@@ -42,6 +46,13 @@ const Orrientation = () => {
 
   return (
     <div className={classes.container}>
+      <Button
+        variant="contained"
+        onClick={handleBackClick}
+        className={classes.floatingButton}
+      >
+        Back
+      </Button>
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
           Orrientation
