@@ -33,13 +33,12 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
+    textAlign: "left",
     position: "relative",
     height: "100%",
     width: "100%",
     zIndex: -2,
-    animation: `"$fadeIn 1.5s ease-in","$bounce 2s ease-in-out infinite"`,
+    animation: `"$fadeIn 1.5s ease-in"`,
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
       alignItems: "center",
@@ -62,6 +61,7 @@ export const useStyles = makeStyles((theme) => ({
     position: "absolute",
     opacity: "70%",
     zIndex: -2,
+    left: "-1vw",
     objectFit: "cover",
   },
   logo: {
@@ -74,6 +74,8 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "3rem",
     fontWeight: "bolder",
     fontOpticalSizing: "auto",
+    marginLeft: "1vw",
+
     zIndex: 10,
     marginBottom: theme.spacing(2),
     animation: "$bounce 2s ease-in-out infinite",
@@ -82,7 +84,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   highlight: {
-    color: "#FF6600",
+    color: "#ff7704",
   },
   underline: {
     textDecoration: "underline",
@@ -98,12 +100,13 @@ export const useStyles = makeStyles((theme) => ({
     fontStyle: "italic",
     color: "white",
     fontWeight: 900,
+    marginLeft: "1vw",
     width: "60vw",
     padding: "10px",
     fontFamily: `"Poppins"`,
     lineHeight: 1.5,
     zIndex: 2,
-    textAlign: "center",
+    textAlign: "left",
     animation: "$bounce 2s ease-in-out infinite",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",

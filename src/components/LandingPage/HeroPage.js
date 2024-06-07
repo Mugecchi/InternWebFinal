@@ -1,8 +1,9 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Avatar, Box, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import Wave from "./wave.svg";
 import { useStyles } from "./useStyles";
 import overlay from "./overlay.png";
+import Ryan from "./Ryann.jpg";
 const HeroPage = () => {
   const classes = useStyles();
 
@@ -25,6 +26,16 @@ const HeroPage = () => {
         <span className={`${classes.highlight} ${classes.circled}`}>
           TO FUTURE SUCCESS
         </span>
+        <Avatar
+          src={Ryan}
+          style={{
+            width: "40vh",
+            height: "40vh",
+            position: "absolute",
+            right: "10vw",
+            top: "5vh",
+          }}
+        ></Avatar>
       </Typography>
       <Grid>
         <Typography className={classes.description}>
