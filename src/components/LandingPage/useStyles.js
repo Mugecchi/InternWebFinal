@@ -2,44 +2,6 @@ import { makeStyles } from "@material-ui/core";
 import bg from "./bg.png";
 
 export const useStyles = makeStyles((theme) => ({
-  titleContainer: {
-    background: `url(${bg}) no-repeat center center`,
-    backgroundSize: "cover",
-    justifyContent: "center",
-    alignItems: "center",
-    justifyItems: "center",
-    textAlign: "center",
-    position: "relative",
-    alignContent: "center",
-    display: "block",
-    height: "100%",
-    width: "100%",
-    zIndex: -2,
-    animation: "$fadeIn 1.5s ease-in",
-    [theme.breakpoints.down("sm")]: {
-      justifyContent: "center",
-      alignItems: "center",
-    },
-  },
-  descContainer: {
-    justifyContent: "left",
-    alignItems: "center",
-    display: "flex",
-    height: "35vh",
-    width: "100%",
-    paddingLeft: "2vh",
-    [theme.breakpoints.down("sm")]: {
-      justifyContent: "center",
-      alignItems: "center",
-    },
-  },
-  Container: {
-    background: "black",
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "5rem",
-    },
-  },
-
   "@keyframes fadeIn": {
     "0%": {
       opacity: 0,
@@ -56,22 +18,65 @@ export const useStyles = makeStyles((theme) => ({
       transform: "translateY(-100px)", // Bounce up
     },
   },
+  "@keyframes bounceBg": {
+    "0%, 100%": {
+      backgroundPosition: "center center", // Start and end position
+    },
+    "50%": {
+      backgroundPosition: "center 20px", // Bounce up
+    },
+  },
+
+  titleContainer: {
+    background: `url(${bg}) no-repeat center center`,
+    backgroundSize: "cover",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    position: "relative",
+    height: "100%",
+    width: "100%",
+    zIndex: -2,
+    animation: `"$fadeIn 1.5s ease-in","$bounce 2s ease-in-out infinite"`,
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  },
+  descContainer: {
+    display: "flex",
+    justifyContent: "left",
+    alignItems: "center",
+    height: "35vh",
+    width: "100%",
+    paddingLeft: "2vh",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  },
+
+  overlayImage: {
+    position: "absolute",
+    opacity: "70%",
+    zIndex: -2,
+    objectFit: "cover",
+  },
   logo: {
     width: "20vw",
     height: "20vw",
   },
   heading: {
-    textAlign: "center",
-    fontFamily: `"Unkempt", cursive`,
-    color: "#000000",
-    fontSize: "4.8vw",
-    top: "20vh",
+    fontFamily: `"Poppins", cursive`,
+    color: "#ffffff",
+    fontSize: "3rem",
     fontWeight: "bolder",
-    position: "absolute",
     fontOpticalSizing: "auto",
     zIndex: 10,
     marginBottom: theme.spacing(2),
-    animation: "$bounce 2s ease-in-out infinite", // Applying flyIn animation
+    animation: "$bounce 2s ease-in-out infinite",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.8rem",
     },
@@ -86,18 +91,19 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     marginBottom: theme.spacing(2),
   },
-
   description: {
     zIndex: 10,
     marginTop: theme.spacing(2),
-    fontSize: "3rem",
+    fontSize: "2rem",
     fontStyle: "italic",
+    color: "white",
     fontWeight: 900,
-    position: "absolute",
-    top: "40vh",
+    width: "60vw",
     padding: "10px",
-    fontFamily: `"Unkempt", cursive`,
+    fontFamily: `"Poppins"`,
     lineHeight: 1.5,
+    zIndex: 2,
+    textAlign: "center",
     animation: "$bounce 2s ease-in-out infinite",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
@@ -105,7 +111,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   Growing: {
     fontWeight: "bold",
-    fontSize: "5rem",
+    color: "black",
+    fontSize: "4rem",
     [theme.breakpoints.down("xs")]: {
       fontSize: "3rem",
     },
