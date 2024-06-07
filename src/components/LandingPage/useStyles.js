@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import bg from "./bg.png";
+import bg from "./bg.jpg";
 
 export const useStyles = makeStyles((theme) => ({
   "@keyframes fadeIn": {
@@ -10,20 +10,26 @@ export const useStyles = makeStyles((theme) => ({
       opacity: 1,
     },
   },
-  "@keyframes bounce": {
-    "0%, 100%": {
-      transform: "translateY(0)", // Start and end position
+  "@keyframes highlighter": {
+    "0%": {
+      backgroundColor: "transparent",
     },
     "50%": {
-      transform: "translateY(-100px)", // Bounce up
+      backgroundColor: "#ff7704", // Your highlight color
+    },
+    "100%": {
+      backgroundColor: "transparent",
     },
   },
-  "@keyframes bounceBg": {
-    "0%, 100%": {
-      backgroundPosition: "center center", // Start and end position
+  "@keyframes highlighter2": {
+    "0%": {
+      backgroundColor: "transparent",
     },
     "50%": {
-      backgroundPosition: "center 20px", // Bounce up
+      backgroundColor: "#000000", // Your highlight color
+    },
+    "100%": {
+      backgroundColor: "transparent",
     },
   },
 
@@ -38,11 +44,15 @@ export const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "100%",
     zIndex: -2,
-    animation: `"$fadeIn 1.5s ease-in"`,
+    animation: `fadeIn 1.5s ease-in`,
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
+      textAlign: "center",
       alignItems: "center",
     },
+  },
+  backgroundImage: {
+    transform: "rotateX(180deg)", // Rotate the background image only
   },
   descContainer: {
     display: "flex",
@@ -53,13 +63,14 @@ export const useStyles = makeStyles((theme) => ({
     paddingLeft: "2vh",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
+      textAlign: "center",
       alignItems: "center",
     },
   },
 
   overlayImage: {
     position: "absolute",
-    opacity: "70%",
+    opacity: "30%",
     zIndex: -2,
     left: "-1vw",
     objectFit: "cover",
@@ -69,30 +80,27 @@ export const useStyles = makeStyles((theme) => ({
     height: "20vw",
   },
   heading: {
-    fontFamily: `"Poppins", cursive`,
-    color: "#ffffff",
-    fontSize: "3rem",
-    fontWeight: "bolder",
-    fontOpticalSizing: "auto",
-    marginLeft: "1vw",
-
     zIndex: 10,
-    marginBottom: theme.spacing(2),
-    animation: "$bounce 2s ease-in-out infinite",
+    marginTop: theme.spacing(2),
+    fontSize: "3rem",
+    fontStyle: "italic",
+    color: "white",
+    fontWeight: 900,
+    marginLeft: "1vw",
+    width: "60vw",
+    padding: "10px",
+    fontFamily: `"Poppins"`,
+    lineHeight: 1.5,
+    zIndex: 2,
+    textAlign: "left",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1.8rem",
+      fontSize: "1rem",
     },
   },
-  highlight: {
-    color: "#ff7704",
-  },
-  underline: {
-    textDecoration: "underline",
-  },
-  subheading: {
-    fontSize: "1rem",
-    marginBottom: theme.spacing(2),
-  },
+  // highlight: {
+  //   color: "#ff7704",
+  // },
+
   description: {
     zIndex: 10,
     marginTop: theme.spacing(2),
@@ -107,17 +115,18 @@ export const useStyles = makeStyles((theme) => ({
     lineHeight: 1.5,
     zIndex: 2,
     textAlign: "left",
-    animation: "$bounce 2s ease-in-out infinite",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1.5rem",
+      fontSize: "1rem",
+      textAlign: "center",
     },
   },
   Growing: {
     fontWeight: "bold",
-    color: "black",
+    color: "#000000ff",
+    WebkitTextStroke: "1px white",
     fontSize: "4rem",
     [theme.breakpoints.down("xs")]: {
-      fontSize: "3rem",
+      fontSize: "2rem",
     },
   },
   Avatar: {

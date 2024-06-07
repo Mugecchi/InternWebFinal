@@ -106,7 +106,7 @@ const Food = () => {
         <DialogContent
           style={{
             background: "#ddd",
-            width: "80vw", // Adjust the width as needed
+            maxWidth: "80vw", // Adjust the width as needed
             margin: "auto",
             overflow: "auto",
           }}

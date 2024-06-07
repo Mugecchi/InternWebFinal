@@ -3,7 +3,6 @@ import React from "react";
 import Wave from "./wave.svg";
 import { useStyles } from "./useStyles";
 import overlay from "./overlay.png";
-import Ryan from "./Ryann.jpg";
 const HeroPage = () => {
   const classes = useStyles();
 
