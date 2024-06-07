@@ -5,6 +5,7 @@ import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 import IconButton from "@material-ui/core/IconButton";
+import { Link } from "react-router-dom";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import {
   Paper,
@@ -27,6 +28,9 @@ const Food = () => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+  const handleBackClick = () => {
+    window.history.back();
   };
   const photos = [
     {
@@ -58,6 +62,13 @@ const Food = () => {
 
   return (
     <div className={classes.container}>
+      <Button
+        variant="contained"
+        onClick={handleBackClick}
+        className={classes.floatingButton}
+      >
+        Back
+      </Button>
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
           Food <br /> <br />- In a single camera’s click ripples countless

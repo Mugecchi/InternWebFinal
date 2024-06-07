@@ -1,6 +1,12 @@
 import { makeStyles } from "@material-ui/core";
 export const useStyles = makeStyles((theme) => ({
   container: {},
+  floatingButton: {
+    position: "fixed",
+    bottom: theme.spacing(2), // Or a specific value like '20px'
+    right: theme.spacing(2), // Or a specific value like '20px'
+    zIndex: 1000,
+  },
   root: {
     display: "flex",
     justifyContent: "center",
