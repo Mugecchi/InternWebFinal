@@ -10,7 +10,7 @@
 
 .message-card {
   width: 80%;
-  border-radius: 50vw;
+  border-radius: 40vw;
   margin: 10px 0;
   background-color: #ffffff;
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
@@ -48,7 +48,7 @@
   grid-column: 1;
   justify-self: start;
   margin-left: 8.8vw;
-  width: 77%;
+  width: 76%;
 }
 
 .mission {
@@ -56,14 +56,14 @@
   grid-column: 2;
   justify-self: end;
   margin-right: 8.8vw;
-  width: 77%;
+  width: 76%;
 }
 
 .purpose {
   border-radius: 50vw;
   grid-column: 1 / span 2;
   justify-self: center;
-  margin-top: 7px;
+  margin-top: 19px;
 }
 
 @media only screen and (max-width: 1200px) {

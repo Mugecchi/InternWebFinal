@@ -13,6 +13,7 @@ const Purpose = [
           color: "#ff7704",
           padding: "10px",
           border: "outset 10px #ff7704",
+          borderRadius: "20px",
           backgroundColor: "#ededed",
         }}
       >
@@ -44,6 +45,7 @@ const Purpose = [
           color: "#ff7704",
           padding: "10px",
           border: "outset 10px #ff7704",
+          borderRadius: "20px",
           backgroundColor: "#ededed",
         }}
       >
@@ -74,6 +76,7 @@ const Purpose = [
           color: "#ff7704",
           padding: "10px",
           border: "outset 10px #ff7704",
+          borderRadius: "20px",
           backgroundColor: "#ededed",
         }}
       >
