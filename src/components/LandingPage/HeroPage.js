@@ -1,16 +1,21 @@
 import { Box, Grid, Typography } from "@material-ui/core";
 import React from "react";
-import logo from "./wave.svg";
+import Wave from "./wave.svg";
 import { useStyles } from "./useStyles";
-
+import overlay from "./overlay.png";
 const HeroPage = () => {
   const classes = useStyles();
 
   return (
     <Box className={classes.titleContainer}>
       <img
-        src={logo}
-        style={{ position: "absolute", bottom: 0, left: 0, zIndex: -1 }}
+        src={Wave}
+        style={{
+          position: "absolute",
+          bottom: "-10vw",
+          left: 0,
+          zIndex: -1,
+        }}
       />
       <Typography variant="h4" className={classes.heading}>
         NAVIGATE YOUR{" "}
@@ -27,15 +32,14 @@ const HeroPage = () => {
           <span style={{ color: "#ff7704" }}>Making an impact:</span> Explore
           the journeys of those who dared to bridge the gap between theory and
           reality.
-          <Grid>
-            <i
-              class="fa-solid fa-arrow-down fa-2x "
-              className={classes["@keyframes bounce"]}
-              style={{ color: "#ffffff" }}
-            ></i>
-          </Grid>
+          <Grid></Grid>
         </Typography>
       </Grid>
+      <img
+        alt="Overlay Background"
+        src={overlay}
+        className={classes.overlayImage}
+      />
     </Box>
   );
 };
