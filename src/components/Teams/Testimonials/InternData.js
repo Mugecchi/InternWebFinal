@@ -1,20 +1,21 @@
 import React from "react";
 import Testimonial from "./Testimonial";
 import Randy from "./Images/RAN.JPG";
-import Migs from "../../InternTeam/InternImages/migs.png";
+import Migs from "./Images/migs.jpg";
 import Adonis from "./Images/ADO.JPG";
 import Ben from "./Images/BEN.JPG";
 import Angie from "./Images/ANGIE.JPG";
 import Ryan from "./Images/RY.JPG";
-import Joan from "./Images/JOAN.JPG";
+import Joan from "./Images/joan.jpg";
 import Joemar from "./Images/JOMS.JPG";
 import Andeng from "./Images/ANDENG.JPG";
 import Novelyn from "./Images/NOVE.JPG";
-import Frenan from "./Images/FRENAN.JPG";
-import Frenalyn from "./Images/FRENALYN.JPG";
+import Frenan from "./Images/frenan.jpg";
+import Frenalyn from "./Images/frenalyn.jpg";
 import Pat from "./Images/PAT.JPG";
 import Isah from "./Images/ISAH.JPG";
 import ModalExp from "./Modal";
+
 export default function InternData() {
   const data = [
     {
@@ -655,10 +656,7 @@ export default function InternData() {
           remember is they taught me how to be a{" "}
           <span style={{ fontWeight: 800 }}> GOOD PERSON </span> no matter what
           or where you are.{" "}
-          <span style={{ fontWeight: 800 }}>
-            {" "}
-            MARAMING SALAMAT, MAHAL KONG RBS.{" "}
-          </span>
+          <span style={{ fontWeight: 800 }}> MARAMING SALAMAT, RBS. </span>
           <br /> <br />
         </p>
       ),

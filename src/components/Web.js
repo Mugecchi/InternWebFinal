@@ -12,96 +12,32 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     overflow: "hidden",
+    height: "100vh",
+    width: "100vw",
+    overflowY: "scroll",
   },
   LandingPane: {
-    display: "flex",
-    textAlign: "center",
     position: "relative",
     height: "100vh",
     width: "100vw",
     overflow: "hidden",
-    [theme.breakpoints.down("sm")]: {
-      height: "50vh",
-    },
-  },
-  bgImage: {
-    position: "absolute",
-    top: 0,
-    left: "-13vw",
-    height: "100%",
-    zIndex: -1,
-    "@media (max-width: 600px)": {
-      height: "50vh",
-    },
-  },
-  imageContainer: {
-    position: "absolute",
-    bottom: "20vw",
-    right: "10vw",
-    width: "80vw",
-    height: "40vw",
-    objectFit: "cover",
-    zIndex: 1,
-  },
-  overlayImage: {
-    position: "absolute",
-    top: 0,
-    left: "-2vw",
-    width: "120vw",
-    height: "100vh",
-    zIndex: 1,
-    opacity: 0,
-  },
-  textContainer: {
-    paddingTop: "1vh",
-    paddingLeft: "2vw",
-    paddingRight: "2vw",
-  },
-
-  WAVE: {
-    position: "absolute",
-    bottom: "-50vh",
-    left: 0,
-    width: "100vw",
-    height: "100vh",
-    zIndex: 1,
   },
   primaryPanel: {
     position: "relative",
-    background: "#ffffff",
-    padding: "10vh 0vh",
+    background: "#f5f5f5",
+    padding: "10vh 0",
+    justifyContent: "center",
+    justifyItems: "center",
+    alignItems: "center",
+    textAlign: "center",
+    transition: "opacity 0.5s ease",
   },
   secondaryPanel: {
     position: "relative",
     height: "40vh",
     background: "#011c25",
-    padding: "10vh 0vh",
-  },
-
-  inputLabel: {
-    color: "#bcbcbc",
-    fontSize: "0.5vw",
-    fontWeight: "bold",
-    "&.Mui-focused": {
-      fontSize: "0.5vw",
-      fontWeight: "bold",
-    },
-  },
-  buttonMod: {
-    borderRadius: theme.spacing(0, 1, 1, 0),
-    height: "7.2vh",
-  },
-  text: {
-    fontSize: "2.5vw",
-    marginTop: "80vh",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "2.5vw",
-      marginTop: "80vh",
-    },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "2.5vw",
-      marginTop: "22vh",
-    },
+    padding: "10vh 0",
+    transition: "opacity 0.5s ease",
   },
 }));
 
@@ -124,6 +60,9 @@ const Home = () => {
 
       <div className={classes.secondaryPanel}>
         <InternData />
+      </div>
+      <div className={classes.primaryPanel}>
+        <Purpose />
       </div>
       <div className={classes.primaryPanel}>
         <Message />

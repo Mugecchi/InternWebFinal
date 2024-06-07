@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import ImageList from "@material-ui/core/ImageList";
@@ -14,37 +13,9 @@ import {
   DialogActions,
   Button,
 } from "@material-ui/core";
+import { useStyles } from "./utils/useStyles";
 
-const useStyles = makeStyles((theme) => ({
-  container: {},
-  root: {
-    display: "flex",
-    justifyContent: "center",
-    overflow: "hidden",
-  },
-  imageList: {
-    width: "100vw",
-    height: "95vh",
-    overflowY: "auto",
-    transform: "translateZ(0)",
-  },
-  titleBar: {
-    background:
-      "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
-      "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
-  },
-  icon: {
-    color: "white",
-  },
-  image: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover", // Ensures the entire image is visible without cropping
-    cursor: "pointer", // Add cursor pointer to indicate clickability
-  },
-}));
-
-const BarDaGoalan = () => {
+const BibleStudy = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -59,18 +30,8 @@ const BarDaGoalan = () => {
   };
   const photos = [
     {
-      img: "https://scontent.fcrk1-2.fna.fbcdn.net/v/t39.30808-6/332925313_864727001254545_5048380539468074462_n.png?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHoslzWZtQHojLk8vdtkpRiH7R2K5N8kYUftHYrk3yRhVUTzEleyp8_aZZ6dO1STHMkP7l9F8TeU-mo7Txjwc1j&_nc_ohc=jjNQR3O3cbUQ7kNvgEIwfN7&_nc_ht=scontent.fcrk1-2.fna&oh=00_AYD9weVCn9PdWIzvHxXCHc7IeIQCZuQiIEw-EX6JTqI3yQ&oe=66643560",
+      img: "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/447616622_1835905440169515_7091066312287955012_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGFZpGOa5NLTL8UzyqEnkTAv-uMT3joSHG_64xPeOhIcTruyd_833UYrNKqZR_9rpDoBBdKyXH_6qC4DYreTpRw&_nc_ohc=ejyTU7AgE6gQ7kNvgHvkT43&_nc_ht=scontent.fmnl4-7.fna&oh=00_AYAPV99CMNHtMtleIJDFzBikqbYcfjpkNKP82R_EWcaMag&oe=66660DD4tps://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/447555963_1835904470169612_2860019519222343637_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEMk5wFbLtDmWQwcU3p0tSkUar0ADKSzSZRqvQAMpLNJp4LvCg8D1ByPCcSs8QJBBLGS_gFukCov3GmYTG9Y47U&_nc_ohc=n1HPxOvblYUQ7kNvgFAK5FF&_nc_ht=scontent.fmnl4-3.fna&oh=00_AYA3VEoZliE1S9hbC2fcOADS9TeaXrKyKWM-C5hFIeu-cQ&oe=6665FBF7",
       title: "Photo 2",
-      featured: true,
-    },
-    {
-      img: "https://scontent.fcrk1-5.fna.fbcdn.net/v/t39.30808-6/305401428_105951435592754_7586837755521457137_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHCN90pw2xihIapaKIlF8dcQtiaHpwf8FVC2JoenB_wVZuh3ijYh0mIMhY4gEbtt_zGBe-1OUBvs2fsMlmeGYZl&_nc_ohc=IEFLYTr5Dc0Q7kNvgGJ_ELo&_nc_ht=scontent.fcrk1-5.fna&oh=00_AYCtigEJJR_aMd45CWLB_ITz5cTrq4GYxZn03mcxqWuzpw&oe=66645B2B",
-      title: "Photo 1",
-    },
-
-    {
-      img: "https://scontent.fcrk1-3.fna.fbcdn.net/v/t39.30808-6/305918235_107023508818880_6771027481115972092_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFnNhXqeGFJUQlMp9LFnsbvtfNvb9KGFti1829v0oYW2JD5uXfc22q4qYH4mIxdMPtdyO--13RG4ntEUV33h1eI&_nc_ohc=wXpeKxrqzG8Q7kNvgEt5aor&_nc_ht=scontent.fcrk1-3.fna&oh=00_AYDnANxRN7hOUCYK9lHRD2pC6IVUt8oqvZ17CqMA79yz8w&oe=6664535A",
-      title: "Photo 3",
       featured: false,
     },
   ];
@@ -79,7 +40,7 @@ const BarDaGoalan = () => {
     <div className={classes.container}>
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
-          Devs
+          BibleStudy
         </Typography>
         <div className={classes.root}>
           <ImageList rowHeight={300} gap={12} className={classes.imageList}>
@@ -140,4 +101,4 @@ const BarDaGoalan = () => {
   );
 };
 
-export default BarDaGoalan;
+export default BibleStudy;

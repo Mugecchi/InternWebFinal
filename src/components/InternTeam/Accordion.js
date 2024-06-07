@@ -1,44 +1,13 @@
 import React from "react";
-import "./Accordion.css"; // Make sure to create this CSS file
+import { useTheme, useMediaQuery } from "@material-ui/core";
+import "./Accordion.css"; // Ensure this CSS file exists
 
 const Slider = () => {
-  return (
-    <ul className="slider">
-      <li className="one">
-        <a href="#">
-          <h1>ADONIS</h1>
-        </a>
-      </li>
-      <li className="two">
-        <a href="#">
-          <h1>BENEDICK</h1>
-        </a>
-      </li>
-      <li className="three">
-        <a href="#">
-          <h1>MIGUI</h1>
-        </a>
-      </li>
-      <li className="four">
-        <a href="#">
-          <h1>RANDY</h1>
-        </a>
-      </li>
-      <li className="five">
-        <a href="#">
-          <h1>ANDREA</h1>
-        </a>
-      </li>
-      <li className="six">
-        <a href="#">
-          <h1>ANGELINA</h1>
-        </a>
-      </li>
-      <li className="seven">
-        <a href="#">
-          <h1>FRENALYN</h1>
-        </a>
-      </li>
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const seconHalf = (
+    <>
       <li className="eight">
         <a href="#">
           <h1>JOAN</h1>
@@ -56,7 +25,7 @@ const Slider = () => {
       </li>
       <li className="eleven">
         <a href="#">
-          <h1>FRENAN</h1>\
+          <h1>FRENAN</h1>
         </a>
       </li>
       <li className="twelve">
@@ -74,7 +43,50 @@ const Slider = () => {
           <h1>ISAH</h1>
         </a>
       </li>
-    </ul>
+    </>
+  );
+  return (
+    <>
+      <ul className="slider">
+        <li className="one">
+          <a href="#">
+            <h1>ADONIS</h1>
+          </a>
+        </li>
+        <li className="two">
+          <a href="#">
+            <h1>BENEDICK</h1>
+          </a>
+        </li>
+        <li className="three">
+          <a href="#">
+            <h1>MIGUI</h1>
+          </a>
+        </li>
+        <li className="four">
+          <a href="#">
+            <h1>RANDY</h1>
+          </a>
+        </li>
+        <li className="five">
+          <a href="#">
+            <h1>ANDREA</h1>
+          </a>
+        </li>
+        <li className="six">
+          <a href="#">
+            <h1>ANGELINA</h1>
+          </a>
+        </li>
+        <li className="seven">
+          <a href="#">
+            <h1>FRENALYN</h1>
+          </a>
+        </li>
+        {!isMobile ? seconHalf : null}
+      </ul>
+      {isMobile ? <ul className="slider">{seconHalf}</ul> : null}
+    </>
   );
 };
 

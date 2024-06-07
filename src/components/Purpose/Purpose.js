@@ -4,100 +4,87 @@ import "./Purposee.css";
 
 const Purpose = [
   {
+    id: "vision",
     title: (
-      <p
+      <Box
         style={{
           fontSize: 30,
           fontWeight: 800,
           color: "#ff7704",
-          margin: 0,
-          alignItems: "center",
-          display: "flex",
-          justifyContent: "center",
+          padding: "10px",
+          border: "outset 10px #ff7704",
+          borderRadius: "20px",
+          backgroundColor: "#ededed",
         }}
       >
-        Mission
-      </p>
+        VISION
+      </Box>
     ),
     content: (
-      <p
-        style={{
-          fontSize: 19,
-          fontFamily: "Poppins, sans-serif",
-          margin: 0,
-          marginLeft: 10,
-          alignContent: "center",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        Radztech Business Solutions provides technology-integrated accounting
-        solutions aiming to help our clients improve their business value.
-      </p>
-    ),
-  },
-  {
-    title: (
-      <p
-        style={{
-          fontSize: 30,
-          fontWeight: 800,
-          color: "#ff7704",
-          margin: 0,
-          alignItems: "center",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        Vision
-      </p>
-    ),
-    content: (
-      <p
-        style={{
-          fontSize: 19,
-          fontFamily: "Poppins, sans-serif",
-          margin: 0,
-          marginLeft: 10,
-          alignContent: "center",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      <p>
         The country's leading partner in technology-integrated accounting
         innovations.
       </p>
     ),
+
+    contentStyle: {
+      fontSize: 19,
+      fontFamily: "Poppins, sans-serif",
+      margin: "0 10px",
+      textAlign: "center",
+      marginTop: "30px",
+    },
   },
   {
+    id: "mission",
     title: (
-      <p
+      <Box
         style={{
           fontSize: 30,
           fontWeight: 800,
           color: "#ff7704",
-          margin: 0,
-          alignItems: "center",
-          display: "flex",
-          justifyContent: "center",
+          padding: "10px",
+          border: "outset 10px #ff7704",
+          borderRadius: "20px",
+          backgroundColor: "#ededed",
         }}
       >
-        Purpose of Internship
-      </p>
+        MISSION
+      </Box>
     ),
     content: (
-      <p
+      <p>
+        Radztech Business Solutions provides technology-integrated accounting
+        solutions aiming to help our clients improve their business value.
+      </p>
+    ),
+    contentStyle: {
+      fontSize: 19,
+      fontFamily: "Poppins, sans-serif",
+      margin: "0 10px",
+      textAlign: "center",
+      marginTop: "30px",
+    },
+  },
+  {
+    id: "purpose",
+    title: (
+      <Box
         style={{
-          fontSize: 19,
-          fontFamily: "Poppins, sans-serif",
-          margin: 0,
-          marginLeft: 10,
-          textAlign: "justify",
-          alignContent: "center",
-          display: "flex",
-          justifyContent: "center",
+          fontSize: 30,
+          fontWeight: 800,
+          color: "#ff7704",
+          padding: "10px",
+          border: "outset 10px #ff7704",
+          borderRadius: "20px",
+          backgroundColor: "#ededed",
         }}
       >
+        PURPOSE OF INTERNSHIP
+      </Box>
+    ),
+    content: (
+      <p>
         &nbsp;&nbsp;&nbsp;&nbsp;The internship program is designed to serve as a
         valuable opportunity for students to gain firsthand experience in the
         corporate world, closely aligned with their chosen professional career
@@ -116,16 +103,33 @@ const Purpose = [
         challenges and demands of their chosen fields.
       </p>
     ),
+    contentStyle: {
+      fontSize: 19,
+      fontFamily: "Poppins, sans-serif",
+      margin: "0 10px",
+      textAlign: "justify",
+      marginTop: "30px",
+    },
   },
 ];
 
-const Message = ({ title, content }) => (
-  <Card className="message-card">
+const Message = ({ id, title, content, titleStyle, contentStyle }) => (
+  <Card className={`message-card ${id}`}>
     <CardContent>
-      <Typography variant="h5" component="div">
+      <Typography
+        variant="h5"
+        component="div"
+        className="message-title"
+        style={titleStyle}
+      >
         {title}
       </Typography>
-      <Typography variant="body2" color="text.secondary">
+      <Typography
+        variant="body2"
+        color="text.secondary"
+        className="message-content"
+        style={contentStyle}
+      >
         {content}
       </Typography>
     </CardContent>
@@ -135,7 +139,14 @@ const Message = ({ title, content }) => (
 const Purp = () => (
   <Box className="message-container">
     {Purpose.map((item, index) => (
-      <Message key={index} title={item.title} content={item.content} />
+      <Message
+        key={index}
+        id={item.id}
+        title={item.title}
+        content={item.content}
+        titleStyle={item.titleStyle}
+        contentStyle={item.contentStyle}
+      />
     ))}
   </Box>
 );

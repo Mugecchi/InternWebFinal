@@ -1,17 +1,156 @@
 .message-container {
-  position: relative;
-  padding: 40px;
-  border: 5px solid #000;
-  border-radius: 20px;
-  margin-bottom: 100px;
-  background-color: #ff7704;
-  margin-left: 17px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0px;
+  border-radius: 50vw;
+  justify-items: center;
+  padding: 20px;
 }
 
 .message-card {
-  margin-bottom: 2rem;
-  position: relative;
-  border-radius: 20px;
-  z-index: 1;
-  border-style: inherit;
+  width: 80%;
+  border-radius: 40vw;
+  margin: 10px 0;
+  background-color: #ffffff;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.message-card:hover {
+  transform: scale(1.02);
+  box-shadow: 15px 15px 20px rgba(255, 146, 6, 0.908);
+}
+
+.message-title {
+  text-align: center;
+  margin: 10px 0;
+  border-radius: 50vw;
+}
+
+.message-content {
+  text-align: justify;
+  margin: 10px;
+  border-radius: 50vw;
+}
+
+.vision,
+.mission,
+.purpose {
+  /*border: 2px solid #ff7704; Optional: add a border color*/
+  border-radius: 50vw; /* Adjust the value for more or less curvature */
+  padding: 15px; /* Optional: add some padding for inner spacing */
+  border-radius: 50vw;
+}
+
+.vision {
+  border-radius: 50vh;
+  grid-column: 1;
+  justify-self: start;
+  margin-left: 8.8vw;
+  width: 76%;
+}
+
+.mission {
+  border-radius: 50vw;
+  grid-column: 2;
+  justify-self: end;
+  margin-right: 8.8vw;
+  width: 76%;
+}
+
+.purpose {
+  border-radius: 50vw;
+  grid-column: 1 / span 2;
+  justify-self: center;
+  margin-top: 19px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .message-container {
+    grid-template-columns: 1fr;
+    border-radius: 50vw;
+  }
+
+  .vision,
+  .mission,
+  .purpose {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 50vw;
+  }
+
+  .vision,
+  .mission {
+    grid-column: auto;
+    justify-self: center;
+    margin: 10px;
+    border-radius: 50vw;
+  }
+
+  .purpose {
+    grid-column: auto;
+    justify-self: center;
+    margin: 0;
+    border-radius: 50vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .message-container {
+    grid-template-columns: 1fr;
+    margin-right: 50px;
+    margin-left: 20px;
+    border-radius: 50vw;
+  }
+
+  .message-card {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 50vw;
+  }
+
+  .vision,
+  .mission,
+  .purpose {
+    width: 100%;
+    border-radius: 50vw;
+  }
+
+  .vision,
+  .mission {
+    margin: 10px auto;
+    border-radius: 50vw;
+  }
+
+  .purpose {
+    margin: 10px auto;
+    border-radius: 50vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .message-container {
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 5px;
+    border-radius: 50vw;
+  }
+
+  .message-card {
+    width: 95%;
+    border-radius: 50vw;
+  }
+
+  .message-content {
+    font-size: 14px;
+    border-radius: 50vw;
+  }
+
+  .vision,
+  .mission,
+  .purpose {
+    padding: 10px;
+    border-radius: 50vw;
+  }
 }

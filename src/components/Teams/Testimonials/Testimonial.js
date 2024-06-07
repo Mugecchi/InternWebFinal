@@ -60,8 +60,6 @@ export default function Testimonial({ Team = [], handleClose }) {
   }
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const key = Object.values(Team);
-  console.log(key);
   return (
     <div className={classes.root}>
       {Team.map((item, index) => {
