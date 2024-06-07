@@ -7,7 +7,9 @@ export const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     justifyContent: "center",
     alignItems: "center",
+    justifyItems: "center",
     textAlign: "center",
+    position: "relative",
     alignContent: "center",
     display: "block",
     height: "100%",
@@ -64,7 +66,6 @@ export const useStyles = makeStyles((theme) => ({
     color: "#000000",
     fontSize: "4.8vw",
     top: "20vh",
-    left: "5vw",
     fontWeight: "bolder",
     position: "absolute",
     fontOpticalSizing: "auto",
@@ -72,7 +73,7 @@ export const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     animation: "$bounce 2s ease-in-out infinite", // Applying flyIn animation
     [theme.breakpoints.down("sm")]: {
-      fontSize: "4.5vh",
+      fontSize: "1.8rem",
     },
   },
   highlight: {
@@ -89,23 +90,25 @@ export const useStyles = makeStyles((theme) => ({
   description: {
     zIndex: 10,
     marginTop: theme.spacing(2),
-    fontSize: "3vw",
+    fontSize: "3rem",
     fontStyle: "italic",
     fontWeight: 900,
     position: "absolute",
     top: "40vh",
-    left: "5vw",
     padding: "10px",
     fontFamily: `"Unkempt", cursive`,
     lineHeight: 1.5,
     animation: "$bounce 2s ease-in-out infinite",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "3vh",
+      fontSize: "1.5rem",
     },
   },
   Growing: {
     fontWeight: "bold",
-    fontSize: "5vh",
+    fontSize: "5rem",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "3rem",
+    },
   },
 }));
 

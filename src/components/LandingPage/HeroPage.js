@@ -7,8 +7,7 @@ const HeroPage = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.titleContainer} style={{ position: "relative" }}>
-      {/* Image placed behind the text */}
+    <Box className={classes.titleContainer}>
       <img
         src={logo}
         style={{ position: "absolute", bottom: 0, left: 0, zIndex: -1 }}
@@ -30,8 +29,9 @@ const HeroPage = () => {
           reality.
           <Grid>
             <i
-              class="fa-solid fa-arrow-down fa-2x"
+              class="fa-solid fa-arrow-down fa-2x "
               className={classes["@keyframes bounce"]}
+              style={{ color: "#ffffff" }}
             ></i>
           </Grid>
         </Typography>
