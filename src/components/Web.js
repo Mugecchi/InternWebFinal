@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   floatingButtonsContainer: {
     display: "flex",
+    backgroundColor: "#fafafa30",
     flexDirection: "column",
     alignItems: "flex-end",
     padding: theme.spacing(2),
@@ -54,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     borderRadius: "20px",
     width: "5vw",
-    fontSize: "0.8rem",
+    fontSize: "0.6rem",
     padding: "10px 20px",
     display: "flex",
     justifyContent: "center",
@@ -63,6 +64,10 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: "nowrap",
     overflow: "hidden",
     textOverflow: "ellipsis",
+    "&:hover": {
+      background: "#fff",
+      color: "#ff7704",
+    },
   },
 }));
 
@@ -88,6 +93,10 @@ const Home = () => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
+  };
+  const handleClick = (child) => {
+    scrollToRef(child);
+    setDrawerOpen(false);
   };
 
   return (
@@ -128,37 +137,37 @@ const Home = () => {
         <div className={classes.floatingButtonsContainer}>
           <Button
             className={classes.floatingButton}
-            onClick={() => scrollToRef(landingPage)}
+            onClick={() => handleClick(landingPage)}
           >
             Home
           </Button>
           <Button
             className={classes.floatingButton}
-            onClick={() => scrollToRef(secondaryPanelRef)}
+            onClick={() => handleClick(secondaryPanelRef)}
           >
             Testimonials
           </Button>
           <Button
             className={classes.floatingButton}
-            onClick={() => scrollToRef(purposePanelRef)}
+            onClick={() => handleClick(purposePanelRef)}
           >
             Purpose
           </Button>
           <Button
             className={classes.floatingButton}
-            onClick={() => scrollToRef(messagePanelRef)}
+            onClick={() => handleClick(messagePanelRef)}
           >
             Messages
           </Button>
           <Button
             className={classes.floatingButton}
-            onClick={() => scrollToRef(galleryPanelRef)}
+            onClick={() => handleClick(galleryPanelRef)}
           >
             Gallery
           </Button>
           <Button
             className={classes.floatingButton}
-            onClick={() => scrollToRef(faqsPanelRef)}
+            onClick={() => handleClick(faqsPanelRef)}
           >
             FAQs
           </Button>
@@ -166,7 +175,7 @@ const Home = () => {
           <Button onClick={() => setDrawerOpen(false)}>Close</Button>
         </div>
       </Drawer>
-      <Button
+      {/* <Button
         variant="contained"
         color="primary"
         onClick={() => setDrawerOpen(true)}
@@ -177,8 +186,8 @@ const Home = () => {
           zIndex: 999,
         }}
       >
-        Open Drawer
-      </Button>
+        Open Navigation
+      </Button> */}
     </div>
   );
 };
