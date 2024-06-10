@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#f5f5f5",
     padding: "10vh 0",
     justifyContent: "center",
+    height: "100vh",
     justifyItems: "center",
     alignItems: "center",
     textAlign: "center",
@@ -175,7 +176,7 @@ const Home = () => {
           <Button onClick={() => setDrawerOpen(false)}>Close</Button>
         </div>
       </Drawer>
-      {/* <Button
+      <Button
         variant="contained"
         color="primary"
         onClick={() => setDrawerOpen(true)}
@@ -187,7 +188,7 @@ const Home = () => {
         }}
       >
         Open Navigation
-      </Button> */}
+      </Button>
     </div>
   );
 };

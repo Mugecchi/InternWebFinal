@@ -1,13 +1,16 @@
 import React from "react";
 import "./MessageDisplay.css";
+import { Avatar, Typography } from "@material-ui/core";
 
 const MessageDisplay = ({ employee }) => {
   return (
     <div className="display-container">
-      <h2 className="employee-name">{employee.name}</h2>
+      <Typography variant="h5" className="employee-name">
+        {employee.name}
+      </Typography>
       {employee.messages.map((msg, index) => (
         <div key={index} className="message-bubble">
-          {employee.name}: {msg}
+          <Typography className="message-text">{msg}</Typography>
         </div>
       ))}
     </div>

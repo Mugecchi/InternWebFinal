@@ -1,8 +1,18 @@
 import React from "react";
 import "./EmployeeList.css";
-import { Avatar, Typography } from "@material-ui/core";
-
+import { Avatar, Typography, makeStyles } from "@material-ui/core";
+const useStyles = makeStyles((theme) => ({
+  Avatar: {
+    width: "5vh",
+    height: "5vh",
+    [theme.breakpoints.down("sm")]: {
+      width: "10vh",
+      height: "10vh",
+    },
+  },
+}));
 const EmployeeList = ({ employees, onSelect }) => {
+  const classes = useStyles();
   const [selectedId, setSelectedId] = React.useState(employees[0].id);
 
   const handleSelect = (employee) => {
@@ -21,10 +31,12 @@ const EmployeeList = ({ employees, onSelect }) => {
           }`}
           onClick={() => handleSelect(employee)}
         >
-          <div className="avatar">
-            <Avatar src={employee.image} alt={employee.name} />
-          </div>
-          {employee.name}
+          <Avatar
+            className={classes.Avatar}
+            src={employee.image}
+            alt={employee.name}
+          />
+          <Typography className="employeee">{employee.name}</Typography>
         </div>
       ))}
     </div>
