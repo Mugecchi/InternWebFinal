@@ -3,8 +3,7 @@
   height: 80vh;
   border: 10px solid #ff7704;
   border-radius: 20px 0 0 20px;
-  background: url(C:\Users\Baezha\Documents\react\Magasin\Intern-Website\src\components\Message\messageBG.png)
-    no-repeat center center;
+  background: url(messageBG.png) no-repeat center center;
   background-size: cover;
   padding: 20px;
   overflow-y: auto;
