@@ -1,6 +1,7 @@
 import { Box, Typography, Divider } from "@material-ui/core";
 import React from "react";
 import Wave from "./wave.svg";
+import bg from "./bg.png";
 import { useStyles } from "./useStyles";
 
 const HeroPage = () => {
@@ -16,16 +17,17 @@ const HeroPage = () => {
           bottom: "-5vw",
           transform: "scaleX(-2)",
           left: 0,
-          zIndex: -1,
+          zIndex: 30,
         }}
       />
-      <Typography className={classes.heading}>
-        CHART YOUR CAREER COURSE
-      </Typography>
-      <Divider className={classes.divider} />
-      <Typography className={classes.description}>
-        your internship, your future
-      </Typography>
+      <div className={classes.centerPiece}>
+        <Typography className={classes.heading}>
+          CHART YOUR CAREER COURSE
+        </Typography>
+        <Typography className={classes.description}>
+          your internship, your future
+        </Typography>
+      </div>
     </Box>
   );
 };
