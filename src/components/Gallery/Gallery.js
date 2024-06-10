@@ -16,7 +16,6 @@ import hero from "../../images/album1/bg.jpg";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
-    color: "#333",
   },
   heroSection: {
     position: "relative",
@@ -47,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "#2e2c3c86",
     zIndex: 0,
   },
   card: {

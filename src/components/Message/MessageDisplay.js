@@ -10,7 +10,7 @@ const MessageDisplay = ({ employee }) => {
       </Typography>
       {employee.messages.map((msg, index) => (
         <div key={index} className="message-bubble">
-          <Typography className="message-text">{msg}</Typography>
+          <Typography style={{ fontSize: "0.75rem" }}>{msg}</Typography>
         </div>
       ))}
     </div>
