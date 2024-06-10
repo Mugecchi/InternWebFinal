@@ -35,12 +35,12 @@ const DeploMoment = () => {
   const photos = [
     {
       img: "https://scontent.fmnl4-6.fna.fbcdn.net/v/t39.30808-6/447616330_1835903426836383_990556026098755227_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFjmubmwclqQGHMXYUIs4kYUyyTFXvVdwtTLJMVe9V3C8stZFNiMwtmeUtY3RG-i5NaXhL4mFsY3eiZGf7DvdfE&_nc_ohc=L87oigqxfOcQ7kNvgEmMhQE&_nc_ht=scontent.fmnl4-6.fna&oh=00_AYAynOl8xaUSkG1Un_XS4hEix8QhBBwo7MfB3Rc7023KWg&oe=6665F465",
-      title: "Photo 2",
+      title: "Photo 1",
       featured: false,
     },
     {
       img: "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/447626977_1835903440169715_237552682228264994_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF4KrAyypoNRTzHDKh2BH4pD0rABc_L6acPSsAFz8vpp2ezpPGUfMIYe6YZOcHf3Io9U2-b7TN0Tg1uOrx0wgi3&_nc_ohc=I1hz5XlzEdMQ7kNvgGnZH-a&_nc_ht=scontent.fmnl4-7.fna&oh=00_AYAIpOSpxw6iqTimACzEGbG_V3jABCSVvkr72edCHOaDtg&oe=6665FFCE",
-      title: "Photo 1",
+      title: "Photo 2",
     },
     {
       img: "https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/447519117_1835903546836371_8789853041902982113_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF6-Gjet3-dx05xA0Ao-NR4bo5jcMHoSERujmNwwehIRCEUShKFP7cvEY1RIzAxLZSoUiC3axIUa2wlm22mhF0S&_nc_ohc=CFZ9sOzFXZgQ7kNvgHnURLM&_nc_ht=scontent.fmnl4-3.fna&oh=00_AYCAkffImAhJznGXyu3bR-MalhO-PySTJfLaY6bhv9wwLw&oe=66660A1B",
