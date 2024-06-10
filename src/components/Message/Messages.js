@@ -7,7 +7,7 @@ import { Grid } from "@material-ui/core";
 const employees = [
   {
     id: "uid",
-    name: "Jon Carlo Miguel C. Rivera",
+    name: "Name",
     image:
       "https://cdn.pixabay.com/photo/2023/08/02/18/21/yoga-8165759_640.jpg",
     messages: ["Welcome to the company!", "Hope you are doing well."],

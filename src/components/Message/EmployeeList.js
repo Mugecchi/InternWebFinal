@@ -22,7 +22,7 @@ const EmployeeList = ({ employees, onSelect }) => {
 
   return (
     <div className="list-container">
-      <Typography>Employees</Typography>
+      <Typography>RadzTech Family</Typography>
       {employees.map((employee) => (
         <div
           key={employee.id}
