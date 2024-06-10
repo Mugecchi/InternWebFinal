@@ -3,8 +3,7 @@
   background-color: #ddd;
   border: 10px solid #ff7704;
   border-radius: 0 20px 20px 0;
-  background: url(C:\Users\Baezha\Documents\react\Magasin\Intern-Website\src\components\Message\messageBG.png)
-    no-repeat center left;
+  background: url(messageBG.png) no-repeat center left;
   background-size: cover;
   background-position-x: 110%;
   padding: 20px;

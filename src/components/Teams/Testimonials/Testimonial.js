@@ -157,19 +157,19 @@ export default function Testimonial({ Team = [], handleClose }) {
                     variant="h4"
                     align={isMobile ? "center" : "justify"}
                   >
-                    &nbsp; &nbsp; &nbsp; &nbsp;{item.Testimony}
+                    &nbsp;&nbsp;&nbsp;&nbsp;{item.Testimony}
                   </Typography>
                   <Typography
                     variant="h4"
                     align={isMobile ? "center" : "justify"}
                   >
-                    &nbsp; &nbsp; &nbsp; &nbsp;{item.Body}
+                    &nbsp;&nbsp;&nbsp;&nbsp;{item.Body}
                   </Typography>
                   <Typography
                     variant="h4"
                     align={isMobile ? "center" : "justify"}
                   >
-                    &nbsp; &nbsp; &nbsp; &nbsp;{item.Quote}
+                    &nbsp;&nbsp;&nbsp;&nbsp;{item.Quote}
                   </Typography>
                 </Grid>
               </Grid>
