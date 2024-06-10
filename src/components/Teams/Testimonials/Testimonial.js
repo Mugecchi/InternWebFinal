@@ -99,7 +99,7 @@ export default function Testimonial({ Team = [], handleClose }) {
                     container
                     direction="row"
                     justifyContent="flex-start"
-                    alignItems="center"
+                    alignItems="justify-start"
                   >
                     <Grid
                       item
