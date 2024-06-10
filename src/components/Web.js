@@ -4,26 +4,25 @@ import {
   Button,
   Typography,
   makeStyles,
-  Menu,
-  MenuItem,
+  Drawer,
+  Divider,
 } from "@material-ui/core";
 import InternData from "./Teams/Testimonials/InternData";
 import Slider from "./InternTeam/Accordion";
 import Faqs from "./Faqs/Faqs";
 import HeroPage from "./LandingPage/HeroPage";
-import Message from "./Message/Messagees";
+import Message from "./Message/Messages";
 import Gallery from "./Gallery/Gallery";
 import Purpose from "./Purpose/Purpose";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
-    overflowY: "scroll",
+    overflowY: "hidden",
   },
   LandingPane: {
     position: "relative",
     height: "100vh",
-    width: "100vw",
     overflow: "hidden",
   },
   primaryPanel: {
@@ -43,13 +42,20 @@ const useStyles = makeStyles((theme) => ({
     padding: "10vh 0",
     transition: "opacity 0.5s ease",
   },
+  floatingButtonsContainer: {
+    display: "flex",
+    backgroundColor: "#fafafa30",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    padding: theme.spacing(2),
+  },
   floatingButton: {
     marginBottom: theme.spacing(1),
     background: "#ff7704",
     color: "#fff",
     borderRadius: "20px",
-    width: "auto",
-    fontSize: "0.8rem",
+    width: "5vw",
+    fontSize: "0.6rem",
     padding: "10px 20px",
     display: "flex",
     justifyContent: "center",
@@ -58,11 +64,15 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: "nowrap",
     overflow: "hidden",
     textOverflow: "ellipsis",
+    "&:hover": {
+      background: "#fff",
+      color: "#ff7704",
+    },
   },
 }));
 
 const Home = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const landingPage = useRef(null);
   const secondaryPanelRef = useRef(null);
   const purposePanelRef = useRef(null);
@@ -83,7 +93,10 @@ const Home = () => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
-    setAnchorEl(null); // Close the menu after clicking
+  };
+  const handleClick = (child) => {
+    scrollToRef(child);
+    setDrawerOpen(false);
   };
 
   return (
@@ -116,10 +129,56 @@ const Home = () => {
         <Faqs />
       </div>
 
-      <Button
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      >
+        <div className={classes.floatingButtonsContainer}>
+          <Button
+            className={classes.floatingButton}
+            onClick={() => handleClick(landingPage)}
+          >
+            Home
+          </Button>
+          <Button
+            className={classes.floatingButton}
+            onClick={() => handleClick(secondaryPanelRef)}
+          >
+            Testimonials
+          </Button>
+          <Button
+            className={classes.floatingButton}
+            onClick={() => handleClick(purposePanelRef)}
+          >
+            Purpose
+          </Button>
+          <Button
+            className={classes.floatingButton}
+            onClick={() => handleClick(messagePanelRef)}
+          >
+            Messages
+          </Button>
+          <Button
+            className={classes.floatingButton}
+            onClick={() => handleClick(galleryPanelRef)}
+          >
+            Gallery
+          </Button>
+          <Button
+            className={classes.floatingButton}
+            onClick={() => handleClick(faqsPanelRef)}
+          >
+            FAQs
+          </Button>
+          <Divider />
+          <Button onClick={() => setDrawerOpen(false)}>Close</Button>
+        </div>
+      </Drawer>
+      {/* <Button
         variant="contained"
         color="primary"
-        onClick={(e) => setAnchorEl(e.currentTarget)}
+        onClick={() => setDrawerOpen(true)}
         style={{
           position: "fixed",
           bottom: "20px",
@@ -127,28 +186,8 @@ const Home = () => {
           zIndex: 999,
         }}
       >
-        Open Menu
-      </Button>
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={() => setAnchorEl(null)}
-      >
-        <MenuItem onClick={() => scrollToRef(landingPage)}>Home</MenuItem>
-        <MenuItem onClick={() => scrollToRef(secondaryPanelRef)}>
-          Testimonials
-        </MenuItem>
-        <MenuItem onClick={() => scrollToRef(purposePanelRef)}>
-          Purpose
-        </MenuItem>
-        <MenuItem onClick={() => scrollToRef(messagePanelRef)}>
-          Messages
-        </MenuItem>
-        <MenuItem onClick={() => scrollToRef(galleryPanelRef)}>
-          Gallery
-        </MenuItem>
-        <MenuItem onClick={() => scrollToRef(faqsPanelRef)}>FAQs</MenuItem>
-      </Menu>
+        Open Navigation
+      </Button> */}
     </div>
   );
 };

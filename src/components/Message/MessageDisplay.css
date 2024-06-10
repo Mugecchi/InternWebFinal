@@ -1,0 +1,44 @@
+.display-container {
+  flex: 1;
+  background-color: #ddd;
+  border: 10px solid #ff7704;
+  border-radius: 0 20px 20px 0;
+  background: url(C:\Users\Baezha\Documents\react\Magasin\Intern-Website\src\components\Message\messageBG.png)
+    no-repeat center left;
+  background-size: cover;
+  background-position-x: 110%;
+  padding: 20px;
+  margin-left: -1vw;
+}
+@media (max-width: 768px) {
+  .display-container {
+    background-position-x: center; /* Center the background image */
+    padding: 10px; /* Reduce padding */
+    margin-left: 0; /* Reset margin */
+  }
+}
+
+@media (max-width: 480px) {
+  .display-container {
+    border: 5px solid #ff7704; /* Adjust border size for very small screens */
+    padding: 5px; /* Further reduce padding */
+  }
+}
+
+.message-bubble {
+  background-color: #ff7704;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px 0;
+  max-width: 60%;
+}
+
+.employee-name {
+  background-color: #ff7704;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}

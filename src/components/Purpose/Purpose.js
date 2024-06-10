@@ -26,14 +26,6 @@ const Purpose = [
         innovations.
       </p>
     ),
-
-    contentStyle: {
-      fontSize: 19,
-      fontFamily: "Poppins, sans-serif",
-      margin: "0 10px",
-      textAlign: "center",
-      marginTop: "30px",
-    },
   },
   {
     id: "mission",
@@ -58,13 +50,6 @@ const Purpose = [
         solutions aiming to help our clients improve their business value.
       </p>
     ),
-    contentStyle: {
-      fontSize: 19,
-      fontFamily: "Poppins, sans-serif",
-      margin: "0 10px",
-      textAlign: "center",
-      marginTop: "30px",
-    },
   },
   {
     id: "purpose",
@@ -103,13 +88,6 @@ const Purpose = [
         challenges and demands of their chosen fields.
       </p>
     ),
-    contentStyle: {
-      fontSize: 19,
-      fontFamily: "Poppins, sans-serif",
-      margin: "0 10px",
-      textAlign: "justify",
-      marginTop: "30px",
-    },
   },
 ];
 
@@ -128,7 +106,6 @@ const Message = ({ id, title, content, titleStyle, contentStyle }) => (
         variant="body2"
         color="text.secondary"
         className="message-content"
-        style={contentStyle}
       >
         {content}
       </Typography>
