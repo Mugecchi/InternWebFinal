@@ -25,7 +25,7 @@ const HeroPage = () => {
           CHART YOUR CAREER COURSE
         </Typography>
         <Typography className={classes.description}>
-          your internship, your future
+          YOUR INTERNSHIP, YOUR FUTURE
         </Typography>
       </div>
     </Box>

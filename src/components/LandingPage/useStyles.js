@@ -40,7 +40,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "3rem",
     fontStyle: "italic",
     backgroundColor: "#ff750494",
-    width: "50vw",
+    width: "60vw",
     color: "#ffffff",
     fontWeight: 900,
     textAlign: "center",
@@ -52,17 +52,16 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   description: {
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     fontWeight: "normal",
     width: "30vw",
     color: "#000000",
     backgroundColor: "#ffffffa1",
     fontStyle: "italic",
     animation: "$fadeEffect 3s ease-in-out infinite",
-
     marginTop: theme.spacing(1), // Add some margin between heading and description
     [theme.breakpoints.down("sm")]: {
-      width: "70vw",
+      width: "50vw",
       fontSize: "1rem",
     },
   },
