@@ -16,6 +16,8 @@ const Slider = () => {
       <li className="nine">
         <a href="#">
           <h1>NOVELYN</h1>
+          <br /> <br />
+          <h1>OPS TEAM</h1>
         </a>
       </li>
       <li className="ten">
