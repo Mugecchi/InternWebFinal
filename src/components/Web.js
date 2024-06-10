@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     overflowY: "hidden",
+    scrollBehavior: "smooth",
   },
   LandingPane: {
     position: "relative",
@@ -65,8 +66,13 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
     "&:hover": {
-      background: "#fff",
+      background: "#ddd",
       color: "#ff7704",
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      borderRadius: "10px",
+      width: "15vh",
     },
   },
 }));

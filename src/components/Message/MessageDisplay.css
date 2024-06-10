@@ -3,6 +3,8 @@
   background-color: #ddd;
   border: 10px solid #ff7704;
   border-radius: 0 20px 20px 0;
+  height: 80vh;
+  overflow-y: auto;
   background: url(messageBG.png) no-repeat center left;
   background-size: cover;
   background-position-x: 110%;
