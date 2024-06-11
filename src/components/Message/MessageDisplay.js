@@ -5,12 +5,13 @@ import { Avatar, Typography } from "@material-ui/core";
 const MessageDisplay = ({ employee }) => {
   return (
     <div className="display-container">
-      <Typography variant="h5" className="employee-name">
-        {employee.name}
+      <Typography variant="h4" className="employee-name" >
+        {employee.name}<br></br>  <Typography variant="subtitle2">{employee.position}</Typography>
       </Typography>
+      
       {employee.messages.map((msg, index) => (
         <div key={index} className="message-bubble">
-          <Typography style={{ fontSize: "0.75rem" }}>{msg}</Typography>
+          <Typography style={{ fontSize: "0.95rem" }}>{msg}</Typography>
         </div>
       ))}
     </div>
