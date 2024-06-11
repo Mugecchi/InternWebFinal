@@ -84,6 +84,7 @@ const Home = () => {
   const purposePanelRef = useRef(null);
   const messagePanelRef = useRef(null);
   const galleryPanelRef = useRef(null);
+  const TeamsPanel = useRef(null);
   const faqsPanelRef = useRef(null);
 
   useEffect(() => {
@@ -110,7 +111,7 @@ const Home = () => {
       <div className={classes.LandingPane} ref={landingPage}>
         <HeroPage />
       </div>
-      <div className={classes.primaryPanel}>
+      <div className={classes.primaryPanel} ref={TeamsPanel}>
         <Typography align="center">
           <Box fontFamily={"poppins"} fontSize={"5vw"} fontWeight={800}>
             RADZTECH <span style={{ color: "#ff7704" }}>INTERNS</span>
@@ -146,6 +147,12 @@ const Home = () => {
             onClick={() => handleClick(landingPage)}
           >
             Home
+          </Button>
+          <Button
+            className={classes.floatingButton}
+            onClick={() => handleClick(TeamsPanel)}
+          >
+            Teams
           </Button>
           <Button
             className={classes.floatingButton}
