@@ -6,14 +6,13 @@ import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 import IconButton from "@material-ui/core/IconButton";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
-import { Link } from "react-router-dom";
-
 import {
   Paper,
   Dialog,
   DialogContent,
   DialogActions,
   Button,
+  Zoom,
 } from "@material-ui/core";
 import { useStyles } from "./utils/useStyles";
 
@@ -148,7 +147,13 @@ const Birthday = () => {
           </ImageList>
         </div>
       </Container>
-      <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        maxWidth="lg"
+        fullWidth
+        TransitionComponent={Zoom}
+      >
         <DialogContent
           style={{
             background: "#ddd",

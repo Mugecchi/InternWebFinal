@@ -10,6 +10,7 @@ import {
   Paper,
   Dialog,
   DialogContent,
+  Zoom,
   DialogActions,
   Button,
 } from "@material-ui/core";
@@ -145,7 +146,13 @@ const BarDaGoalan = () => {
           </ImageList>
         </div>
       </Container>
-      <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
+      <Dialog
+        TransitionComponent={Zoom}
+        open={open}
+        onClose={handleClose}
+        maxWidth="lg"
+        fullWidth
+      >
         <DialogContent
           style={{
             background: "#ddd",

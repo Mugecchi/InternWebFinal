@@ -4,6 +4,8 @@
   background: url(messageBG.png) no-repeat center center;
   background-size: cover;
   overflow-y: auto;
+  margin-top: 2px;
+  margin-left: 2px;
   padding-right: 20;
 }
 

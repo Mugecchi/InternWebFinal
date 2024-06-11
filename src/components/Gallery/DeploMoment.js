@@ -12,6 +12,7 @@ import {
   Dialog,
   DialogContent,
   DialogActions,
+  Zoom,
   Button,
 } from "@material-ui/core";
 import { useStyles } from "./utils/useStyles";
@@ -94,7 +95,13 @@ const DeploMoment = () => {
           </ImageList>
         </div>
       </Container>
-      <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        maxWidth="lg"
+        fullWidth
+        TransitionComponent={Zoom}
+      >
         <DialogContent
           style={{
             background: "#ddd",

@@ -5,19 +5,26 @@
   overflow-y: auto;
   background: url(messageBG.png) no-repeat center left;
   background-size: cover;
-  background-position-x: 110%;
-  padding: 10;
+  margin-left: 10px;
 }
 
 .message-bubble {
   background-color: #ff7704;
   color: #fff;
   text-align: left;
-  max-width: 60%;
-
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 10px 0;
+  display: inline-block;
+  max-width: 90%;
+  float: right;
+  clear: both;
+}
+
+.message-bubble img {
+  height: 30vh;
+  width: 40vh;
+  border-radius: 10px;
 }
 
 .employee-name {

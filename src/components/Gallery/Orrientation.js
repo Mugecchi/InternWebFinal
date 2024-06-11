@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import {
   Paper,
+  Zoom,
   Dialog,
   DialogContent,
   DialogActions,
@@ -107,7 +108,13 @@ const Orrientation = () => {
           </ImageList>
         </div>
       </Container>
-      <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
+      <Dialog
+        TransitionComponent={Zoom}
+        open={open}
+        onClose={handleClose}
+        maxWidth="lg"
+        fullWidth
+      >
         <DialogContent
           style={{
             background: "#ddd",

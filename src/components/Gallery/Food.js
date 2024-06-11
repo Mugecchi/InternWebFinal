@@ -10,6 +10,7 @@ import StarBorderIcon from "@material-ui/icons/StarBorder";
 import {
   Paper,
   Dialog,
+  Zoom,
   DialogContent,
   DialogActions,
   Button,
@@ -137,7 +138,13 @@ const Food = () => {
           </ImageList>
         </div>
       </Container>
-      <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        maxWidth="lg"
+        fullWidth
+        TransitionComponent={Zoom}
+      >
         <DialogContent
           style={{
             background: "#ddd",
