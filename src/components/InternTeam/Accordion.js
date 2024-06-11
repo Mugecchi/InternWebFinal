@@ -66,7 +66,7 @@ const Slider = () => {
     </>
   );
   return (
-    <>
+    <Typography>
       <ul className="slider">
         <li className="one">
           <a href="#">
@@ -119,17 +119,15 @@ const Slider = () => {
         <li className="seven">
           <a href="#">
             <h1>
-              <Typography style={{ textAlign: "center" }}>
-                FRENALYN
-                <br /> OPERATIONS TEAM
-              </Typography>
+              FRENALYN
+              <br /> OPERATIONS TEAM
             </h1>
           </a>
         </li>
         {!isMobile ? seconHalf : null}
       </ul>
       {isMobile ? <ul className="slider">{seconHalf}</ul> : null}
-    </>
+    </Typography>
   );
 };
 

@@ -59,7 +59,7 @@ export const useStyles = makeStyles((theme) => ({
     opacity: "0",
     textAlign: "center",
     fontFamily: `"Poppins"`,
-    animation: "$fadeEffect 5s ease-in-out infinite",
+    animation: "$fadeEffect 4s ease-in-out infinite",
     animationDelay: "3s",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
@@ -77,7 +77,7 @@ export const useStyles = makeStyles((theme) => ({
     fontStyle: "italic",
     animationDelay: "3s",
 
-    animation: "$fadeEffect 5s ease-in-out infinite",
+    animation: "$fadeEffect 4s ease-in-out infinite",
     marginTop: theme.spacing(1), // Add some margin between heading and description
     [theme.breakpoints.down("sm")]: {
       width: "50vw",
