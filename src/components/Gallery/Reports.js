@@ -10,7 +10,7 @@ import { Paper, Dialog, DialogContent, Zoom, Button } from "@material-ui/core";
 import { useStyles } from "./utils/useStyles";
 import { importAllImages } from "./utils/importImages";
 
-const BarDaGoalan = () => {
+const Reports = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -32,19 +32,15 @@ const BarDaGoalan = () => {
   useEffect(() => {
     try {
       const images = importAllImages(
-        require.context("./images/funMoment", false, /\.(png|jpe?g|svg)$/)
+        require.context("./images/reporting", false, /\.(png|jpe?g|JPG|svg)$/)
       );
-      console.log("Imported images:", images);
       const updatedPhotos = Object.keys(images).map((key, index) => ({
         img: images[key],
         title: `Photo ${index + 1}`,
         featured: (index + 1) % 5 === 1,
       }));
-      console.log("Updated photos:", updatedPhotos);
       setPhotos(updatedPhotos);
-    } catch (error) {
-      console.error("Error importing images:", error);
-    }
+    } catch (error) {}
   }, []);
   return (
     <div className={classes.container}>
@@ -116,4 +112,4 @@ const BarDaGoalan = () => {
   );
 };
 
-export default BarDaGoalan;
+export default Reports;

@@ -97,7 +97,7 @@ const albums = [
     ),
     thumbnail:
       "https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-6/447638316_1835900570170002_3322422175933087373_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF6I1cycDgPYDQUiN7xZr3_AmfK780yLvoCZ8rvzTIu-jf_BPZEkVUx3Xo3GwKjkRIOtU0Z4Gx54SCok0a_Ipxq&_nc_ohc=6Lcb8tcAv4EQ7kNvgEBNi-i&_nc_ht=scontent.fmnl4-1.fna&oh=00_AYD5PeyneoVb80fbKyfQwvA5l6A9PIFOHvhtQFDW59WpSg&oe=6665E2D6",
-    link: "/BarDaGoalan",
+    link: "/Reporting",
   },
   {
     title: (
@@ -162,7 +162,7 @@ const albums = [
   {
     title: (
       <>
-        BibleStudy
+        Bible Study
         <p style={{ fontSize: 16, fontWeight: 400 }}>
           - Together in His presence. Building a foundation of faith, one Bible
           study at a time.
