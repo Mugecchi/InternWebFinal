@@ -26,7 +26,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   image: {
     width: "100%",
-    borderRadius: "50px",
+    borderRadius: "10px",
     height: "100%",
     objectFit: "cover", // Ensures the entire image is visible without cropping
     cursor: "pointer", // Add cursor pointer to indicate clickability
