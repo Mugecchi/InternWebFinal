@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./PerCarousel.css";
 import Rado from "../Gallery/images/RadztechFamily/Rado.jpg";
 import Rose from "../Gallery/images/RadztechFamily/Rose.jpg";
@@ -11,320 +11,194 @@ import Rea from "../Gallery/images/RadztechFamily/Rea.jpg";
 import Lovely from "../Gallery/images/RadztechFamily/Lovely.jpg";
 import Raplh from "../Gallery/images/RadztechFamily/Ralph.jpg";
 import Jean from "../Gallery/images/RadztechFamily/Jean.jpg";
+import Chel from "../Gallery/images/RadztechFamily/Gechel.jpg";
 import { Avatar, Typography } from "@material-ui/core";
+const getRandomPastelColor = () => {
+  const r = Math.floor(Math.random() * 127 + 127);
+  const g = Math.floor(Math.random() * 127 + 127);
+  const b = Math.floor(Math.random() * 127 + 127);
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
+const teamMembers = [
+  {
+    name: "Rado D. Racimo",
+    position: "Chief Executive Officer/Lead Developer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    src: Rado,
+  },
+  {
+    name: "Venerose G. Racimo",
+    position: "Admin and Finance Executive",
+    src: Rose,
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  },
+  {
+    src: Archie,
+    name: "Acquilles A. Lazaro",
+    position: "Business Development Officer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  },
+  {
+    src: Ronald,
+    name: "Ronald Allan V. Miranda Jr.",
+    position: "Chief Operations Officer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  },
+  {
+    src: Rouella,
+    name: "Rouella Marie R. Agonoy",
+    position: "Junior Implementation Supervisor",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  },
+  {
+    src: Rea,
+    name: "Rea Bianca T. Rilan",
+    position: "Implementation Associate",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  },
+  {
+    name: "Lovely Joy C. Mina",
+    src: Lovely,
+    position: "Junior Implementation Associate",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  },
+  {
+    name: "Gechelle B. Ubaldo",
+    position: "Technical Support Associate",
+    src: Chel,
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  },
+  {
+    name: "Jean Carla D. Barrientos",
+    position: "Admin Staff",
+    src: Jean,
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  },
+  {
+    name: "Celso G. Laggui Jr.",
+    position: "Senior Software Developer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    src: Celso,
+  },
+  {
+    name: "Renen C. Rivera",
+    position: "Senior Software Developer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    src: Renen,
+  },
+];
 
 const PerCarousel = () => {
-  const [items, setItems] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
+  const carouselRef = useRef(null);
 
-  useEffect(() => {
-    const allItems = document.querySelectorAll(".per-carousel .item");
-    const itemsArray = Array.from(allItems);
-    setItems(itemsArray);
-
-    carouselClass(itemsArray);
-  }, []);
-
-  const carouselClass = (items) => {
-    items.forEach((item) => {
-      item.classList.remove(
-        "center-item",
-        "before-item",
-        "after-item",
-        "second-item",
-        "last-item"
-      );
+  const updateCarouselClasses = useCallback(() => {
+    const items = carouselRef.current?.querySelectorAll(".item");
+    items?.forEach((item, index) => {
+      item.className = "item";
       item.style.zIndex = "0";
     });
-
-    items[0].classList.add("center-item");
-    items[0].style.zIndex = "90";
-
-    if (items.length > 1) {
-      items[1].classList.add("second-item");
-      items[1].classList.add("after-item");
-      items[1].style.zIndex = "80";
+    if (!items) return;
+    const length = items.length;
+    items[currentIndex].classList.add("center-item");
+    items[currentIndex].style.zIndex = "90";
+    if (length > 1) {
+      items[(currentIndex + 1) % length].classList.add(
+        "second-item",
+        "after-item"
+      );
+      items[(currentIndex + 1) % length].style.zIndex = "80";
     }
-
-    if (items.length > 2) {
-      items[2].classList.add("after-item");
-      items[2].style.zIndex = "70";
+    if (length > 2) {
+      items[(currentIndex + 2) % length].classList.add("after-item");
+      items[(currentIndex + 2) % length].style.zIndex = "70";
     }
-
-    if (items.length > 3) {
-      items[items.length - 1].classList.add("last-item");
-      items[items.length - 1].classList.add("before-item");
-      items[items.length - 1].style.zIndex = "60";
+    if (length > 3) {
+      items[(currentIndex - 1 + length) % length].classList.add(
+        "last-item",
+        "before-item"
+      );
+      items[(currentIndex - 1 + length) % length].style.zIndex = "60";
     }
-
-    if (items.length > 4) {
-      items[items.length - 2].classList.add("before-item");
-      items[items.length - 2].style.zIndex = "50";
+    if (length > 4) {
+      items[(currentIndex - 2 + length) % length].classList.add("before-item");
+      items[(currentIndex - 2 + length) % length].style.zIndex = "50";
     }
-  };
-
-  const handleNextClick = () => {
-    const newItems = [...items.slice(1), items[0]];
-    setItems(newItems);
-    carouselClass(newItems);
-  };
-
-  const handlePrevClick = () => {
-    const newItems = [items[items.length - 1], ...items.slice(0, -1)];
-    setItems(newItems);
-    carouselClass(newItems);
-  };
+  }, [currentIndex]);
 
   useEffect(() => {
-    const nextButton = document.querySelector(".per-next");
-    const prevButton = document.querySelector(".per-prev");
+    updateCarouselClasses();
+  }, [currentIndex, updateCarouselClasses]);
 
-    nextButton.addEventListener("click", handleNextClick);
-    prevButton.addEventListener("click", handlePrevClick);
+  const handleNextClick = useCallback(
+    () => setCurrentIndex((prev) => (prev + 1) % teamMembers.length),
+    []
+  );
+  const handlePrevClick = useCallback(
+    () =>
+      setCurrentIndex(
+        (prev) => (prev - 1 + teamMembers.length) % teamMembers.length
+      ),
+    []
+  );
 
+  useEffect(() => {
+    intervalRef.current = setInterval(handleNextClick, 3000);
+    return () => clearInterval(intervalRef.current);
+  }, [handleNextClick]);
+
+  useEffect(() => {
     const handleTouchStart = (event) => {
       const xClick = event.touches[0].pageX;
       const handleTouchMove = (event) => {
         const xMove = event.touches[0].pageX;
-        if (Math.floor(xClick - xMove) > 5) {
-          handleNextClick();
-        } else if (Math.floor(xClick - xMove) < -5) {
-          handlePrevClick();
-        }
-        document
-          .querySelector(".per-carousel")
-          .removeEventListener("touchmove", handleTouchMove);
+        if (xClick - xMove > 5) handleNextClick();
+        if (xClick - xMove < -5) handlePrevClick();
+        carouselRef.current.removeEventListener("touchmove", handleTouchMove);
       };
-      document
-        .querySelector(".per-carousel")
-        .addEventListener("touchmove", handleTouchMove);
+      carouselRef.current.addEventListener("touchmove", handleTouchMove);
     };
-
-    document
-      .querySelector(".per-carousel")
-      .addEventListener("touchstart", handleTouchStart);
-
-    return () => {
-      nextButton.removeEventListener("click", handleNextClick);
-      prevButton.removeEventListener("click", handlePrevClick);
-      document
-        .querySelector(".per-carousel")
-        .removeEventListener("touchstart", handleTouchStart);
-    };
-  }, [items]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNextClick();
-    }, 3000); // 3 seconds interval
-
-    return () => clearInterval(interval);
-  }, [items]);
+    carouselRef.current.addEventListener("touchstart", handleTouchStart);
+    return () =>
+      carouselRef.current.removeEventListener("touchstart", handleTouchStart);
+  }, [handleNextClick, handlePrevClick]);
 
   return (
     <section className="Per-wrapper">
-      <div className="per-carousel">
-        <div className="item">
-          <div className="per-content">
-            <div className="per-pic">
-              <Avatar
-                style={{
-                  height: "200px",
-                  width: "200px",
-                  border: "1px solid #ff7704",
-                }}
-                src={Rado}
-              />
+      <div className="per-carousel" ref={carouselRef}>
+        {teamMembers.map((member, index) => (
+          <div
+            className="item"
+            style={{ backgroundColor: getRandomPastelColor() }}
+            key={index}
+          >
+            <div className="per-content">
+              {member.src && (
+                <div className="per-pic">
+                  <Avatar
+                    style={{
+                      height: "200px",
+                      width: "200px",
+                      border: "1px solid #ff7704",
+                    }}
+                    src={member.src}
+                  />
+                </div>
+              )}
+              <div className="per-title">
+                {member.name}
+                <Typography className="per-sub">{member.position}</Typography>
+              </div>
+              <Typography className="per-mess">{member.message}</Typography>
             </div>
-            <div className="per-title">
-              Rado D. Racimo
-              <Typography className="per-sub">
-                Chief Executive Officer/Lead Developer
-              </Typography>
-            </div>
-
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
           </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Venerose G. Racimo</h2>
-            <Typography className="per-sub">
-              Admin and Finance Executive
-            </Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Acquilles A. Lazaro</h2>
-            <Typography className="per-sub">
-              Business Development Officer
-            </Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Ronald Allan V. Miranda Jr.</h2>
-            <Typography className="per-sub">
-              Chief Operations Officer
-            </Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Rouella Marie R. Agonoy</h2>
-            <Typography className="per-sub">
-              Junior Implementation Supervisor
-            </Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Rea Bianca T. Rilan</h2>
-            <Typography className="per-sub">
-              Implementation Associate
-            </Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Lovely Joy C. Mina</h2>
-            <Typography className="per-sub">
-              Junior Implementation Associate
-            </Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Gechelle B. Ubaldo</h2>
-            <Typography className="per-sub">
-              Technical Support Associate
-            </Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Jean Carla D. Barrientos</h2>
-            <Typography className="per-sub">Admin Staff</Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Celso G. Laggui Jr.</h2>
-            <Typography className="per-sub">
-              Senior Software Developer
-            </Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
-        <div className="item">
-          <div className="per-content">
-            <h2 className="per-title">Renen C. Rivera</h2>
-            <Typography className="per-sub">
-              Senior Software Developer
-            </Typography>
-            <h4 className="per-mess">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </h4>
-          </div>
-        </div>
+        ))}
       </div>
       <div className="per-control">
         <div className="per-arrow">
-          <span className="per-prev">
+          <span className="per-prev" onClick={handlePrevClick}>
             <svg
               width="9px"
               height="17px"
@@ -349,7 +223,7 @@ const PerCarousel = () => {
               </g>
             </svg>
           </span>
-          <span className="per-next">
+          <span className="per-next" onClick={handleNextClick}>
             <svg
               width="9px"
               height="20px"
