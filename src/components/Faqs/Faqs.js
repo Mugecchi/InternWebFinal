@@ -24,9 +24,9 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginBottom: "0.5rem",
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   answerList: {
     textAlign: "justify",
@@ -58,7 +58,7 @@ const DropdownButton = ({ question }) => {
         onClick={handleClick}
       >
         {question}
-        <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: 'auto' }} />
+        <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: "auto" }} />
       </Button>
     </div>
   );
