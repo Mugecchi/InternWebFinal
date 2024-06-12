@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import bg from "./background.jpg";
+import bg from "./background.png";
 
 export const useStyles = makeStyles((theme) => ({
   "@keyframes fadeEffect": {
@@ -144,16 +144,16 @@ export const useStyles = makeStyles((theme) => ({
       position: "absolute",
       top: 0,
       height: "100%",
-      width: "51%",
+      width: "50%",
       border: "1px solid #ffffff",
       background: "#ff7704",
     },
     "&:before": {
-      left: 0,
+      left: -1.7,
       transform: "skew(0deg, 30deg)",
     },
     "&:after": {
-      right: 0,
+      right: -1.7,
       width: "50%",
       transform: "skew(0deg, -30deg)",
     },
