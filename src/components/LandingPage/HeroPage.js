@@ -1,7 +1,6 @@
-import { Box, Typography, Divider } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 import React from "react";
 import Wave from "./wave.svg";
-import bg from "./bg.png";
 import { useStyles } from "./useStyles";
 
 const HeroPage = () => {
@@ -27,6 +26,12 @@ const HeroPage = () => {
         <Typography className={classes.description}>
           YOUR INTERNSHIP, YOUR FUTURE
         </Typography>
+      </div>
+      <div className={classes.scrollContainer}>
+        <div className={classes.chevron}></div>
+        <div className={classes.chevron}></div>
+        <div className={classes.chevron}></div>
+        <span className={classes.scrollText}>Scroll down</span>
       </div>
     </Box>
   );

@@ -6,10 +6,15 @@ import {
   TextField,
   Button,
   Collapse,
+  Menu,
+  MenuItem,
+  Grow,
 } from "@material-ui/core";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { makeStyles } from "@material-ui/core/styles"; // Import makeStyles
-import "leaflet/dist/leaflet.css"; // Import Leaflet CSS
+import { makeStyles } from "@material-ui/core/styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import "leaflet/dist/leaflet.css";
 import markerIcon from "./marker.png";
 import L from "leaflet";
 
@@ -19,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginBottom: "0.5rem",
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   answerList: {
     textAlign: "justify",
@@ -27,6 +35,34 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
   },
 }));
+
+const DropdownButton = ({ question }) => {
+  const classes = useStyles();
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <div>
+      <Button
+        className={classes.button}
+        variant="contained"
+        color="primary"
+        fullWidth
+        onClick={handleClick}
+      >
+        {question}
+        <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: 'auto' }} />
+      </Button>
+    </div>
+  );
+};
 
 const Faq = ({ question, answer, isOpen, onMouseEnter, onMouseLeave }) => {
   const classes = useStyles();
@@ -37,16 +73,9 @@ const Faq = ({ question, answer, isOpen, onMouseEnter, onMouseLeave }) => {
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <Button
-        className={classes.button}
-        variant="contained"
-        color="primary"
-        fullWidth
-      >
-        {question}
-      </Button>
+      <DropdownButton question={question} />
       <Typography>
-        <Collapse in={isOpen}>
+        <Collapse in={isOpen} timeout="auto" unmountOnExit>
           <ul className={classes.answerList}>
             {answer.map((item, index) => (
               <li key={index}>{item}</li>
@@ -68,7 +97,7 @@ const Faqs = () => {
     message: "",
   });
 
-  const classes = useStyles(); // useStyles for your component
+  const classes = useStyles();
 
   const faqs = [
     {
@@ -246,8 +275,7 @@ const Faqs = () => {
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <Marker position={[16.932315, 121.767919]} icon={customIcon}>
                   <Popup>
-                    Don Jose Canciller Ave., District 1, <br /> Cauayan City
-                    3305, Isabela
+                    Don Jose Canciller Ave, Cauayan City, Isabela, Philippines
                   </Popup>
                 </Marker>
               </MapContainer>
