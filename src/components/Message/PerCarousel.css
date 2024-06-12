@@ -70,6 +70,7 @@
 .before-item {
   left: -30%;
   cursor: pointer;
+  color: transparent;
   transform: scaleY(0.8);
   opacity: 0.5;
 }
@@ -90,6 +91,7 @@
 .after-item {
   left: 30%;
   cursor: pointer;
+  color: transparent;
   transform: scaleY(0.8);
   opacity: 0.5;
 }
