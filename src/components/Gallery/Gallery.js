@@ -211,16 +211,14 @@ const Gallery = () => {
 
   return (
     <Container maxWidth="xl" className={classes.root}>
-      <LazyLoad>
-        {" "}
-        <div className={classes.heroSection}>
-          <div className={classes.overlay}></div>
-          <div className={classes.heroText}>
-            <Typography variant="h1">Interns Gallery</Typography>
-            <Typography variant="body1">A Journey Frozen in Time </Typography>
-          </div>
+      {" "}
+      <div className={classes.heroSection}>
+        <div className={classes.overlay}></div>
+        <div className={classes.heroText}>
+          <Typography variant="h1">Interns Gallery</Typography>
+          <Typography variant="body1">A Journey Frozen in Time </Typography>
         </div>
-      </LazyLoad>
+      </div>
       <Grid container spacing={2}>
         {albums.map((album, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
