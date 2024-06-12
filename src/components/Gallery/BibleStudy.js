@@ -69,20 +69,6 @@ const BibleStudy = () => {
                   alt={photo.title}
                   className={classes.image}
                 />
-                <ImageListItemBar
-                  title={photo.title}
-                  position="top"
-                  actionIcon={
-                    <IconButton
-                      aria-label={`star ${photo.title}`}
-                      className={classes.icon}
-                    >
-                      <StarBorderIcon />
-                    </IconButton>
-                  }
-                  actionPosition="left"
-                  className={classes.titleBar}
-                />
               </ImageListItem>
             ))}
           </ImageList>
