@@ -29,7 +29,7 @@ export const useStyles = makeStyles((theme) => ({
   image: {
     width: "100%",
     height: "100%",
-    objectFit: "contain", // Ensures the entire image is visible without cropping
+    objectFit: "cover", // Ensures the entire image is visible without cropping
     cursor: "pointer", // Add cursor pointer to indicate clickability
   },
 }));
