@@ -12,6 +12,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import hero from "../../images/album1/bg.jpg";
+import LazyLoad from "react-lazyload";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -210,23 +211,28 @@ const Gallery = () => {
 
   return (
     <Container maxWidth="xl" className={classes.root}>
-      <div className={classes.heroSection}>
-        <div className={classes.overlay}></div>
-        <div className={classes.heroText}>
-          <Typography variant="h1">Interns Gallery</Typography>
-          <Typography variant="body1">A Journey Frozen in Time </Typography>
+      <LazyLoad>
+        {" "}
+        <div className={classes.heroSection}>
+          <div className={classes.overlay}></div>
+          <div className={classes.heroText}>
+            <Typography variant="h1">Interns Gallery</Typography>
+            <Typography variant="body1">A Journey Frozen in Time </Typography>
+          </div>
         </div>
-      </div>
+      </LazyLoad>
       <Grid container spacing={2}>
         {albums.map((album, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
             <Card className={classes.card}>
               <CardActionArea component={Link} to={album.link}>
-                <CardMedia
-                  className={classes.media}
-                  image={album.thumbnail}
-                  title={album.title}
-                />
+                <LazyLoad>
+                  <CardMedia
+                    className={classes.media}
+                    image={album.thumbnail}
+                    title={album.title}
+                  />
+                </LazyLoad>
                 <div className={classes.cardTitle}>
                   <Typography variant="h5">{album.title}</Typography>
                   <Typography variant="body2">{album.subtitle}</Typography>

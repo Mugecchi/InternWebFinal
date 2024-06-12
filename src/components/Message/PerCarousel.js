@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./PerCarousel.css";
+import Raplh from "../Gallery/images/RadztechFamily/Ralph.png";
+import Jean from "../Gallery/images/RadztechFamily/Jean.png";
 import Rado from "../Gallery/images/RadztechFamily/Rado.png";
 import Rose from "../Gallery/images/RadztechFamily/Rose.png";
 import Celso from "../Gallery/images/RadztechFamily/Celso.png";
@@ -9,20 +11,7 @@ import Rouella from "../Gallery/images/RadztechFamily/Rouella.png";
 import Ronald from "../Gallery/images/RadztechFamily/Ronald.png";
 import Rea from "../Gallery/images/RadztechFamily/Rea.png";
 import Lovely from "../Gallery/images/RadztechFamily/Lovely.png";
-import Raplh from "../Gallery/images/RadztechFamily/Ralph.png";
-import Jean from "../Gallery/images/RadztechFamily/Jean.png";
-import Rado from "../Gallery/images/RadztechFamily/Rado.jpg";
-import Rose from "../Gallery/images/RadztechFamily/Rose.jpg";
-import Celso from "../Gallery/images/RadztechFamily/Celso.jpg";
-import Renen from "../Gallery/images/RadztechFamily/Renen.jpg";
-import Archie from "../Gallery/images/RadztechFamily/Archie.jpg";
-import Rouella from "../Gallery/images/RadztechFamily/Rouella.jpg";
-import Ronald from "../Gallery/images/RadztechFamily/Ronald.jpg";
-import Rea from "../Gallery/images/RadztechFamily/Rea.jpg";
-import Lovely from "../Gallery/images/RadztechFamily/Lovely.jpg";
-import Raplh from "../Gallery/images/RadztechFamily/Ralph.jpg";
-import Jean from "../Gallery/images/RadztechFamily/Jean.jpg";
-import Chel from "../Gallery/images/RadztechFamily/Gechel.jpg";
+import Chel from "../Gallery/images/RadztechFamily/Gechel.png";
 import { Avatar, Typography } from "@material-ui/core";
 const getRandomPastelColor = () => {
   const r = Math.floor(Math.random() * 127 + 127);
@@ -190,8 +179,9 @@ const PerCarousel = () => {
                 <div className="per-pic">
                   <Avatar
                     style={{
-                      height: "200px",
-                      width: "200px",
+                      height: "35vh",
+                      width: "35vh",
+                      background: "white",
                       border: "1px solid #ff7704",
                     }}
                     src={member.src}
@@ -199,9 +189,10 @@ const PerCarousel = () => {
                 </div>
               )}
               <div className="per-title">
-                {member.name}
-                <Typography className="per-sub">{member.position}</Typography>
+                <Typography>{member.name}</Typography>
               </div>
+              <Typography variant="subtitle2">{member.position}</Typography>
+
               <Typography className="per-mess">{member.message}</Typography>
             </div>
           </div>
