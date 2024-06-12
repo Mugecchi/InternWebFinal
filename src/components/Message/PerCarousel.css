@@ -125,12 +125,28 @@
 }
 
 .per-title {
-  margin-top: 70px;
+  margin-top: -20vh;
   padding-top: 450px;
 }
 
 .per-sub {
   margin-top: -20px;
+}
+
+.per-pic {
+  padding: 0 50px;
+  top: 35%;
+
+  position: absolute;
+}
+
+.per-mess {
+  padding: 0 50px;
+  text-align: justify;
+  text-weight: bold;
+  bottom: 15%;
+
+  position: absolute;
 }
 
 .item:not(.center-item) .per-class-name,

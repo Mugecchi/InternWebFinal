@@ -115,66 +115,166 @@ const PerCarousel = () => {
           <div className="per-content">
             <h2 className="per-title">Rado D. Racimo</h2>
             <h3 className="per-sub">Chief Executive Officer/Lead Developer</h3>
+            <img />
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Venerose G. Racimo</h2>
             <h3 className="per-sub">Admin and Finance Executive</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Acquilles A. Lazaro</h2>
             <h3 className="per-sub">Business Development Officer</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Ronald Allan V. Miranda Jr.</h2>
             <h3 className="per-sub">Chief Operations Officer</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Rouella Marie R. Agonoy</h2>
             <h3 className="per-sub">Junior Implementation Supervisor</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Rea Bianca T. Rilan</h2>
             <h3 className="per-sub">Implementation Associate</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Lovely Joy C. Mina</h2>
             <h3 className="per-sub">Junior Implementation Associate</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Gechelle B. Ubaldo</h2>
             <h3 className="per-sub">Technical Support Associate</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Jean Carla D. Barrientos</h2>
             <h3 className="per-sub">Admin Staff</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Celso G. Laggui Jr.</h2>
             <h3 className="per-sub">Senior Software Developer</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Renen C. Rivera</h2>
             <h3 className="per-sub">Senior Software Developer</h3>
+            <h4 className="per-mess">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h4>
           </div>
         </div>
       </div>
