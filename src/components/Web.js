@@ -11,7 +11,7 @@ import InternData from "./Teams/Testimonials/InternData";
 import Slider from "./InternTeam/Accordion";
 import Faqs from "./Faqs/Faqs";
 import HeroPage from "./LandingPage/HeroPage";
-import Message from "./Message/Messages";
+import Message from "./Message/PerCarousel";
 import Gallery from "./Gallery/Gallery";
 import Purpose from "./Purpose/Purpose";
 
