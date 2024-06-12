@@ -1,5 +1,16 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./PerCarousel.css";
+import Rado from "../Gallery/images/RadztechFamily/Rado.png";
+import Rose from "../Gallery/images/RadztechFamily/Rose.png";
+import Celso from "../Gallery/images/RadztechFamily/Celso.png";
+import Renen from "../Gallery/images/RadztechFamily/Renen.png";
+import Archie from "../Gallery/images/RadztechFamily/Archie.png";
+import Rouella from "../Gallery/images/RadztechFamily/Rouella.png";
+import Ronald from "../Gallery/images/RadztechFamily/Ronald.png";
+import Rea from "../Gallery/images/RadztechFamily/Rea.png";
+import Lovely from "../Gallery/images/RadztechFamily/Lovely.png";
+import Raplh from "../Gallery/images/RadztechFamily/Ralph.png";
+import Jean from "../Gallery/images/RadztechFamily/Jean.png";
 import Rado from "../Gallery/images/RadztechFamily/Rado.jpg";
 import Rose from "../Gallery/images/RadztechFamily/Rose.jpg";
 import Celso from "../Gallery/images/RadztechFamily/Celso.jpg";
