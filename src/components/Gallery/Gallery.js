@@ -13,6 +13,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import hero from "../../images/album1/bg.jpg";
 import LazyLoad from "react-lazyload";
+import bs from "../Gallery/images/bibleStudy/1.jpg";
+import birth from "../Gallery/images/birthday/1.jpg";
+import cli from "../Gallery/images/client/1.jpg";
+import deplo from "../Gallery/images/deploMoment/1.jpeg";
+import food from "../Gallery/images/food/1.jpg";
+import fun from "../Gallery/images/funMoment/1.JPG";
+import ori from "../Gallery/images/orientation/1.jpg";
+import rep from "../Gallery/images/reporting/1.JPG";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -96,8 +104,7 @@ const albums = [
         </p>
       </>
     ),
-    thumbnail:
-      "https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-6/447638316_1835900570170002_3322422175933087373_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF6I1cycDgPYDQUiN7xZr3_AmfK780yLvoCZ8rvzTIu-jf_BPZEkVUx3Xo3GwKjkRIOtU0Z4Gx54SCok0a_Ipxq&_nc_ohc=6Lcb8tcAv4EQ7kNvgEBNi-i&_nc_ht=scontent.fmnl4-1.fna&oh=00_AYD5PeyneoVb80fbKyfQwvA5l6A9PIFOHvhtQFDW59WpSg&oe=6665E2D6",
+    thumbnail: rep,
     link: "/Reporting",
   },
   {
@@ -111,8 +118,7 @@ const albums = [
         </p>{" "}
       </>
     ),
-    thumbnail:
-      "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/447634084_1835902723503120_1336065542110380525_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFDtdLGWMza8qMk0GgT6iaMHKryrP_PS-IcqvKs_89L4rolfRvOWW6Jgm2oO4-7iGSoPmR11BDBjx09rbMPpj3f&_nc_ohc=P6enxm_f_XAQ7kNvgExxH4k&_nc_ht=scontent.fmnl4-7.fna&oh=00_AYCuHSszEHxedVp334hG1ksY0Dm9CcDxGiG0G9QbI958EQ&oe=6665E307",
+    thumbnail: ori,
     link: "/Orrientation",
   },
   {
@@ -127,8 +133,7 @@ const albums = [
         </p>
       </>
     ),
-    thumbnail:
-      "https://scontent.fmnl4-6.fna.fbcdn.net/v/t39.30808-6/447616330_1835903426836383_990556026098755227_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFjmubmwclqQGHMXYUIs4kYUyyTFXvVdwtTLJMVe9V3C8stZFNiMwtmeUtY3RG-i5NaXhL4mFsY3eiZGf7DvdfE&_nc_ohc=L87oigqxfOcQ7kNvgEmMhQE&_nc_ht=scontent.fmnl4-6.fna&oh=00_AYAynOl8xaUSkG1Un_XS4hEix8QhBBwo7MfB3Rc7023KWg&oe=6665F465",
+    thumbnail: deplo,
     link: "/DeploMoment",
   },
   {
@@ -142,8 +147,7 @@ const albums = [
         </p>
       </>
     ),
-    thumbnail:
-      "https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/447555963_1835904470169612_2860019519222343637_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEMk5wFbLtDmWQwcU3p0tSkUar0ADKSzSZRqvQAMpLNJp4LvCg8D1ByPCcSs8QJBBLGS_gFukCov3GmYTG9Y47U&_nc_ohc=n1HPxOvblYUQ7kNvgFAK5FF&_nc_ht=scontent.fmnl4-3.fna&oh=00_AYA3VEoZliE1S9hbC2fcOADS9TeaXrKyKWM-C5hFIeu-cQ&oe=6665FBF7",
+    thumbnail: cli,
     link: "/Client",
   },
   {
@@ -156,8 +160,7 @@ const albums = [
         </p>
       </>
     ),
-    thumbnail:
-      "https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-6/447634533_1835905043502888_2886184013118430640_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFiUErejNvLkjsLZXm97mEyU-iVA2AQf4xT6JUDYBB_jDWLRx4sV4tLZYTjS9gHU9jj5lz2IT0nNMzbsuowXqm4&_nc_ohc=8Pbfc3ECD64Q7kNvgHLoWtY&_nc_ht=scontent.fmnl4-1.fna&oh=00_AYDnfx7_qWd2of_ZTtA_hK0PXLrSw1K8jFKkf4k1nfXDfg&oe=6665EDF3",
+    thumbnail: food,
     link: "/Food",
   },
   {
@@ -171,8 +174,7 @@ const albums = [
       </>
     ),
     link: "/BibleStudy",
-    thumbnail:
-      "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/447616622_1835905440169515_7091066312287955012_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGFZpGOa5NLTL8UzyqEnkTAv-uMT3joSHG_64xPeOhIcTruyd_833UYrNKqZR_9rpDoBBdKyXH_6qC4DYreTpRw&_nc_ohc=ejyTU7AgE6gQ7kNvgHvkT43&_nc_ht=scontent.fmnl4-7.fna&oh=00_AYAPV99CMNHtMtleIJDFzBikqbYcfjpkNKP82R_EWcaMag&oe=66660DD4",
+    thumbnail: bs,
   },
   {
     title: (
@@ -185,8 +187,7 @@ const albums = [
         </p>
       </>
     ),
-    thumbnail:
-      "https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/447634070_1835905766836149_1517968031101273750_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEcHBiRgt4PNsDmV7NgOT4TWeCtQTEcLwFZ4K1BMRwvAfZE4TPvmW0nGkcQ7E4vvHe7WOk_guZo7rQTe7f7qL8h&_nc_ohc=18w0El_0_fgQ7kNvgFFyWXe&_nc_ht=scontent.fmnl4-3.fna&oh=00_AYCtFpvyUk0d-j-3BPKDTu6wQRokRIY1hOa8I0gIns4mqw&oe=6666035B",
+    thumbnail: birth,
     link: "/Birthday",
   },
   {
@@ -200,8 +201,7 @@ const albums = [
         </p>{" "}
       </>
     ),
-    thumbnail:
-      "https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/447620223_1835909473502445_7111774670779690064_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFDBVxtsEtgNNFInuFARzv0Xg8CwJPXF_NeDwLAk9cX89JVaJLy7KTewv_gS-RlcCUgbih34K0pYiTsy8oYeQsf&_nc_ohc=2mOOu3PTCCEQ7kNvgH1dBnz&_nc_ht=scontent.fmnl4-4.fna&oh=00_AYB5ct8SEkm5d7Ofm22s_R3v7CdE_O0s97jrcOXdER9zbQ&oe=6665E598",
+    thumbnail: fun,
     link: "/FunMoment",
   },
 ];
