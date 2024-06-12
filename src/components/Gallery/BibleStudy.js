@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import ImageList from "@material-ui/core/ImageList";
@@ -6,20 +6,15 @@ import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 import IconButton from "@material-ui/core/IconButton";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
-import {
-  Paper,
-  Dialog,
-  DialogContent,
-  DialogActions,
-  Button,
-  Zoom,
-} from "@material-ui/core";
+import { Paper, Dialog, DialogContent, Zoom, Button } from "@material-ui/core";
 import { useStyles } from "./utils/useStyles";
+import { importAllImages } from "./utils/importImages";
 
 const BibleStudy = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [photos, setPhotos] = useState([]);
 
   const handleClickOpen = (image) => {
     setSelectedImage(image);
@@ -34,14 +29,19 @@ const BibleStudy = () => {
     window.history.back();
   };
 
-  const photos = [
-    {
-      img: "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/447616622_1835905440169515_7091066312287955012_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGFZpGOa5NLTL8UzyqEnkTAv-uMT3joSHG_64xPeOhIcTruyd_833UYrNKqZR_9rpDoBBdKyXH_6qC4DYreTpRw&_nc_ohc=ejyTU7AgE6gQ7kNvgHvkT43&_nc_ht=scontent.fmnl4-7.fna&oh=00_AYAPV99CMNHtMtleIJDFzBikqbYcfjpkNKP82R_EWcaMag&oe=66660DD4",
-      title: "Photo 1",
-      featured: true,
-    },
-  ];
-
+  useEffect(() => {
+    try {
+      const images = importAllImages(
+        require.context("./images/bibleStudy", false, /\.(png|jpe?g|JPG|svg)$/)
+      );
+      const updatedPhotos = Object.keys(images).map((key, index) => ({
+        img: images[key],
+        title: `Photo ${index + 1}`,
+        featured: (index + 1) % 5 === 1,
+      }));
+      setPhotos(updatedPhotos);
+    } catch (error) {}
+  }, []);
   return (
     <div className={classes.container}>
       <Button
@@ -53,7 +53,7 @@ const BibleStudy = () => {
       </Button>
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
-          BibleStudy
+          Bible Study
         </Typography>
         <div className={classes.root}>
           <ImageList rowHeight={300} gap={12} className={classes.imageList}>
@@ -62,9 +62,13 @@ const BibleStudy = () => {
                 key={photo.img}
                 cols={photo.featured ? 2 : 1}
                 rows={photo.featured ? 2 : 1}
-                onClick={() => handleClickOpen(photo.img)} // Open modal on image click
+                onClick={() => handleClickOpen(photo.img)}
               >
-                <img src={photo.img} className={classes.image} />
+                <img
+                  src={photo.img}
+                  alt={photo.title}
+                  className={classes.image}
+                />
                 <ImageListItemBar
                   title={photo.title}
                   position="top"
@@ -84,25 +88,15 @@ const BibleStudy = () => {
           </ImageList>
         </div>
       </Container>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        maxWidth="lg"
-        fullWidth
-        TransitionComponent={Zoom}
-      >
-        <DialogContent
-          style={{
-            background: "#ddd",
-            maxWidth: "80vw",
-            margin: "auto",
-            overflow: "auto",
-          }}
-        >
+      <Dialog TransitionComponent={Zoom} open={open} onClose={handleClose}>
+        <DialogContent maxWidth="xl" maxHeight="xl">
           <img
             src={selectedImage}
             alt="Selected"
             style={{
+              alignSelf: "center",
+              justifySelf: "center",
+              flexDirection: "column",
               maxWidth: "90%",
               maxHeight: "100%",
               margin: "auto",
@@ -110,11 +104,9 @@ const BibleStudy = () => {
             }}
           />
         </DialogContent>
-        <DialogActions style={{ background: "#ddd" }}>
-          <Button onClick={handleClose} color="primary" variant="contained">
-            Close
-          </Button>
-        </DialogActions>
+        <Button onClick={handleClose} color="primary" variant="contained">
+          Close
+        </Button>
       </Dialog>
     </div>
   );

@@ -23,7 +23,7 @@ const routes = [
         element: Faqs,
       },
       {
-        path: "bardagoalan",
+        path: "Reporting",
         element: BarDaGoalan,
       },
       {
