@@ -88,7 +88,13 @@ const BibleStudy = () => {
           </ImageList>
         </div>
       </Container>
-      <Dialog TransitionComponent={Zoom} open={open} onClose={handleClose}>
+      <Dialog
+        TransitionComponent={Zoom}
+        open={open}
+        onClose={handleClose}
+        maxWidth="xl"
+        maxHeight="xl"
+      >
         <DialogContent maxWidth="xl" maxHeight="xl">
           <img
             src={selectedImage}

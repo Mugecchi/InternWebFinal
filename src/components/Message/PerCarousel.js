@@ -1,5 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./PerCarousel.css";
+import Rado from "../Gallery/images/RadztechFamily/Rado.jpg";
+import Rose from "../Gallery/images/RadztechFamily/Rose.jpg";
+import Celso from "../Gallery/images/RadztechFamily/Celso.jpg";
+import Renen from "../Gallery/images/RadztechFamily/Renen.jpg";
+import Archie from "../Gallery/images/RadztechFamily/Archie.jpg";
+import Rouella from "../Gallery/images/RadztechFamily/Rouella.jpg";
+import Ronald from "../Gallery/images/RadztechFamily/Ronald.jpg";
+import Rea from "../Gallery/images/RadztechFamily/Rea.jpg";
+import Lovely from "../Gallery/images/RadztechFamily/Lovely.jpg";
+import Raplh from "../Gallery/images/RadztechFamily/Ralph.jpg";
+import Jean from "../Gallery/images/RadztechFamily/Jean.jpg";
+import { Avatar, Typography } from "@material-ui/core";
 
 const PerCarousel = () => {
   const [items, setItems] = useState([]);
@@ -110,12 +122,26 @@ const PerCarousel = () => {
 
   return (
     <section className="Per-wrapper">
-      <div className="per-carousel carousel-two">
+      <div className="per-carousel">
         <div className="item">
           <div className="per-content">
-            <h2 className="per-title">Rado D. Racimo</h2>
-            <h3 className="per-sub">Chief Executive Officer/Lead Developer</h3>
-            <img />
+            <div className="per-pic">
+              <Avatar
+                style={{
+                  height: "200px",
+                  width: "200px",
+                  border: "1px solid #ff7704",
+                }}
+                src={Rado}
+              />
+            </div>
+            <div className="per-title">
+              Rado D. Racimo
+              <Typography className="per-sub">
+                Chief Executive Officer/Lead Developer
+              </Typography>
+            </div>
+
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -130,7 +156,9 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Venerose G. Racimo</h2>
-            <h3 className="per-sub">Admin and Finance Executive</h3>
+            <Typography className="per-sub">
+              Admin and Finance Executive
+            </Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -145,7 +173,9 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Acquilles A. Lazaro</h2>
-            <h3 className="per-sub">Business Development Officer</h3>
+            <Typography className="per-sub">
+              Business Development Officer
+            </Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -160,7 +190,9 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Ronald Allan V. Miranda Jr.</h2>
-            <h3 className="per-sub">Chief Operations Officer</h3>
+            <Typography className="per-sub">
+              Chief Operations Officer
+            </Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -175,7 +207,9 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Rouella Marie R. Agonoy</h2>
-            <h3 className="per-sub">Junior Implementation Supervisor</h3>
+            <Typography className="per-sub">
+              Junior Implementation Supervisor
+            </Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -190,7 +224,9 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Rea Bianca T. Rilan</h2>
-            <h3 className="per-sub">Implementation Associate</h3>
+            <Typography className="per-sub">
+              Implementation Associate
+            </Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -205,7 +241,9 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Lovely Joy C. Mina</h2>
-            <h3 className="per-sub">Junior Implementation Associate</h3>
+            <Typography className="per-sub">
+              Junior Implementation Associate
+            </Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -220,7 +258,9 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Gechelle B. Ubaldo</h2>
-            <h3 className="per-sub">Technical Support Associate</h3>
+            <Typography className="per-sub">
+              Technical Support Associate
+            </Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -235,7 +275,7 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Jean Carla D. Barrientos</h2>
-            <h3 className="per-sub">Admin Staff</h3>
+            <Typography className="per-sub">Admin Staff</Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -250,7 +290,9 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Celso G. Laggui Jr.</h2>
-            <h3 className="per-sub">Senior Software Developer</h3>
+            <Typography className="per-sub">
+              Senior Software Developer
+            </Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -265,7 +307,9 @@ const PerCarousel = () => {
         <div className="item">
           <div className="per-content">
             <h2 className="per-title">Renen C. Rivera</h2>
-            <h3 className="per-sub">Senior Software Developer</h3>
+            <Typography className="per-sub">
+              Senior Software Developer
+            </Typography>
             <h4 className="per-mess">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
