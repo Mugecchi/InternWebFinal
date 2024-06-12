@@ -77,7 +77,6 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: 900,
     textAlign: "center",
     fontFamily: `"Poppins"`,
-    animation: "$fadeEffect 5s ease-out ",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
       width: "70vw",
@@ -90,7 +89,6 @@ export const useStyles = makeStyles((theme) => ({
     color: "white",
     textShadow: `2px 2px 4px rgba(0, 0, 0, 0.863)`,
     fontStyle: "italic",
-    animation: "$fadeEffect 5s ease-out ",
     marginTop: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
       width: "50vw",
@@ -100,9 +98,13 @@ export const useStyles = makeStyles((theme) => ({
   centerPiece: {
     position: "absolute",
     zIndex: 1,
+    opacity: 0,
     borderRadius: "50px",
     backgroundSize: "cover",
+    animation: "$fadeEffect 5s ease-out ",
+    animationDelay: "3s",
     display: "flex",
+    animationFillMode: "forwards",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
@@ -152,6 +154,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   scrollText: {
     display: "block",
+    zIndex: 10,
     marginTop: "65px",
     fontFamily: '"Helvetica Neue", "Helvetica", Arial, sans-serif',
     fontSize: "12px",
