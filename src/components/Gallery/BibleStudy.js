@@ -89,7 +89,7 @@ const BibleStudy = () => {
         </div>
       </Container>
       <Dialog TransitionComponent={Zoom} open={open} onClose={handleClose}>
-        <DialogContent maxWidth="xl" maxHeight="xl">
+        <DialogContent>
           <img
             src={selectedImage}
             alt="Selected"

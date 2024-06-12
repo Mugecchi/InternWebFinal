@@ -279,9 +279,6 @@ const PerCarousel = () => {
         </div>
       </div>
       <div className="per-control">
-        <div className="per-line">
-          <div className="actual-line"></div>
-        </div>
         <div className="per-arrow">
           <span className="per-prev">
             <svg
