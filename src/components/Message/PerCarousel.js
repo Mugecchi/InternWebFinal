@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./PerCarousel.css";
-import Raplh from "../Gallery/images/RadztechFamily/Ralph.png";
+import Ralph from "../Gallery/images/RadztechFamily/Ralph.png";
 import Jean from "../Gallery/images/RadztechFamily/Jean.png";
 import Rado from "../Gallery/images/RadztechFamily/Rado.png";
 import Rose from "../Gallery/images/RadztechFamily/Rose.png";
@@ -49,6 +49,12 @@ const teamMembers = [
     src: Rouella,
     name: "Rouella Marie R. Agonoy",
     position: "Junior Implementation Supervisor",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+  },
+  {
+    src: Ralph,
+    name: "Ralph Daryll J. Galam",
+    position: "Senior Implementation Associate",
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
   },
   {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import ImageList from "@material-ui/core/ImageList";
@@ -6,21 +6,15 @@ import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 import IconButton from "@material-ui/core/IconButton";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
-import {
-  Paper,
-  Dialog,
-  DialogContent,
-  DialogActions,
-  Button,
-  Zoom,
-} from "@material-ui/core";
+import { Paper, Dialog, DialogContent, Zoom, Button } from "@material-ui/core";
 import { useStyles } from "./utils/useStyles";
-import zIndex from "@material-ui/core/styles/zIndex";
+import { importAllImages } from "./utils/importImages";
 
 const Client = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [photos, setPhotos] = useState([]);
 
   const handleClickOpen = (image) => {
     setSelectedImage(image);
@@ -30,17 +24,24 @@ const Client = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
   const handleBackClick = () => {
     window.history.back();
   };
-  const photos = [
-    {
-      img: "https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/447555963_1835904470169612_2860019519222343637_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEMk5wFbLtDmWQwcU3p0tSkUar0ADKSzSZRqvQAMpLNJp4LvCg8D1ByPCcSs8QJBBLGS_gFukCov3GmYTG9Y47U&_nc_ohc=n1HPxOvblYUQ7kNvgFAK5FF&_nc_ht=scontent.fmnl4-3.fna&oh=00_AYA3VEoZliE1S9hbC2fcOADS9TeaXrKyKWM-C5hFIeu-cQ&oe=6665FBF7",
-      title: "Photo 2",
-      featured: true,
-    },
-  ];
 
+  useEffect(() => {
+    try {
+      const images = importAllImages(
+        require.context("./images/client", false, /\.(png|jpe?g|JPG|svg)$/)
+      );
+      const updatedPhotos = Object.keys(images).map((key, index) => ({
+        img: images[key],
+        title: `Photo ${index + 1}`,
+        featured: (index + 1) % 5 === 1,
+      }));
+      setPhotos(updatedPhotos);
+    } catch (error) {}
+  }, []);
   return (
     <div className={classes.container}>
       <Button
@@ -50,7 +51,6 @@ const Client = () => {
       >
         Back
       </Button>
-
       <Container component={Paper}>
         <Typography variant="h4" gutterBottom align="center">
           Client
@@ -62,9 +62,13 @@ const Client = () => {
                 key={photo.img}
                 cols={photo.featured ? 2 : 1}
                 rows={photo.featured ? 2 : 1}
-                onClick={() => handleClickOpen(photo.img)} // Open modal on image click
+                onClick={() => handleClickOpen(photo.img)}
               >
-                <img src={photo.img} className={classes.image} />
+                <img
+                  src={photo.img}
+                  alt={photo.title}
+                  className={classes.image}
+                />
                 <ImageListItemBar
                   title={photo.title}
                   position="top"
@@ -84,25 +88,15 @@ const Client = () => {
           </ImageList>
         </div>
       </Container>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        maxWidth="lg"
-        fullWidth
-        TransitionComponent={Zoom}
-      >
-        <DialogContent
-          style={{
-            background: "#ddd",
-            maxWidth: "80vw", // Adjust the width as needed
-            margin: "auto",
-            overflow: "auto",
-          }}
-        >
+      <Dialog TransitionComponent={Zoom} open={open} onClose={handleClose}>
+        <DialogContent>
           <img
             src={selectedImage}
             alt="Selected"
             style={{
+              alignSelf: "center",
+              justifySelf: "center",
+              flexDirection: "column",
               maxWidth: "90%",
               maxHeight: "100%",
               margin: "auto",
@@ -110,11 +104,9 @@ const Client = () => {
             }}
           />
         </DialogContent>
-        <DialogActions style={{ background: "#ddd" }}>
-          <Button onClick={handleClose} color="primary" variant="contained">
-            Close
-          </Button>
-        </DialogActions>
+        <Button onClick={handleClose} color="primary" variant="contained">
+          Close
+        </Button>
       </Dialog>
     </div>
   );

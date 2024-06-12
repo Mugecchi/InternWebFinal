@@ -60,6 +60,7 @@
   height: 600px; /* height of the 2nd level divs */
   width: 100%;
   background-color: rgb(255, 255, 255);
+  border-radius: 50px;
   transition: height 0.3s, left 0.3s, box-shadow 0.3s, transform 0.3s,
     filter 0.3s, opacity 0.3s;
   position: absolute;
