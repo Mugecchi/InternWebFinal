@@ -137,7 +137,7 @@
 .per-mess {
   padding: 0 50px;
   text-align: justify;
-  text-weight: bold;
+  font-weight: bold;
   bottom: 15%;
  
   position: absolute;
