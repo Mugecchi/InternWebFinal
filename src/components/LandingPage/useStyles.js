@@ -6,11 +6,9 @@ export const useStyles = makeStyles((theme) => ({
     "0%": {
       opacity: 0,
     },
-    "25%": {
-      opacity: 1,
-    },
+
     "100%": {
-      opacity: 0,
+      opacity: 1,
     },
   },
   "@keyframes blurOff": {
@@ -71,34 +69,28 @@ export const useStyles = makeStyles((theme) => ({
   },
   heading: {
     zIndex: 10,
-    fontSize: "3rem",
+    fontSize: "5rem",
     fontStyle: "italic",
-    backgroundColor: "#ff7504ff",
-    width: "50vw",
-    border: "3px solid white",
+    width: "100vw",
+    textShadow: `2px 2px 4px rgba(0, 0, 0, 0.863)`,
     color: "#ffffff",
     fontWeight: 900,
-    opacity: "0",
     textAlign: "center",
     fontFamily: `"Poppins"`,
-    animation: "$fadeEffect 4s ease-in-out infinite",
-    animationDelay: "3s",
+    animation: "$fadeEffect 5s ease-out ",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
       width: "70vw",
     },
   },
   description: {
-    fontSize: "1.5rem",
+    fontSize: "4rem",
     fontWeight: "normal",
-    width: "30vw",
-    opacity: "0",
-    color: "#000000",
-    backgroundColor: "#ffffffff",
-    border: "3px solid #ff7704",
+    width: "100vw",
+    color: "white",
+    textShadow: `2px 2px 4px rgba(0, 0, 0, 0.863)`,
     fontStyle: "italic",
-    animationDelay: "3s",
-    animation: "$fadeEffect 4s ease-in-out infinite",
+    animation: "$fadeEffect 5s ease-out ",
     marginTop: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
       width: "50vw",
@@ -145,8 +137,8 @@ export const useStyles = makeStyles((theme) => ({
       top: 0,
       height: "100%",
       width: "50%",
-      border: "1px solid #ffffff",
-      background: "#ff7704",
+      border: "1px solid #ff7704",
+      background: "white",
     },
     "&:before": {
       left: -1.7,

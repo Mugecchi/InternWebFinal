@@ -14,7 +14,6 @@ import {
   Container,
 } from "@material-ui/core";
 import Carousel from "react-multi-carousel";
-import LazyLoad from "react-lazyload";
 import "react-multi-carousel/lib/styles.css";
 import Testimonial from "./Testimonial"; // Adjust the import path as needed
 

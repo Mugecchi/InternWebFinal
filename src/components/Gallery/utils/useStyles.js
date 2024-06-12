@@ -19,15 +19,14 @@ export const useStyles = makeStyles((theme) => ({
     transform: "translateZ(0)",
   },
   titleBar: {
-    background:
-      "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
-      "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+    display: "none",
   },
   icon: {
     color: "white",
   },
   image: {
     width: "100%",
+    borderRadius: "50px",
     height: "100%",
     objectFit: "cover", // Ensures the entire image is visible without cropping
     cursor: "pointer", // Add cursor pointer to indicate clickability
