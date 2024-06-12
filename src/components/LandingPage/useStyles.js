@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import bg from "./Ryann.jpg";
+import bg from "./background.jpg";
 
 export const useStyles = makeStyles((theme) => ({
   "@keyframes fadeEffect": {
@@ -106,10 +106,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   centerPiece: {
-    height: "80vh",
     position: "absolute",
-    top: "5vh",
-    width: "80vw",
     zIndex: 1,
     borderRadius: "50px",
     backgroundSize: "cover",
@@ -139,13 +136,17 @@ export const useStyles = makeStyles((theme) => ({
     "&:nth-child(2)": {
       animationDelay: "2s",
     },
+    "&:nth-child(3)": {
+      animationDelay: "3s",
+    },
     "&:before, &:after": {
       content: '""',
       position: "absolute",
       top: 0,
       height: "100%",
       width: "51%",
-      background: "#fff",
+      border: "1px solid #ffffff",
+      background: "#ff7704",
     },
     "&:before": {
       left: 0,
@@ -162,7 +163,7 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: "65px",
     fontFamily: '"Helvetica Neue", "Helvetica", Arial, sans-serif',
     fontSize: "12px",
-    color: "#fff",
+    color: "#ffffff",
     textTransform: "uppercase",
     whiteSpace: "nowrap",
     opacity: 0.25,

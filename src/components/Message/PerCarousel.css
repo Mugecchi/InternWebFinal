@@ -2,12 +2,18 @@
   padding: 40px 0;
   max-width: 800px;
   margin: auto;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-
+.Per-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
 .per-next {
   margin-left: 10px;
 }
@@ -61,6 +67,7 @@
   left: -30%;
   filter: blur(3px);
   cursor: pointer;
+  color: transparent;
 }
 
 .center-item {
@@ -77,6 +84,7 @@
 .after-item {
   left: 30%;
   filter: blur(3px);
+  color: transparent;
   cursor: pointer;
 }
 
@@ -117,4 +125,9 @@
 
 .per-sub {
   margin-top: -20px;
+}
+.item:not(.center-item) .per-class-name,
+.item:not(.center-item) .per-title,
+.item:not(.center-item) .per-sub {
+  color: transparent;
 }

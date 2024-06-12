@@ -63,8 +63,11 @@ const PerCarousel = () => {
   };
 
   useEffect(() => {
-    document.querySelector(".per-next").addEventListener("click", handleNextClick);
-    document.querySelector(".per-prev").addEventListener("click", handlePrevClick);
+    const nextButton = document.querySelector(".per-next");
+    const prevButton = document.querySelector(".per-prev");
+
+    nextButton.addEventListener("click", handleNextClick);
+    prevButton.addEventListener("click", handlePrevClick);
 
     const handleTouchStart = (event) => {
       const xClick = event.touches[0].pageX;
@@ -75,18 +78,34 @@ const PerCarousel = () => {
         } else if (Math.floor(xClick - xMove) < -5) {
           handlePrevClick();
         }
-        document.querySelector(".per-carousel").removeEventListener("touchmove", handleTouchMove);
+        document
+          .querySelector(".per-carousel")
+          .removeEventListener("touchmove", handleTouchMove);
       };
-      document.querySelector(".per-carousel").addEventListener("touchmove", handleTouchMove);
+      document
+        .querySelector(".per-carousel")
+        .addEventListener("touchmove", handleTouchMove);
     };
 
-    document.querySelector(".per-carousel").addEventListener("touchstart", handleTouchStart);
+    document
+      .querySelector(".per-carousel")
+      .addEventListener("touchstart", handleTouchStart);
 
     return () => {
-      document.querySelector(".per-next").removeEventListener("click", handleNextClick);
-      document.querySelector(".per-prev").removeEventListener("click", handlePrevClick);
-      document.querySelector(".per-carousel").removeEventListener("touchstart", handleTouchStart);
+      nextButton.removeEventListener("click", handleNextClick);
+      prevButton.removeEventListener("click", handlePrevClick);
+      document
+        .querySelector(".per-carousel")
+        .removeEventListener("touchstart", handleTouchStart);
     };
+  }, [items]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNextClick();
+    }, 3000); // 3 seconds interval
+
+    return () => clearInterval(interval);
   }, [items]);
 
   return (
@@ -209,7 +228,7 @@ const PerCarousel = () => {
                   d="M5.95402631,5.53955726 L12.4900312,12.6302483 C12.5215536,12.663625 12.5200504,12.7162361 12.4866737,12.7477585 C12.4633873,12.7697513 12.4295365,12.7764084 12.3996562,12.7648714 C8.92068895,11.4216238 6.28747023,10.75 4.5,10.75 C2.75167103,10.75 0.194227704,11.392532 -3.17232997,12.6775959 L-3.17225579,12.6777903 C-3.2755576,12.7172221 -3.39126605,12.6654452 -3.43069786,12.5621434 C-3.45811021,12.4903296 -3.44198647,12.4091621 -3.38920725,12.3532783 L3.04597369,5.53955726 C3.80439711,4.73652071 5.07021051,4.70035461 5.87324707,5.45877803 C5.90093716,5.48492978 5.92787455,5.51186717 5.95402631,5.53955726 Z"
                   id="Triangle"
                   fill="#111111"
-                  transform="translate(4.500000, 8.500000) rotate(-90.000000) translate(-4.500000, -8.500000) "
+                  transform="translate(4.500000, 8.500000) rotate(90.000000) translate(-4.500000, -8.500000) "
                 ></path>
               </g>
             </svg>
