@@ -79,7 +79,11 @@ const Purpose = () => {
             >
               PURPOSE OF INTERNSHIP
             </Typography>
-            <Typography variant="body1" align="justify">
+            <Typography
+              variant="body1"
+              align="justify"
+              style={{ flexGrow: 1, marginTop: "3vh " }}
+            >
               &nbsp;&nbsp;&nbsp;&nbsp;The internship program is designed to
               serve as a valuable opportunity for students to gain firsthand
               experience in the corporate world, closely aligned with their

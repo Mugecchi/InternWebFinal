@@ -1,4 +1,4 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box, Button, Typography } from "@material-ui/core";
 import React from "react";
 import Wave from "./wave.svg";
 import { useStyles } from "./useStyles";
