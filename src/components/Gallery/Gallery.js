@@ -98,7 +98,7 @@ const albums = [
       <>
         Reporting
         <p style={{ fontSize: 16, fontWeight: 400 }}>
-          - Interns unite their efforts, blending individual insights into
+          Interns unite their efforts, blending individual insights into
           collective success. From meticulous reporting to seamless teamwork,
           they elevate each task with unity and purpose.
         </p>
@@ -112,7 +112,7 @@ const albums = [
       <>
         Orientation
         <p style={{ fontSize: 16, fontWeight: 400 }}>
-          - Interns unite their efforts, blending individual insights into
+          Interns unite their efforts, blending individual insights into
           collective success. From meticulous reporting to seamless teamwork,
           they elevate each task with unity and purpose.
         </p>{" "}
@@ -126,7 +126,7 @@ const albums = [
       <>
         DeploMoments
         <p style={{ fontSize: 16, fontWeight: 400 }}>
-          - Interns are assigned to various company clients, working
+          Interns are assigned to various company clients, working
           collaboratively to address their needs and achieve common goals. They
           interact directly with clients, provide system guidance, and supply
           essential materials for support.
@@ -141,7 +141,7 @@ const albums = [
       <>
         Meet the Clients
         <p style={{ fontSize: 16, fontWeight: 400 }}>
-          - Interns dive into real-world experience by joining dynamic client
+          Interns dive into real-world experience by joining dynamic client
           meetings, both online and face-to-face, gaining invaluable exposure
           and insights.
         </p>
@@ -155,7 +155,7 @@ const albums = [
       <>
         Food Hangouts
         <p style={{ fontSize: 16, fontWeight: 400 }}>
-          - Gather, eat, laugh and repeat with the Radztech Team. Nothing brings
+          Gather, eat, laugh and repeat with the Radztech Team. Nothing brings
           people together like good “Balut” and siomai.
         </p>
       </>
@@ -168,7 +168,7 @@ const albums = [
       <>
         Bible Study
         <p style={{ fontSize: 16, fontWeight: 400 }}>
-          - Together in His presence. Building a foundation of faith, one Bible
+          Together in His presence. Building a foundation of faith, one Bible
           study at a time.
         </p>
       </>
@@ -182,7 +182,7 @@ const albums = [
         Birthday Celebrations
         <br />
         <p style={{ fontSize: 16, fontWeight: 400 }}>
-          - Celebrating the best CEO ever and the powerhouse of business
+          Celebrating the best CEO ever and the powerhouse of business
           development as they lead the Radztech Team to success and new heights.
         </p>
       </>
@@ -196,7 +196,7 @@ const albums = [
         Fun Moments
         <br />
         <p style={{ fontSize: 16, fontWeight: 400 }}>
-          - In a single camera’s click ripples countless photos as the interns
+          In a single camera’s click ripples countless photos as the interns
           were unstoppable to show their smiles and take poses.
         </p>{" "}
       </>

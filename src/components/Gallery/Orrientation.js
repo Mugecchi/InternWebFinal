@@ -3,9 +3,6 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
-import ImageListItemBar from "@material-ui/core/ImageListItemBar";
-import IconButton from "@material-ui/core/IconButton";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
 import { Paper, Dialog, DialogContent, Zoom, Button } from "@material-ui/core";
 import { useStyles } from "./utils/useStyles";
 import { importAllImages } from "./utils/importImages";
@@ -56,9 +53,10 @@ const Orrientation = () => {
           Orientation
         </Typography>
         <div className={classes.root}>
-          <ImageList rowHeight={300} gap={12} className={classes.imageList}>
+          <ImageList rowHeight={500} gap={12} className={classes.imageList}>
             {photos.map((photo) => (
               <ImageListItem
+                className={classes.listContainer}
                 key={photo.img}
                 cols={photo.featured ? 2 : 1}
                 rows={photo.featured ? 2 : 1}

@@ -4,8 +4,8 @@ import { Typography, Paper, Grid, Container } from "@material-ui/core";
 const Purpose = () => {
   return (
     <Container maxWidth="xl">
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6} container>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={12} container>
           <Paper
             elevation={16}
             style={{
@@ -18,6 +18,7 @@ const Purpose = () => {
           >
             <Typography
               variant="h4"
+              align="left"
               gutterBottom
               style={{
                 color: "#ff7704",
@@ -34,7 +35,7 @@ const Purpose = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={6} container>
+        <Grid item xs={12} md={12} container>
           <Paper
             elevation={16}
             style={{
@@ -49,6 +50,7 @@ const Purpose = () => {
             <Typography
               variant="h4"
               gutterBottom
+              align="left"
               style={{
                 color: "#ff7704",
                 height: "5vh",
@@ -69,6 +71,7 @@ const Purpose = () => {
           <Paper elevation={16} style={{ padding: 24 }}>
             <Typography
               variant="h4"
+              align="left"
               gutterBottom
               style={{
                 color: "#ff7704",

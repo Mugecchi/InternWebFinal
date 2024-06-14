@@ -56,14 +56,16 @@ const FunMoment = () => {
           Fun Moments
         </Typography>
         <div className={classes.root}>
-          <ImageList rowHeight={300} gap={12} className={classes.imageList}>
+          <ImageList rowHeight={500} gap={12} className={classes.imageList}>
             {photos.map((photo) => (
               <ImageListItem
+                className={classes.listContainer}
                 key={photo.img}
                 cols={photo.featured ? 2 : 1}
                 rows={photo.featured ? 2 : 1}
                 onClick={() => handleClickOpen(photo.img)}
               >
+                nClick={() => handleClickOpen(photo.img)}
                 <img
                   src={photo.img}
                   alt={photo.title}
