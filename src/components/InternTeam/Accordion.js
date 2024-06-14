@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme, useMediaQuery, Typography } from "@material-ui/core";
-import "./Accordion.css"; // Ensure this CSS file exists
+import "./Accordion.css";
 
 const Slider = () => {
   const theme = useTheme();
