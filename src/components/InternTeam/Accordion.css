@@ -10,7 +10,6 @@ body {
   align-items: flex-start;
   flex-wrap: nowrap;
   width: 90vw;
-  margin-right: 20;
   height: 60vh;
   margin: 0 auto;
   padding: 0;
@@ -27,6 +26,7 @@ body {
   overflow: hidden;
   flex-grow: 1;
   transition: 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 5vw 0 5vw 0;
 }
 
 .slider li::before {

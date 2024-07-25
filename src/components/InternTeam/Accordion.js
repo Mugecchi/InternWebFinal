@@ -59,7 +59,7 @@ const Slider = () => {
         <a href="#">
           <h1>
             ISAH
-            <br /> Technical Support
+            <br /> Tech Support Team
           </h1>
         </a>
       </li>
