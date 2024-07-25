@@ -23,14 +23,27 @@ export default function InternData() {
       FirstName: "Adonis",
       NickName: "Ado",
       Quote: (
-        <h3>
+        <h3 style={{ textAlign: "center" }}>
           "Kung hindi mo alam edi aralin mo, Lahat ng bagay ay ina aral bago
           gawin, maliban kay GPT 🙂"
         </h3>
       ),
-      Course: "BS Computer Science ",
-      School: "Isabela State University - Echague Campus",
-      Introduction: <h2>Hi I'm Adonis, you can call me ado</h2>,
+      Course: "Bachelor of Science in Computer Science ",
+      School: (
+        <p>
+          Isabela State University <br /> Echague Campus
+        </p>
+      ),
+      Introduction: (
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Hi I'm Adonis, you can call me Ado
+        </h2>
+      ),
       Testimony:
         "My name is Adonis A. Maranan, and I am currently a Computer Science Student, student at Isabela State, University. I'm currently has on my On-the-Job Training at Radztech, where I need to spent 486 hours working as a Developer in the dev team.",
       Body: (
@@ -80,15 +93,24 @@ export default function InternData() {
       FirstName: "Benedick",
       NickName: "Ben",
       Quote: (
-        <h3>
+        <h3 style={{ textAlign: "center" }}>
           "Life is like a bicycle in able to maintain your balance, you must
           keep moving."
         </h3>
       ),
-      Course: "BS Computer Science ",
-      School: "Isabela State University - Echague Campus",
+      Course: "Bachelor of Science in Computer Science ",
+      School: (
+        <p>
+          Isabela State University <br /> Echague Campus
+        </p>
+      ),
       Introduction: (
-        <h2>
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
           Greetings, I'm Ben, I'm here to share my journey during my internship
           at RadzTech.
         </h2>
@@ -97,12 +119,12 @@ export default function InternData() {
         "My RadzTech internship was a dynamic learning experience where I tackled real-world challenges, bonded with mentors and peers, and left with enhanced skills and confidence for my tech career ahead.",
       Body: (
         <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;During my time at RadzTech Business Solutions
-          as a developer intern, I felt like I was on a thrilling rollercoaster
-          of learning and growth. From the moment I stepped through the door, I
-          was welcomed into a vibrant community of tech enthusiasts where
-          curiosity was celebrated, mistakes were learning opportunities, and
-          teamwork was key.
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During my time at RadzTech Business
+          Solutions as a developer intern, I felt like I was on a thrilling
+          rollercoaster of learning and growth. From the moment I stepped
+          through the door, I was welcomed into a vibrant community of tech
+          enthusiasts where curiosity was celebrated, mistakes were learning
+          opportunities, and teamwork was key.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;Each day brought new challenges and triumphs
           as I dove headfirst into projects, often feeling the rush of
@@ -112,12 +134,12 @@ export default function InternData() {
           puzzles, the colleagues who became friends, sharing in both the
           victories and the occasional setbacks.
           <br /> <br />
-          &nbsp;&nbsp;&nbsp;Looking back, I realize that my time at RadzTech
-          wasn't just about learning technical skills; it was about discovering
-          my own strengths, building confidence in my abilities, and finding my
-          place in the ever-evolving world of software development. It's an
-          experience I'll always cherish as I continue on my journey in this
-          fascinating field.
+          &nbsp;&nbsp;&nbsp;&nbsp;Looking back, I realize that my time at
+          RadzTech wasn't just about learning technical skills; it was about
+          discovering my own strengths, building confidence in my abilities, and
+          finding my place in the ever-evolving world of software development.
+          It's an experience I'll always cherish as I continue on my journey in
+          this fascinating field.
         </p>
       ),
       src: Ben,
@@ -128,11 +150,25 @@ export default function InternData() {
     {
       LastName: "Rivera",
       FirstName: "Jon Carlo Miguel",
-      Quote: <h3>"Some complex questions have the simplest answers."</h3>,
-      Course: "BS Computer Science ",
-      School: "Isabela State University - Cauayan Campus",
+      Quote: (
+        <h3 style={{ textAlign: "center" }}>
+          "Some complex questions have the simplest answers"
+        </h3>
+      ),
+      Course: "Bachelor of Science in Computer Science ",
+      School: (
+        <p>
+          Isabela State University <br />
+          Cauayan Campus
+        </p>
+      ),
       Introduction: (
-        <h2>
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
           Hi I am Jon Carlo Miguel C. Rivera, an aspiring Data Analyst am here
           to tell you a testament of my life during my internship in RadzTech.
         </h2>
@@ -209,10 +245,28 @@ export default function InternData() {
       LastName: "Antalan",
       FirstName: "Randy Jr.",
       NickName: "Ran",
-      Quote: <h2>"Accept the Challenge, Push Yourself to the Limit"</h2>,
-      Course: "BS Computer Science ",
-      School: "Isabela State University - Echague Campus",
-      Introduction: <h1>Hi I'm Ran the Fast Talker na kabado</h1>,
+      Quote: (
+        <h3 style={{ textAlign: "center" }}>
+          "Accept the Challenge, Push Yourself to the Limit"
+        </h3>
+      ),
+      Course: "Bachelor of Science in Computer Science ",
+      School: (
+        <p>
+          Isabela State University <br />
+          Echague Campus
+        </p>
+      ),
+      Introduction: (
+        <h1
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Hi I'm Ran the Fast Talker na kabado
+        </h1>
+      ),
       Testimony:
         "As an intern at here at Radztech Business Solutions it was an great oportunity to be part of this company. Many things happen when I start my internship here. Intenship help me to boost my self confidence. I am grateful to be part of this company even for a short time the things I learn here will become a big help in my future. Throughout this journey I realize many things that I have many things that I need to fix.",
       Body: (
@@ -257,11 +311,18 @@ export default function InternData() {
       LastName: "Medrano",
       FirstName: "Ma. Andrea Antonette",
       NickName: "Andeng",
-      Quote: "",
-      Course: "BS Management Accounting",
+      Quote: <h3 style={{ textAlign: "center" }}>"One Day or Day One"</h3>,
+      Course: "Bachelor of Science in Management Accounting",
       School: "Isabela State University - Echague Campus",
       Introduction: (
-        <h2>Cold Mysterious Independent Sweet Soft Girl of Isabela, Andrea.</h2>
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Cold Mysterious Independent Sweet Soft Girl of Isabela, Andrea.
+        </h2>
       ),
       Testimony:
         "If you want it easy and simple, then Radztech is not for you.",
@@ -325,7 +386,7 @@ export default function InternData() {
       FirstName: "Angelina",
       NickName: "Angie",
       Quote: (
-        <h3>
+        <h3 style={{ textAlign: "center" }}>
           You can’t skip chapters, that’s not how life works. Some chapters will
           make you cry for weeks. You will read things you don’t want to read,
           you will have moments when you don’t want the pages to end. But you
@@ -333,10 +394,20 @@ export default function InternData() {
           <br />- Courtney Peppernell, Healing the Heart
         </h3>
       ),
-      Course: "BS Management Accounting",
-      School: "Isabela State University - Echague Campus",
+      Course: "Bachelor of Science in Management Accounting",
+      School: (
+        <p>
+          Isabela State University <br />
+          Echague Campus
+        </p>
+      ),
       Introduction: (
-        <h2>
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
           HI! I am Angie. My pleasure to share my transformative internship
           experience with you!
         </h2>
@@ -378,16 +449,27 @@ export default function InternData() {
       FirstName: "Frenalyn",
       NickName: "Frenalyn",
       Quote: (
-        <h3>
-          &nbsp;&nbsp;&nbsp;&nbsp;"Internship complete, but the journey
-          continues – beyond the confines of the office walls, into a world
-          brimming with new opportunities and unexplored paths."
+        <h3 style={{ textAlign: "center" }}>
+          "Internship complete, but the journey continues – beyond the confines
+          of the office walls, into a world brimming with new opportunities and
+          unexplored paths."
         </h3>
       ),
-      Course: "BS Management Accounting",
-      School: "Isabela State University - Cauayan Campus",
+      Course: "Bachelor of Science in Management Accounting",
+      School: (
+        <p>
+          Isabela State University <br /> Cauayan Campus
+        </p>
+      ),
       Introduction: (
-        <h2>Hi! I am Frenalyn, join me in my journey at Radztech!</h2>
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Hi! I am Frenalyn, join me in my journey at Radztech!
+        </h2>
       ),
       Testimony:
         "My internship at Radztech Business Solutions was an eye-opening experience. A little back story, i was a little afraid of joining the agency especially when we were told about their selection process. I was thinking of not going and just finding another agency. But then I still tried to attend the recruitment thinking I wouldn't  make it. But thankfully I did try as  I was one of the students who were selected",
@@ -424,17 +506,24 @@ export default function InternData() {
     {
       LastName: "Batara",
       FirstName: "Joan",
-      NickName: "JO",
+      NickName: "Joan",
       Quote: (
-        <h3>
-          &nbsp;&nbsp;&nbsp;&nbsp;"You’ll never know what’s ahead of you when
-          you limit yourself. Have the courage to try and explore."
+        <h3 style={{ textAlign: "center" }}>
+          "You’ll never know what’s ahead of you when you limit yourself. Have
+          the courage to try and explore."
         </h3>
       ),
-      Course: "BS Management Accounting",
+      Course: "Bachelor of Science in Management Accounting",
       School: "Isabela State University - Echague Campus",
       Introduction: (
-        <h2>Hi! Glad to have you here! Set your mind and Enjoy Reading :)</h2>
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Hi! Glad to have you here! Set your mind and Enjoy Reading :)
+        </h2>
       ),
       Testimony:
         "As someone looking to maximize my OJT experience while being efficient with my time and finances,  I've come up with a decision to gain practical experience in banks, cooperatives and water districts near my location, however I failed to secure spots. The rejections felt endless, but then, a door to a brighter future opened. I was offered and convinced to apply for an internship at Radztech Business Solutions which I’m already familiar with.",
@@ -488,11 +577,22 @@ export default function InternData() {
       LastName: "Sejalvo",
       FirstName: "Novelyn",
       NickName: "Novs",
-      Quote: <h3>&nbsp;&nbsp;&nbsp;&nbsp;"Go Beyond Your Limits"</h3>,
-      Course: "BS Management Accounting",
-      School: "Isabela State University - Cauayan Campus",
+      Quote: <h3 style={{ textAlign: "center" }}>"Go Beyond Your Limits"</h3>,
+      Course: "Bachelor of Science in Management Accounting",
+      School: (
+        <p>
+          Isabela State University <br /> Cauayan Campus
+        </p>
+      ),
       Introduction: (
-        <h2>Hi, I’m Novelyn. I hope you find time reading this!</h2>
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Hi, I’m Novelyn. I hope you find time reading this!
+        </h2>
       ),
       Testimony: (
         <span style={{ fontWeight: 800 }}>
@@ -534,10 +634,20 @@ export default function InternData() {
       FirstName: "Patricia Fae",
       NickName: "Pat",
       Quote: "",
-      Course: "BS Management Accounting",
-      School: "Isabela State University - Echague Campus",
+      Course: "Bachelor of Science in Management Accounting",
+      School: (
+        <p>
+          Isabela State University <br />
+          Echague Campus
+        </p>
+      ),
       Introduction: (
-        <h2>
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
           Hi! I am Pat, nice to meet you. May you have a glimpse of what happens
           here at Radztech through my testimony. Happy reading!
         </h2>
@@ -597,10 +707,25 @@ export default function InternData() {
       LastName: "Medina",
       FirstName: "Frenan",
       NickName: "Frenan",
-      Quote: <h3>&nbsp;&nbsp;&nbsp;&nbsp;"Manifest lang nang manifest"</h3>,
-      Course: "BS Management Accounting",
-      School: "Isabela State University - Cauayan Campus",
-      Introduction: <h2>Hi, I’m FreNen, este FRENAN</h2>,
+      Quote: (
+        <h3 style={{ textAlign: "center" }}>"Manifest lang nang manifest"</h3>
+      ),
+      Course: "Bachelor of Science in Management Accounting",
+      School: (
+        <p>
+          Isabela State University <br /> Cauayan Campus
+        </p>
+      ),
+      Introduction: (
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Hi, I’m FreNen, este FRENAN
+        </h2>
+      ),
       Testimony:
         "I still vividly remember the day our Professor referred Radztech to me. July 07, 2023. I am offered to host the graduation ceremony of my seniors. The first time I met Radztech. And our professor once told me, Dun kayo sa Radztech, maganda dun. That moment feels surreal. As each company representative ended their speech I once said I can't wait to be part of your team, soon.",
       Body: (
@@ -633,10 +758,23 @@ export default function InternData() {
       LastName: "Respicio",
       FirstName: "Ryan",
       NickName: "Ry",
-      Quote: <h3>"STAPPPppppp"</h3>,
-      Course: "BS Management Accounting ",
-      School: "Isabela State University - Cauayan Campus",
-      Introduction: <h2>Hi, I’m Ry, Nonchalant na OA</h2>,
+      Quote: <h3 style={{ textAlign: "center" }}>"STAPPPppppp"</h3>,
+      Course: "Bachelor of Science in Management Accounting ",
+      School: (
+        <p>
+          Isabela State University <br /> Cauayan Campus
+        </p>
+      ),
+      Introduction: (
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Hi, I’m Ry, Nonchalant na OA
+        </h2>
+      ),
       Testimony: (
         <>
           "When I received the news that I had been selected as an intern at
@@ -694,10 +832,27 @@ export default function InternData() {
       LastName: "Palting",
       FirstName: "Joemar",
       NickName: "Joms",
-      Quote: <h3>&nbsp;&nbsp;&nbsp;&nbsp;Work on your present; OUKOURRRR!</h3>,
-      Course: "BS Information Technology ",
-      School: "Isabela State University - Cauayan Campus",
-      Introduction: <h2>Ang nonchalant lang, Happy Mothers Day Po 🙂</h2>,
+      Quote: (
+        <h3 style={{ textAlign: "center" }}>
+          Work on your present; OUKOURRRR!
+        </h3>
+      ),
+      Course: "Bachelor of Science in Information Technology ",
+      School: (
+        <p>
+          Isabela State University <br /> Cauayan Campus
+        </p>
+      ),
+      Introduction: (
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Ang nonchalant lang, Happy Mothers Day Po 🙂
+        </h2>
+      ),
       Testimony:
         "When I started looking for an internship, my priority was to find a company where I could gain real-world experience beyond the typical setting",
       Body: (
@@ -730,10 +885,23 @@ export default function InternData() {
       LastName: "Agonoy",
       FirstName: "Isah Janriel",
       NickName: "Isah",
-      Quote: <h3>Trueneeessss; Yaaannnnn</h3>,
-      Course: "BS Accounting Information System ",
-      School: "Isabela State University - Cauayan Campus",
-      Introduction: <h2>Hi, I`m Isah,Lutang pero pwede na 😊</h2>,
+      Quote: <h3 style={{ textAlign: "center" }}>Trueneeessss; Yaaannnnn</h3>,
+      Course: "Bachelor of Science in Accounting Information System ",
+      School: (
+        <p>
+          Isabela State University <br /> Cauayan Campus
+        </p>
+      ),
+      Introduction: (
+        <h2
+          style={{
+            textAlign: "justify-center",
+            marginLeft: "50px",
+          }}
+        >
+          Hi, I`m Isah,Lutang pero pwede na 😊
+        </h2>
+      ),
       Testimony: (
         <>
           &nbsp;"I still remember it clearly when I decided to go to Radztech.
