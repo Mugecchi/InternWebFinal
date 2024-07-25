@@ -195,7 +195,7 @@ const ModalExp = ({ children = {}, Team = [] }) => {
                             variant={"h5"}
                             style={{ color: "#ff7704", paddingTop: "3vh" }}
                           >
-                            Read more......
+                            Read more...
                           </Typography>
                         </Grid>
                       </Grid>

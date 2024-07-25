@@ -112,9 +112,10 @@ const albums = [
       <>
         Orientation
         <p style={{ fontSize: 16, fontWeight: 400 }}>
-          Interns unite their efforts, blending individual insights into
-          collective success. From meticulous reporting to seamless teamwork,
-          they elevate each task with unity and purpose.
+          Kick off their professional journey by exploring the company culture,
+          meeting fellow interns, and understanding their role. The first day is
+          designed to familiarize with the company teams, outline their duties,
+          and set the tone for an enriching internship experience.
         </p>{" "}
       </>
     ),
