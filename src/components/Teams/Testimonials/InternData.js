@@ -302,8 +302,8 @@ export default function InternData() {
       CardTitle: "",
       CardContent: (
         <p>
-          "Accept the challenge don’t be afraid to make a mistake, mistake will
-          taught you a lesson."
+          Accept the challenge don’t be afraid to make a mistake, mistake will
+          taught you a lesson.
         </p>
       ),
     },
