@@ -41,42 +41,36 @@ export default function InternData() {
             marginLeft: "50px",
           }}
         >
-          Hi I'm Adonis, you can call me Ado
+          Hi! I’m Adonis. You can call me Ado.
         </h2>
       ),
       Testimony:
-        "My name is Adonis A. Maranan, and I am currently a Computer Science Student, student at Isabela State, University. I'm currently has on my On-the-Job Training at Radztech, where I need to spent 486 hours working as a Developer in the dev team.",
+        "When I started my OJT at Radztech, I was welcomed with open arms and provided the resources and support needed to thrive. Initially, I was eager to apply the theoretical knowledge I had gained in school, but my experience here exceeded my expectations in every way.",
       Body: (
         <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;From the moment I started my OJT at Radztech,
-          I was welcomed with open arms and provided with the resources and
-          support needed to thrive. Initially, I was eager to apply the
-          theoretical knowledge I had gained in school, but my experience here
-          exceeded my expectations in every way.
-          <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;During my time at Radztech, I gained valuable
-          hands-on experience in being a help desk and a developer. One of the
-          most significant projects I worked on was Search Bar, Org Chart,
-          Flowchart, which not only challenged me but also allowed me to
+          hands-on experience in being a developer. One of the most significant
+          projects I worked on was a Search bar, organizational chart, and
+          flowchart, which not only challenged me but also allowed me to
           contribute meaningfully to the team.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;The mentorship and guidance I received from my
-          supervisor sir Celso and Renen, and the entire team were invaluable.
-          They were always available to answer my questions, provide feedback,
-          and encourage me to take on new challenges. This supportive
+          supervisors, Sir Celso and Sir Renen, and the entire team were
+          invaluable. They were always available to answer my questions, provide
+          feedback, and encourage me to take on new challenges. This supportive
           environment helped me build confidence and develop my professional
           skills.
           <br /> <br />
-          &nbsp;&nbsp;&nbsp;My OJT experience has profoundly impacted my career
-          goals. It has solidified my interest in Software Developing and
-          inspired me to pursue further opportunities in this area. I am now
+          &nbsp;&nbsp;&nbsp;&nbsp;My OJT experience has profoundly impacted my
+          career goals. It has solidified my interest in software development
+          and inspired me to pursue further opportunities in this area. I am now
           more confident in my abilities and excited about my future career
           path.
           <br /> <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;I am incredibly grateful to Radztech for
-          providing me with such a rewarding and enriching experience. I would
-          highly recommend this organization to any student seeking a
-          comprehensive and impactful OJT opportunity.
+          &nbsp;&nbsp;&nbsp;I am incredibly grateful to Radztech for providing
+          me with such a rewarding experience. I would highly recommend this
+          organization to any student seeking a comprehensive and impactful OJT
+          opportunity.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;Thank you once again to everyone at Radztech
           for making my OJT experience unforgettable.
@@ -111,35 +105,34 @@ export default function InternData() {
             marginLeft: "50px",
           }}
         >
-          Greetings, I'm Ben, I'm here to share my journey during my internship
-          at RadzTech.
+          I’m Ben, sharing my journey during my internship at Radztech.
         </h2>
       ),
       Testimony:
-        "My RadzTech internship was a dynamic learning experience where I tackled real-world challenges, bonded with mentors and peers, and left with enhanced skills and confidence for my tech career ahead.",
+        "My internship at Radztech was a dynamic learning experience where I tackled real-world challenges, bonded with mentors and peers, and left with enhanced skills and confidence for my tech career ahead.",
       Body: (
         <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During my time at RadzTech Business
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During my time at Radztech Business
           Solutions as a developer intern, I felt like I was on a thrilling
-          rollercoaster of learning and growth. From the moment I stepped
+          roller coaster of learning and growth. From the moment I stepped
           through the door, I was welcomed into a vibrant community of tech
-          enthusiasts where curiosity was celebrated, mistakes were learning
-          opportunities, and teamwork was key.
+          enthusiasts where curiosity was celebrated, mistakes were seen as
+          learning opportunities, and teamwork was key.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;Each day brought new challenges and triumphs
           as I dove headfirst into projects, often feeling the rush of
           excitement when code finally clicked into place after hours of
-          debugging. But what truly made my internship special were the
-          people—the mentors who patiently guided me through tough coding
-          puzzles, the colleagues who became friends, sharing in both the
-          victories and the occasional setbacks.
+          debugging. But what truly made my internship special were the people –
+          the mentors who patiently guided me through tough coding puzzles, the
+          colleagues who became friends, sharing in both the victories and the
+          occasional setbacks.
           <br /> <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;Looking back, I realize that my time at
-          RadzTech wasn't just about learning technical skills; it was about
-          discovering my own strengths, building confidence in my abilities, and
-          finding my place in the ever-evolving world of software development.
-          It's an experience I'll always cherish as I continue on my journey in
-          this fascinating field.
+          &nbsp;&nbsp;&nbsp;Looking back, I realize that my time at Radztech
+          wasn't just about learning technical skills; it was about discovering
+          my strengths, building confidence in my abilities, and finding my
+          place in the ever-evolving world of software development. It's an
+          experience I'll always cherish as I continue on my journey in this
+          fascinating field.
         </p>
       ),
       src: Ben,
@@ -182,13 +175,16 @@ export default function InternData() {
           was part of something special. Meeting the leaders of Radztech and
           learning about the company's humble beginnings sparked a sense of
           inspiration within me. It was clear that I was joining a team driven
-          by innovation and a commitment to excellence. Throughout my
-          internship, I had the opportunity to immerse myself in various
-          projects and tasks, each one pushing me to expand my skills and
-          knowledge. From designing and developing landing pages to tackling
-          complex system functionalities, every assignment brought its own set
-          of challenges. However, with the guidance of my mentors and the
-          support of my colleagues, I embraced each challenge head-on,
+          by innovation and a commitment to excellence.
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Throughout my internship, I had the
+          opportunity to immerse myself in various projects and tasks, each one
+          pushing me to expand my skills and knowledge. From designing and
+          developing landing pages to tackling complex system functionalities,
+          every assignment brought its own set of challenges.
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;However, with the guidance of my mentors and
+          the support of my colleagues, I embraced each challenge head-on,
           determined to succeed.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;One particular project stands out in my
@@ -197,14 +193,15 @@ export default function InternData() {
           encountering obstacles along the way, I persevered, seeking advice
           when needed and refining my approach until I achieved the desired
           outcome. The sense of accomplishment upon completing the project was
-          indescribable, a testament to the power of dedication and teamwork. Of
-          course, no journey is without its hurdles. There were moments of
-          frustration and doubt, times when progress seemed elusive. Yet, it was
-          during these moments that I witnessed the true strength of our team.
-          We supported each other, lending a helping hand and offering words of
-          encouragement when needed most. Together, we overcame obstacles that
-          once seemed insurmountable, emerging stronger and more resilient than
-          before.
+          indescribable, a testament to the power of dedication and teamwork.
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Of course, no journey is without its hurdles.
+          There were moments of frustration and doubt, times when progress
+          seemed elusive. Yet, it was during these moments that I witnessed the
+          true strength of our team. We supported each other, lending a helping
+          hand and offering words of encouragement when needed most. Together,
+          we overcame obstacles that once seemed insurmountable, emerging
+          stronger and more resilient than before.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;As I reflect on my time at Radztech, I am
           filled with gratitude—for the opportunities afforded to me, for the
@@ -264,38 +261,37 @@ export default function InternData() {
             marginLeft: "50px",
           }}
         >
-          Hi I'm Ran the Fast Talker na kabado
+          Hi! I’m Ran, the nervous fast talker.
         </h1>
       ),
       Testimony:
-        "As an intern at here at Radztech Business Solutions it was an great oportunity to be part of this company. Many things happen when I start my internship here. Intenship help me to boost my self confidence. I am grateful to be part of this company even for a short time the things I learn here will become a big help in my future. Throughout this journey I realize many things that I have many things that I need to fix.",
+        "As an intern here at Radztech, it was a great opportunity to be part of this company. Many things happen when I start my internship here. This internship helped me to boost my self-confidence. I am grateful to be part of this company even for a short time. The things I learned here will become a big help in my future. Throughout this journey, I realized many things that I have many things that I need to fix.",
       Body: (
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;Throughout this OJT, I demonstrated
           dedication, a strong work ethic, and a keen willingness to learn. I
           adapted to the environment of our team and contributed to several
           projects. Their attention to detail and proactive approach were truly
-          impressive. I am confident that i will excel in any future endeavors
+          impressive. I am confident that I will excel in any future endeavors
           and would highly recommend them for any role they pursue.
           <br /> <br />
-          &nbsp;&nbsp;&nbsp;The internship offered a holistic development
-          experience through regular brainstorming sessions, team
-          collaborations, and even weekly bible studies. These activities not
-          only enhanced my technical expertise but also improved my way on how
-          to work with team, ethical values, and a balanced approach to
-          professional life.
+          &nbsp;&nbsp;The internship offered a holistic development experience
+          through regular brainstorming sessions, team collaborations, and even
+          weekly bible studies. These activities not only enhanced my technical
+          expertise but also improved my way of working with a team, ethical
+          values, and a balanced approach to professional life.
           <br /> <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;I am grateful for the opportunity to have been
-          part of such an innovative and supportive team, and I am confident
-          that the skills and insights I have acquired will greatly benefit my
-          future career.
+          &nbsp;&nbsp;&nbsp;I am grateful for the opportunity to have been part
+          of such an innovative and supportive team, and I am confident that the
+          skills and insights I have acquired will greatly benefit my future
+          career.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;Being part of this little company that is
-          continue growing day by day it is my pleasure to give my best to this
-          company even i graduate i will neber forget the things that happen to
-          me here. The learnings and memories that i experience. Accept the
-          challenge don’t be afraid to make a mistake, mistake will taught you a
-          lesson.
+          continuing to grow day by day, it is my pleasure to give my best to
+          this company even after I graduate. I will never forget the things
+          that happened to me here. The learnings and memories that I
+          experience. Accept the challenge, don't be afraid to make a mistake,
+          mistakes will teach you a lesson.
         </p>
       ),
       src: Randy,
@@ -328,14 +324,14 @@ export default function InternData() {
         "If you want it easy and simple, then Radztech is not for you.",
       Body: (
         <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;I vividly remember I was taking my taxation
-          exam when we were offered to join Radztech Business Solutions. We were
-          six. My professor's offer gave me an instant relief from all the
-          worries I have been thinking about internships. The only thing that
-          was running in my mind while I was taking my exam was I'm going to
-          take the opportunity. We were told how the brightest students of the
-          class are only accepted and how we learn so much from them. Because I
-          have failed academically so many times and this kind of recommendation
+          &nbsp;&nbsp;&nbsp;&nbsp;I still remember I was taking my taxation exam
+          when we were offered to join Radztech Business Solutions. We were six.
+          My professor's offer gave me an instant relief from all the worries I
+          have been thinking about internships. The only thing that was running
+          through my mind while I was taking my exam was I'm going to take the
+          opportunity. We were told how the brightest students of the class are
+          only accepted and how we learn so much from them. Because I have
+          failed academically so many times and this kind of recommendation
           comes once in a while, I decided to give it a go. I tried telling my
           friends. I encouraged them to give it a try. I convinced them this
           internship is something worthwhile even if I had no idea what would
@@ -350,27 +346,27 @@ export default function InternData() {
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;I had my documents prepared for the
           application. But I never knew that it would test my patience as my
-          fellow classmates had their documents signed and notarized while the
-          four of us were waiting for Radztech.
+          classmates had their documents signed and notarized while the four of
+          us were waiting for Radztech.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;Radztech did not disappoint. People at
           Radztech welcomed us warmly. So much it felt like I was a member of
           their family. I just know there's something huge waiting for us that
           day and again, Radztech did not disappoint. The trust they gave to
-          everyone of us was implicit. Their confidence in us really empowered
-          us to do better than what we really measure our capabilities. There
-          were no menial tasks like stapling, punching, and stamping papers.
-          There were no fetching coffees and running errands for the employees.
-          You can never feel clueless and a complete beginner here. You get to
-          experience how they really do their work. Your internship here will
-          never be a waste of your time and abilities. You are seen as someone
-          who has to unlock your own potentials. And Radztech never failed to
-          let us know that they want to be part of our professional growth.
+          each of us was implicit. Their confidence in us empowered us to do
+          better than what we measure our capabilities. There were no menial
+          tasks like stapling, punching, and stamping papers. There were no
+          fetching coffee and running errands for the employees. You can never
+          feel clueless and a complete beginner here. You get to experience how
+          they do their work. Your internship here will never be a waste of your
+          time and abilities. You are seen as someone who has to unlock your
+          potential. And Radztech never failed to let us know that they want to
+          be part of our professional growth.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;With Radztech Business Solutions, you can
           never feel indifferent and unwanted. You'll get to personally know
-          everyone in the office, you'll get to laugh endlessly, you'll
-          definitely have to cry your heart openly.
+          everyone in the office, you'll get to laugh endlessly, you'll have to
+          cry your heart openly.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;That being said, do you have the courage and
           will to go beyond?
@@ -471,11 +467,18 @@ export default function InternData() {
           Hi! I am Frenalyn, join me in my journey at Radztech!
         </h2>
       ),
-      Testimony:
-        "My internship at Radztech Business Solutions was an eye-opening experience. A little back story, i was a little afraid of joining the agency especially when we were told about their selection process. I was thinking of not going and just finding another agency. But then I still tried to attend the recruitment thinking I wouldn't  make it. But thankfully I did try as  I was one of the students who were selected",
+      Testimony: "From Nervous Newbie to Empowered Intern",
       Body: (
         <p>
-          &nbsp;&nbsp;&nbsp;Jumping on the start of my internship, we were
+          &nbsp;&nbsp;&nbsp;My internship at Radztech Business Solutions was an
+          eye-opening experience. A little back story, I was a little afraid of
+          joining the agency especially when we were told about their selection
+          process. I was thinking of not going and just finding another agency.
+          But then I still tried to attend the recruitment thinking I wouldn't
+          make it. But thankfully I did try as I was one of the students who
+          were selected.
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Jumping on the start of my internship, we were
           oriented about the tasks that we were gonna do. The initial
           orientation left me overwhelmed. The tasks seemed endless and there's
           so much to do. Yet, with each completed task, my confidence grew. The
@@ -487,15 +490,11 @@ export default function InternData() {
           supportive environment that let me grow and pushed me outside my
           comfort zone in the best way possible.
           <br /> <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;My internship at Radztech fully prepared me
-          for the demands and dynamics of the corporate world.{" "}
-          <span style={{ fontWeight: 800 }}>
-            I entered with so much worries, but I left with a wealth of
-            knowledge, sharpened skills, and the confidence to thrive in any
-            professional setting.
-          </span>{" "}
-          And I am beyond grateful with Radztech for the experience I'll never
-          forget."
+          &nbsp;&nbsp;&nbsp;&nbsp;MMy internship at Radztech fully prepared me
+          for the demands and dynamics of the corporate world. I entered with so
+          much worries, but I left with a wealth of knowledge, sharpened skills,
+          and the confidence to thrive in any professional setting. And I am
+          beyond grateful with Radztech for the experience I'll never forget.
         </p>
       ),
       src: Frenalyn,
@@ -522,11 +521,11 @@ export default function InternData() {
             marginLeft: "50px",
           }}
         >
-          Hi! Glad to have you here! Set your mind and Enjoy Reading :)
+          Bonjour! Set your mind and enjoy reading!
         </h2>
       ),
       Testimony:
-        "As someone looking to maximize my OJT experience while being efficient with my time and finances,  I've come up with a decision to gain practical experience in banks, cooperatives and water districts near my location, however I failed to secure spots. The rejections felt endless, but then, a door to a brighter future opened. I was offered and convinced to apply for an internship at Radztech Business Solutions which I’m already familiar with.",
+        "As someone looking to maximize my OJT experience while being efficient with my time and finances, I've come up with a decision to gain practical experience in banks, cooperatives and water districts near my location, however I failed to secure spots. The rejections felt endless, but then, a door to a brighter future opened. I was offered and convinced to apply for an internship at Radztech Business Solutions which I’m already familiar with.",
       Body: (
         <p>
           &nbsp;&nbsp;&nbsp;Radztech is my last option honestly but never
@@ -546,15 +545,17 @@ export default function InternData() {
           positions are not felt, yet respect and formality are always
           maintained. In the midst of work, moments can arise where everyone
           jokes, laughs, and sings together which are the times I will truly
-          miss. <br /> <br />
+          miss.
+          <br /> <br />
           &nbsp;&nbsp;&nbsp;It was a wonderful experience to be an intern in
           this company for 3 months where I not only refreshed and improved my
-          accounting knowledge from school but also gained new concepts. They
-          also demonstrate how technology can streamline the process of
-          recording, summarizing, and reporting transactions which I was
-          intensely captivated by. Throughout my time here, I've been
-          continuously impressed by the robustness and sophistication of the
-          accounting system employed by Radztech and at the same time the
+          accounting knowledge from school but also gained new concepts.
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;They also demonstrate how technology can streamline
+          the process of recording, summarizing, and reporting transactions
+          which I was intensely captivated by. Throughout my time here, I've
+          been continuously impressed by the robustness and sophistication of
+          the accounting system employed by Radztech and at the same time the
           customization and automation that it offers. I am glad I chose
           Radztech because it has exposed me to facets of accounting and
           digitalization that I hadn't previously encountered, and I can
@@ -594,12 +595,8 @@ export default function InternData() {
           Hi, I’m Novelyn. I hope you find time reading this!
         </h2>
       ),
-      Testimony: (
-        <span style={{ fontWeight: 800 }}>
-          Reflecting on my internship at Radztech, one word consistently comes
-          to mind: TRANSFORMATION
-        </span>
-      ),
+      Testimony:
+        "Reflecting on my internship at Radztech, one word consistently comes to mind: TRANSFORMATION.",
       Body: (
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;Personal and professional growth were my key
@@ -609,9 +606,9 @@ export default function InternData() {
           &nbsp;&nbsp;&nbsp;&nbsp;Working with the Radztech team has been an
           incredible journey. In just three short months, I've gained a lot of
           lessons, knowledge, and valuable insights. I can say that I've
-          experienced tremendous growth. Radztech embodies the motto,{" "}
-          <span style={{ fontWeight: 800 }}>'Go Beyond</span>,' by consistently
-          pushing me to exceed my own expectations and reach my full potential.
+          experienced tremendous growth. Radztech embodies the motto, 'Go
+          Beyond,' by consistently pushing me to exceed my own expectations and
+          reach my full potential.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;As my internship journey at Radztech
           concludes, a simple 'thank you' feels inadequate to express my
@@ -654,12 +651,12 @@ export default function InternData() {
       ),
       Testimony: (
         <>
-          &nbsp;"A stumbling block or a stepping stone? This is the question I
+          &nbsp;A stumbling block or a stepping stone?” This is the question I
           ask myself each time the weight of this internship feels heavier and
           wrings out my mind until I can't come up with any more useful ideas. I
           could remember I said in an interview before I started that I wanted
           an internship experience where I could think and work outside the box.
-          Radztech has definitely made that happen."
+          Radztech has definitely made that happen.
         </>
       ),
       Body: (
@@ -671,31 +668,35 @@ export default function InternData() {
           This internship helped bridge that gap, sufficing my inadequate
           application of accounting theories and concepts, through generously
           providing us privileges to freely access first-hand their very own
-          accounting information system known as UlapBiz. Moreover, I gradually
-          adapted to the new learning environment and developed new
-          relationships with my fellow interns and superiors. The first month
-          was undeniably challenging as I interacted with people whose values
-          and lifestyles differed from mine, causing me to reassess how
-          extroverted I could be in this new setting. Initially, some of my
-          relationships with them were rough and hesitant. However, as we spent
-          more time together, trust and comfort began to build. One activity
-          that helped us get to know each other better was the Bible study. It
-          served as a bonding tool for us to have shared lives where
+          accounting information system known as UlapBiz.
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;Moreover, I gradually adapted to the new learning
+          environment and developed new relationships with my fellow interns and
+          superiors. The first month was undeniably challenging as I interacted
+          with people whose values and lifestyles differed from mine, causing me
+          to reassess how extroverted I could be in this new setting. Initially,
+          some of my relationships with them were rough and hesitant. However,
+          as we spent more time together, trust and comfort began to build. One
+          activity that helped us get to know each other better was the Bible
+          study. It served as a bonding tool for us to have shared lives where
           vulnerability was embraced and honesty was heard--pointing us always
           of who God is, what He says He will do, and how He wants us to respond
-          amidst the circumstances we were facing.Lastly, I rediscovered myself
-          during those hundreds of hours. I learned to listen to my mind and
-          body, recognizing a stranger within me—a version of myself I had never
-          met or had ignored. I can now identify my ideal workplace, the type of
-          work I am passionate about, the character traits and attitudes I need
-          to learn and unlearn, my stress triggers, my motivations to get out of
-          bed, and the simple joys that help me sleep soundly. <br /> <br />
+          amidst the circumstances we were facing.
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;Lastly, I rediscovered myself during those hundreds
+          of hours. I learned to listen to my mind and body, recognizing a
+          stranger within me—a version of myself I had never met or had ignored.
+          I can now identify my ideal workplace, the type of work I am
+          passionate about, the character traits and attitudes I need to learn
+          and unlearn, my stress triggers, my motivations to get out of bed, and
+          the simple joys that help me sleep soundly.
+          <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;This internship was seemingly a stumbling
           block because of the sore setbacks and magnified self-insufficiency.
           Yet each time I stood up, started over, and looked back, I realized
           that this block was actually a stepping stone to advance my accounting
           expertise, matured me in handling relationships, and deepened my
-          personal understanding.",
+          understanding.
         </p>
       ),
       src: Pat,
@@ -723,20 +724,22 @@ export default function InternData() {
             marginLeft: "50px",
           }}
         >
-          Hi, I’m FreNen, este FRENAN
+          Hi, I’m FreNen, este Frenan.
         </h2>
       ),
       Testimony:
-        "I still vividly remember the day our Professor referred Radztech to me. July 07, 2023. I am offered to host the graduation ceremony of my seniors. The first time I met Radztech. And our professor once told me, Dun kayo sa Radztech, maganda dun. That moment feels surreal. As each company representative ended their speech I once said I can't wait to be part of your team, soon.",
+        "I still vividly remember the day our Professor referred Radztech to me. July 07, 2023. I am offered to host the graduation ceremony of my seniors. The first time I met Radztech. And our professor once told me, “Dun kayo sa Radztech, maganda dun. That moment feels surreal. As each company representative ended their speech I once said “I can't wait to be part of your team, soon.",
       Body: (
         <p>
           &nbsp;&nbsp;&nbsp;It's a dream of mine to be in a company that will
           help me achieve professional and personal growth, and through Radztech
-          i am able to do so. I manifested to be part of the team. Posted on X
-          (Twitter) " Radztech cutieee " Low and behold, Radztech accepted me.
-          Radztech opened so many opportunities for me, I was able to meet
-          clients with diverse working ethics and of course I was able to be
-          part of a team with much dedication towards excellence and quality.
+          I am able to do so. I manifested to be part of the team. Posted on X
+          (Twitter) “Radztech cutieee”
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;Lo and behold, Radztech accepted me. Radztech opened
+          so many opportunities for me, I was able to meet clients with diverse
+          working ethics and of course, I was able to be part of a team with
+          much dedication towards excellence and quality.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;My stay in Radztech for my internship equipped
           me to be a competent individual. They have seen the potential in me
@@ -777,43 +780,41 @@ export default function InternData() {
       ),
       Testimony: (
         <>
-          "When I received the news that I had been selected as an intern at
+          When I received the news that I had been selected as an intern at
           Radztech Business Solutions, I initially felt uncertain about joining
           the program. I doubted myself whether I could successfully handle all
           the tasks they would assign to me. But I’m wrong, they made my
           <span style={{ fontWeight: 800 }}> UNCERTAINTIES </span> into
           <span style={{ fontWeight: 800 }}> OPPORTUNITIES </span>
-          helping me prepare for the real world of a corporate life."
+          helping me prepare for the real world of a corporate life.
         </>
       ),
       Body: (
         <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <span style={{ fontWeight: 800 }}>
-            AT RADZTECH BUSINESS SOLUTIONS, THIS ISN'T YOUR TYPICAL INTERNSHIP.{" "}
-          </span>
-          I've encountered a diverse range of work that I really enjoyed. Each
-          week brings a new surprise task, ensuring that we are not going to do
-          repetitive work. This has made me{" "}
-          <span style={{ fontWeight: 800 }}> FLEXIBLE AND ADAPTABLE </span> from
-          various perspectives.
+          &nbsp;&nbsp;&nbsp;&nbsp;When I received the news that I had been
+          selected as an intern at Radztech, I initially felt uncertain about
+          joining the program. I doubted myself whether I could successfully
+          handle all the tasks they would assign to me. But I’m wrong, they made
+          my uncertainties into opportunities helping me prepare for the real
+          world of a corporate life.
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;At Radztech, this isn’t your typical
+          internship. I've encountered a diverse range of work that I really
+          enjoyed. Each week brings a new surprise task, ensuring that we are
+          not going to do repetitive work. This has made me flexible and
+          adaptable from various perspectives.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;Throughout my entire internship program, the
-          guidance I received was{" "}
-          <span style={{ fontWeight: 800 }}> EXCEPTIONAL. </span> My supervisors
-          addressed all my inquiries with thorough{" "}
-          <span style={{ fontWeight: 800 }}> GUIDANCE. </span> Their willingness
-          to share their expertise made a lasting impact on my{" "}
-          <span style={{ fontWeight: 800 }}> DEVELOPMENT </span> that I will
-          carry for the rest of my life. But the most important thing I will
-          remember is they taught me how to be a{" "}
-          <span style={{ fontWeight: 800 }}> GOOD PERSON </span> no matter what
-          or where you are.{" "}
-          <span style={{ fontWeight: 800 }}>
-            {" "}
-            MARAMING SALAMAT, Radztech Business Solutions.{" "}
-          </span>
+          guidance I received was exceptional. My supervisors addressed all my
+          inquiries with thorough guidance. Their willingness to share their
+          expertise made a lasting impact on my development that I will carry
+          for the rest of my life. But the most important thing I will remember
+          is they taught me how to be a good person no matter what or where you
+          are.
           <br /> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Maraming salamat, mahal kong Radztech Business
+          Solutions!
+          <br />
         </p>
       ),
       src: Ryan,
@@ -832,11 +833,7 @@ export default function InternData() {
       LastName: "Palting",
       FirstName: "Joemar",
       NickName: "Joms",
-      Quote: (
-        <h3 style={{ textAlign: "center" }}>
-          Work on your present; OUKOURRRR!
-        </h3>
-      ),
+      Quote: <h3 style={{ textAlign: "center" }}>Work on your present</h3>,
       Course: "Bachelor of Science in Information Technology ",
       School: (
         <p>
@@ -850,7 +847,7 @@ export default function InternData() {
             marginLeft: "50px",
           }}
         >
-          Ang nonchalant lang, Happy Mothers Day Po 🙂
+          Ang nonchalant lang
         </h2>
       ),
       Testimony:
@@ -869,7 +866,7 @@ export default function InternData() {
           myself accomplishing them with confidence. The experience was so
           enriching that it fueled my eagerness to explore and learn even more.
           It’s all about being you and becoming a better version of yourself
-          every day until you go beyond your limits.",
+          every day until you go beyond your limits.
         </p>
       ),
       src: Joemar,
@@ -899,46 +896,47 @@ export default function InternData() {
             marginLeft: "50px",
           }}
         >
-          Hi, I`m Isah,Lutang pero pwede na 😊
+          Hi, I`m Isah! Lutang pero pwede na. 😊
         </h2>
       ),
       Testimony: (
         <>
-          &nbsp;"I still remember it clearly when I decided to go to Radztech.
-          It was a personal choice, a choice that I know I will not regret. I
-          was the only one on our course even though I encouraged everyone to
-          join me, what I am holding on to is what my friends and former interns
-          of Radztech Business Solutions said to me. I told to Myself, “Eto na
-          yon, Bahala kana Lord”, and as I stand beyond their door, I am filled
-          with certainty that beyond that lies A VAST DIAGRAM OF OPPORTUNITIES
-          THAT AWAITS, EACH ONE WAITING TO BE EXPLORED AND SEIZED."
+          &nbsp;I still remember it clearly when I decided to go to Radztech. It
+          was a personal choice, a choice that I know I will not regret. I was
+          the only one on our course even though I encouraged everyone to join
+          me, what I am holding on to is what my friends and former interns of
+          RBS said to me. I told myself, “Eto na yon! Bahala ka na, Lord.”, and
+          as I stand beyond their door, I am filled with certainty that beyond
+          that lies a vast diagram of opportunities that awaits, each one
+          waiting to be explored and seized.
         </>
       ),
       Body: (
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;Radztech Business Solutions was the best of
-          its class when it comes to internship. I was assigned to technical
+          its class when it came to internship. I was assigned to technical
           support, where I turn every challenge into a valuable learning
           experience. Every support request case that they have assigned to me,
           every report that I have created, diagrams I have constructed, cases
           that I have been solved, queries that I have investigated, all of it
           enhanced my analytical and problem-solving skills and I know it made
-          me the best that I can be. My internship at radztech can be said as a
-          learning milestone. I will truly cherish the moments that we`ve
+          me the best that I can be. My internship at Radztech can be said as a
+          learning milestone. I will truly cherish the moments that we've
           shared, stressful yet fun experiences, the tears, laughter, and
           lessons that I know I will treasure for the rest of my days.
           <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I can now conclude what my friends
-          and former Radztech Business Solutions interns have told me,”Maganda
-          don,Hands on sila sainyo ipaparanas talaga nila yung corporate
-          practices.” It was truly remarkable, and I am so blessed to be part of
-          them, to be a radztech intern. They treat me as a family, a friend,
-          and a valuable piece to them. What they have given me was undoubtedly
-          gonna be my core foundation as I step up to the new journey of new
-          digitalized world. I am eternally grateful, my dear Radztech, thank
-          you for all the challenges, knowledge, and insights that you`ve given
-          me. I am excited about the possibilities that await us all, I`m
-          looking forward to seeing you on top.
+          and former Radztech interns have told me, “Maganda doon, hands-on sila
+          sa inyo. Ipaparanas talaga nila yung corporate practices.” It was
+          truly remarkable, and I am so blessed to be part of them, to be a
+          Radztech intern. They treat me as a family, a friend, and a valuable
+          piece to them. What they have given me was undoubtedly gonna be my
+          core foundation as I step up to the new journey of a new digitalized
+          world. I am eternally grateful, my dear Radztech, thank you for all
+          the challenges, knowledge, and insights that you`ve given me.
+          <br /> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;I am excited about the possibilities that
+          await us all, I`m looking forward to seeing you on top.
         </p>
       ),
       src: Isah,
