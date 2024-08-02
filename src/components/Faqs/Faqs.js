@@ -6,9 +6,7 @@ import {
   TextField,
   Button,
   Collapse,
-  Menu,
-  MenuItem,
-  Grow,
+  Paper,
 } from "@material-ui/core";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { makeStyles } from "@material-ui/core/styles";
@@ -167,44 +165,50 @@ const Faqs = () => {
   return (
     <Container maxWidth="md" style={{ marginTop: "-6rem" }}>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6} style={{ paddingRight: "1vw" }}>
+        <Grid item xs={12} md={12} style={{ paddingRight: "1vw" }}>
           <div className={classes.faqContainer}>
-            <Typography variant="h3" align="center" gutterBottom>
-              Frequently Asked Questions
-            </Typography>
-            <Typography align="center">
-              <p style={{ textAlign: "justify" }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you eager to
-                kickstart your career? Look no further! An internship
-                opportunity with Radztech will empower you with practical
-                skills, real-world experience, and valuable connections.
-              </p>
-              <Typography align="left" style={{ marginBottom: "-1vh" }}>
-                <p
-                  style={{
-                    fontStyle: "italic",
-                    opacity: 0.8,
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  Here are the frequently asked questions about the Internship
-                  program offered by Radztech Business Solutions!
-                </p>
-              </Typography>
-              {faqs.map((faq, index) => (
-                <Faq
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpen={hoverIndex === index}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
-                />
-              ))}
-            </Typography>
+            <Grid container>
+              <Grid item xs={12} md={6} style={{ paddingRight: "1vw" }}>
+                <Typography variant="h3" align="center" gutterBottom>
+                  Frequently Asked Questions
+                </Typography>
+                <Typography>
+                  <p style={{ textAlign: "justify" }}>
+                    Are you eager to kickstart your career? Look no further! An
+                    internship opportunity with Radztech will empower you with
+                    practical skills, real-world experience, and valuable
+                    connections.
+                  </p>
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={6} style={{ paddingRight: "1vw" }}>
+                <Typography align="left" style={{ marginBottom: "-1vh" }}>
+                  <p
+                    style={{
+                      fontStyle: "italic",
+                      opacity: 0.8,
+                      fontSize: "0.8rem",
+                    }}
+                  >
+                    Here are the frequently asked questions about the Internship
+                    program offered by Radztech Business Solutions!
+                  </p>
+                </Typography>
+                {faqs.map((faq, index) => (
+                  <Faq
+                    key={index}
+                    question={faq.question}
+                    answer={faq.answer}
+                    isOpen={hoverIndex === index}
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={handleMouseLeave}
+                  />
+                ))}
+              </Grid>
+            </Grid>
           </div>
         </Grid>
-        <Grid item xs={12} md={6} style={{ paddingLeft: "1vw" }}>
+        <Grid item xs={12} md={6} container style={{ paddingLeft: "1vw" }}>
           <div>
             <Typography variant="h3" align="center" gutterBottom>
               Contact Us
@@ -253,7 +257,7 @@ const Faqs = () => {
                 margin="normal"
                 variant="outlined"
               />
-              <Typography align="left">
+              <Typography align="right">
                 <Button type="submit" variant="contained" color="primary">
                   Send
                 </Button>
@@ -261,7 +265,7 @@ const Faqs = () => {
             </form>
           </div>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} md={6}>
           <div style={{ marginTop: "1rem" }}>
             <Typography variant="h4" gutterBottom>
               Location

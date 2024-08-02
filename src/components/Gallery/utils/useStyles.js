@@ -18,6 +18,9 @@ export const useStyles = makeStyles((theme) => ({
     overflowY: "auto",
     transform: "translateZ(0)",
   },
+  listContainer: {
+    marginBottom: 20,
+  },
   titleBar: {
     display: "none",
   },

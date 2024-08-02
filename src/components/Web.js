@@ -4,9 +4,14 @@ import {
   Button,
   Typography,
   makeStyles,
-  Drawer,
   Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
 } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
 import InternData from "./Teams/Testimonials/InternData";
 import Slider from "./InternTeam/Accordion";
 import Faqs from "./Faqs/Faqs";
@@ -44,36 +49,38 @@ const useStyles = makeStyles((theme) => ({
     transition: "opacity 0.5s ease",
   },
   floatingButtonsContainer: {
+    position: "fixed",
+    top: 0,
+    width: "100%",
+    backgroundColor: "#fafafa",
     display: "flex",
-    backgroundColor: "#fafafa30",
-    flexDirection: "column",
-    alignItems: "flex-end",
-    padding: theme.spacing(2),
+    justifyContent: "space-around",
+    alignItems: "center",
+    padding: theme.spacing(1),
+    zIndex: 1000,
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "space-between",
+    },
   },
   floatingButton: {
-    marginBottom: theme.spacing(1),
-    background: "#ff7704",
-    color: "#fff",
-    borderRadius: "20px",
-    width: "5vw",
-    fontSize: "0.6rem",
-    padding: "10px 20px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    cursor: "pointer",
-    whiteSpace: "nowrap",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
     "&:hover": {
       background: "#ddd",
       color: "#ff7704",
     },
-
     [theme.breakpoints.down("sm")]: {
-      borderRadius: "10px",
-      width: "15vh",
+      display: "none",
     },
+  },
+  menuButton: {
+    display: "none",
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+      color: "#ff7704",
+    },
+  },
+  drawer: {
+    width: "30vh",
   },
 }));
 
@@ -106,10 +113,63 @@ const Home = () => {
     setDrawerOpen(false);
   };
 
+  const toggleDrawer = (open) => {
+    setDrawerOpen(open);
+  };
+
+  const menuItems = [
+    { label: "Home", ref: landingPage },
+    { label: "Purpose", ref: purposePanelRef },
+    { label: "Teams", ref: TeamsPanel },
+    { label: "Testimonials", ref: secondaryPanelRef },
+    { label: "Messages", ref: messagePanelRef },
+    { label: "Gallery", ref: galleryPanelRef },
+    { label: "FAQs", ref: faqsPanelRef },
+  ];
+
   return (
     <div className={classes.root}>
+      <div className={classes.floatingButtonsContainer}>
+        <IconButton
+          className={classes.menuButton}
+          onClick={() => toggleDrawer(true)}
+        >
+          <MenuIcon />
+        </IconButton>
+        {menuItems.map((item, index) => (
+          <Button
+            key={index}
+            className={classes.floatingButton}
+            onClick={() => handleClick(item.ref)}
+          >
+            {item.label}
+          </Button>
+        ))}
+      </div>
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => toggleDrawer(false)}
+      >
+        <div className={classes.drawer}>
+          <List>
+            {menuItems.map((item, index) => (
+              <ListItem
+                button
+                key={index}
+                onClick={() => handleClick(item.ref)}
+              >
+                <ListItemText primary={item.label} />
+              </ListItem>
+            ))}
+          </List>
+        </div>
+      </Drawer>
       <div className={classes.LandingPane} ref={landingPage}>
         <HeroPage />
+      </div>
+      <div className={classes.primaryPanel} ref={purposePanelRef}>
+        <Purpose />
       </div>
       <div className={classes.primaryPanel} ref={TeamsPanel}>
         <Typography align="center">
@@ -123,9 +183,7 @@ const Home = () => {
       <div className={classes.secondaryPanel} ref={secondaryPanelRef}>
         <InternData />
       </div>
-      <div className={classes.primaryPanel} ref={purposePanelRef}>
-        <Purpose />
-      </div>
+
       <div className={classes.primaryPanel} ref={messagePanelRef}>
         <Message />
       </div>
@@ -135,72 +193,6 @@ const Home = () => {
       <div className={classes.primaryPanel} ref={faqsPanelRef}>
         <Faqs />
       </div>
-
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-      >
-        <div className={classes.floatingButtonsContainer}>
-          <Button
-            className={classes.floatingButton}
-            onClick={() => handleClick(landingPage)}
-          >
-            Home
-          </Button>
-          <Button
-            className={classes.floatingButton}
-            onClick={() => handleClick(TeamsPanel)}
-          >
-            Teams
-          </Button>
-          <Button
-            className={classes.floatingButton}
-            onClick={() => handleClick(secondaryPanelRef)}
-          >
-            Testimonials
-          </Button>
-          <Button
-            className={classes.floatingButton}
-            onClick={() => handleClick(purposePanelRef)}
-          >
-            Purpose
-          </Button>
-          <Button
-            className={classes.floatingButton}
-            onClick={() => handleClick(messagePanelRef)}
-          >
-            Messages
-          </Button>
-          <Button
-            className={classes.floatingButton}
-            onClick={() => handleClick(galleryPanelRef)}
-          >
-            Gallery
-          </Button>
-          <Button
-            className={classes.floatingButton}
-            onClick={() => handleClick(faqsPanelRef)}
-          >
-            FAQs
-          </Button>
-          <Divider />
-          <Button onClick={() => setDrawerOpen(false)}>Close</Button>
-        </div>
-      </Drawer>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => setDrawerOpen(true)}
-        style={{
-          position: "fixed",
-          bottom: "20px",
-          right: "20px",
-          zIndex: 999,
-        }}
-      >
-        Open Navigation
-      </Button>
     </div>
   );
 };

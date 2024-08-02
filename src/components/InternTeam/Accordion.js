@@ -12,14 +12,14 @@ const Slider = () => {
         <a href="#">
           <h1>
             JOAN
-            <br /> OPERATIONS TEAM
+            <br /> Operations Team
           </h1>
         </a>
       </li>
       <li className="nine">
         <a href="#">
           <h1>
-            NOVELYN <br /> OPERATIONS TEAM
+            NOVELYN <br /> Operations Team
           </h1>
         </a>
       </li>
@@ -27,7 +27,7 @@ const Slider = () => {
         <a href="#">
           <h1>
             PATRICIA
-            <br /> OPERATIONS TEAM
+            <br /> Operations Team
           </h1>
         </a>
       </li>
@@ -35,7 +35,7 @@ const Slider = () => {
         <a href="#">
           <h1>
             FRENAN
-            <br /> OPERATIONS TEAM
+            <br /> Operations Team
           </h1>
         </a>
       </li>
@@ -43,7 +43,7 @@ const Slider = () => {
         <a href="#">
           <h1>
             RYAN
-            <br /> OPERATIONS TEAM
+            <br /> Operations Team
           </h1>
         </a>
       </li>
@@ -51,7 +51,7 @@ const Slider = () => {
         <a href="#">
           <h1>
             JOEMAR
-            <br /> DEVELOPMENT TEAM
+            <br /> Development Team
           </h1>
         </a>
       </li>
@@ -59,7 +59,7 @@ const Slider = () => {
         <a href="#">
           <h1>
             ISAH
-            <br /> TECHNICAL SUPPORT
+            <br /> Technical Support
           </h1>
         </a>
       </li>
@@ -72,7 +72,7 @@ const Slider = () => {
           <a href="#">
             <h1>
               ADONIS
-              <br /> DEVELOPMENT TEAM
+              <br /> Development Team
             </h1>
           </a>
         </li>
@@ -80,7 +80,7 @@ const Slider = () => {
           <a href="#">
             <h1>
               BENEDICK
-              <br /> DEVELOPMENT TEAM
+              <br /> Development Team
             </h1>
           </a>
         </li>
@@ -88,7 +88,7 @@ const Slider = () => {
           <a href="#">
             <h1>
               MIGUI
-              <br /> DEVELOPMENT TEAM
+              <br /> Development Team
             </h1>
           </a>
         </li>
@@ -96,7 +96,7 @@ const Slider = () => {
           <a href="#">
             <h1>
               RANDY
-              <br /> DEVELOPMENT TEAM
+              <br /> Development Team
             </h1>
           </a>
         </li>
@@ -104,7 +104,7 @@ const Slider = () => {
           <a href="#">
             <h1>
               ANDREA
-              <br /> OPERATIONS TEAM
+              <br /> Operations Team
             </h1>
           </a>
         </li>
@@ -112,7 +112,7 @@ const Slider = () => {
           <a href="#">
             <h1>
               ANGELINA
-              <br /> OPERATIONS TEAM
+              <br /> Operations Team
             </h1>
           </a>
         </li>
@@ -120,7 +120,7 @@ const Slider = () => {
           <a href="#">
             <h1>
               FRENALYN
-              <br /> OPERATIONS TEAM
+              <br /> Operations Team
             </h1>
           </a>
         </li>
