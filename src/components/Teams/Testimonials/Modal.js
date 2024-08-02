@@ -11,7 +11,7 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
-  Container,
+  //Container,
 } from "@material-ui/core";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -186,7 +186,7 @@ const ModalExp = ({ children = {}, Team = [] }) => {
                             {item.CardContent}
                           </Typography>
                           <Typography align="right" variant={"h4"}>
-                            - {item.NickName} (2024)
+                            - {item.NickName}
                           </Typography>
                         </Box>
                         <Grid>
@@ -195,7 +195,7 @@ const ModalExp = ({ children = {}, Team = [] }) => {
                             variant={"h5"}
                             style={{ color: "#ff7704", paddingTop: "3vh" }}
                           >
-                            Read more......
+                            Read more...
                           </Typography>
                         </Grid>
                       </Grid>

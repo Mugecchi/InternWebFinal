@@ -19,7 +19,6 @@ import HeroPage from "./LandingPage/HeroPage";
 import Message from "./Message/PerCarousel";
 import Gallery from "./Gallery/Gallery";
 import Purpose from "./Purpose/Purpose";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
@@ -52,18 +51,22 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     top: 0,
     width: "100%",
-    backgroundColor: "#fafafa",
+    backgroundColor: "#ffffff",
     display: "flex",
-    justifyContent: "space-around",
+    //backgroundColor: "transparent",
+    justifyContent: "center ",
     alignItems: "center",
     padding: theme.spacing(1),
     zIndex: 1000,
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "space-between",
+      padding: theme.spacing(0.5),
     },
   },
   floatingButton: {
+    margin: theme.spacing(1, 1),
+    padding: theme.spacing(0, 1),
     "&:hover": {
       background: "#ddd",
       color: "#ff7704",
