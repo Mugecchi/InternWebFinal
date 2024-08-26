@@ -4,8 +4,6 @@ import Typography from "@material-ui/core/Typography";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
-import IconButton from "@material-ui/core/IconButton";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
 import { Paper, Dialog, DialogContent, Zoom, Button } from "@material-ui/core";
 import { useStyles } from "./utils/useStyles";
 import { importAllImages } from "./utils/importImages";

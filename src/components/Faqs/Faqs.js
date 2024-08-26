@@ -6,7 +6,6 @@ import {
   TextField,
   Button,
   Collapse,
-  Paper,
 } from "@material-ui/core";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { makeStyles } from "@material-ui/core/styles";

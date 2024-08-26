@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/core";
 import defaultTheme from "./theme";
-import createRouter from "./helpers/createRouter";
+import createRouter from "./components/helpers/createRouter";
 import routes from "./routes";
 
 const router = createRouter(routes);

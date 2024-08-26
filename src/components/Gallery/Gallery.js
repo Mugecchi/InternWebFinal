@@ -18,9 +18,9 @@ import birth from "../Gallery/images/birthday/1.jpg";
 import cli from "../Gallery/images/client/1.jpg";
 import deplo from "../Gallery/images/deploMoment/1.jpeg";
 import food from "../Gallery/images/food/1.jpg";
-import fun from "../Gallery/images/funMoment/1.JPG";
+import fun from "./images/funMoment/1.JPG";
 import ori from "../Gallery/images/orientation/1.jpg";
-import rep from "../Gallery/images/reporting/1.JPG";
+import rep from "./images/reporting/1.JPG";
 
 const useStyles = makeStyles((theme) => ({
   root: {
