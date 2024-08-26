@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import hero from "../../images/album1/bg.jpg";
+import hero from "../images/bg_1.jpg";
 import LazyLoad from "react-lazyload";
 import bs from "../Gallery/images/bibleStudy/1.jpg";
 import birth from "../Gallery/images/birthday/1.jpg";

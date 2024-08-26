@@ -1,13 +1,13 @@
-import Home from "./components/Web";
-import Faqs from "./components/Faqs/Faqs";
-import BarDaGoalan from "./components/Gallery/Reports";
-import Orrientation from "./components/Gallery/Orrientation";
-import DeploMoment from "./components/Gallery/DeploMoment";
-import Client from "./components/Gallery/Client";
-import Food from "./components/Gallery/Food";
-import BibleStudy from "./components/Gallery/BibleStudy";
-import Birthday from "./components/Gallery/Birthday";
-import FunMoment from "./components/Gallery/FunMoment";
+import Home from "./InternBatch6/Web";
+import Faqs from "./InternBatch6/Faqs/Faqs";
+import BarDaGoalan from "./InternBatch6/Gallery/Reports";
+import Orrientation from "./InternBatch6/Gallery/Orrientation";
+import DeploMoment from "./InternBatch6/Gallery/DeploMoment";
+import Client from "./InternBatch6/Gallery/Client";
+import Food from "./InternBatch6/Gallery/Food";
+import BibleStudy from "./InternBatch6/Gallery/BibleStudy";
+import Birthday from "./InternBatch6/Gallery/Birthday";
+import FunMoment from "./InternBatch6/Gallery/FunMoment";
 
 const routes = [
   {
